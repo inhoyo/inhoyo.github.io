@@ -12,6 +12,29 @@
 		<meta name="description" content="About In-Ho Baek — Scientist at Fraunhofer HHI and PhD candidate at TU Berlin. Education, experience, publications, and skills in THz communications and photonic networks." />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			.profile-intro {
+				display: flex;
+				gap: 2.4em;
+				align-items: flex-start;
+				margin-bottom: 1.5em;
+			}
+			.profile-photo {
+				flex-shrink: 0;
+				width: 190px;
+			}
+			.profile-photo img {
+				width: 100%;
+				border-radius: 10px;
+				display: block;
+				box-shadow: 0 4px 22px rgba(0,0,0,0.18);
+			}
+			.profile-text { flex: 1; }
+			@media (max-width: 640px) {
+				.profile-intro { flex-direction: column; align-items: center; }
+				.profile-photo { width: 150px; }
+			}
+		</style>
 	</head>
 	<body class="is-preload">
 
@@ -50,24 +73,31 @@
 
 								<!-- Professional Profile -->
 								<h3 data-i18n="about.profile.title">Professional Profile</h3>
-								<p data-i18n-html="about.profile.p1">I am a Scientist at the <strong>Fraunhofer Institute for Telecommunications,
-								Heinrich Hertz Institute (HHI)</strong>, Berlin, within the Department of
-								Photonic Networks and Systems, where I have been working since July 2021.
-								In parallel, I am pursuing a <strong>PhD (Dr.-Ing.)</strong> at
-								<strong>Technische Universit&auml;t Berlin (TUB)</strong> under the working title
-								<em>&ldquo;Investigating Adaptive Baseband Techniques for Converged
-								Optical / THz Wireless Links.&rdquo;</em></p>
-								<p data-i18n-html="about.profile.p2">My research focuses on high-capacity Terahertz (THz) wireless communications
-								and their integration into next-generation 6G photonic network infrastructures.
-								I develop advanced Digital Signal Processing (DSP) algorithms for rate-adaptive
-								THz links and conduct experimental characterisation of photonic transmitter
-								components &mdash; including PIN photodiode and WR3-coupled transmitter configurations
-								&mdash; for probabilistically shaped, high-speed THz wireless transmission beyond
-								100&thinsp;Gbit/s. I am also actively exploring neural-network-based approaches to
-								mitigate transceiver nonlinearities in THz systems.</p>
-								<p data-i18n-html="about.profile.p3">Alongside my research role, I have served as a lecturer for Information and
-								Communication programmes at Berlin universities, covering topics at the
-								intersection of communications engineering and signal processing.</p>
+								<div class="profile-intro">
+									<div class="profile-text">
+										<p data-i18n-html="about.profile.p1">I am a Scientist at the <strong>Fraunhofer Institute for Telecommunications,
+										Heinrich Hertz Institute (HHI)</strong>, Berlin, within the Department of
+										Photonic Networks and Systems, where I have been working since July 2021.
+										In parallel, I am pursuing a <strong>PhD (Dr.-Ing.)</strong> at
+										<strong>Technische Universit&auml;t Berlin (TUB)</strong> under the working title
+										<em>&ldquo;Investigating Adaptive Baseband Techniques for Converged
+										Optical / THz Wireless Links.&rdquo;</em></p>
+										<p data-i18n-html="about.profile.p2">My research focuses on high-capacity Terahertz (THz) wireless communications
+										and their integration into next-generation 6G photonic network infrastructures.
+										I develop advanced Digital Signal Processing (DSP) algorithms for rate-adaptive
+										THz links and conduct experimental characterisation of photonic transmitter
+										components &mdash; including PIN photodiode and WR3-coupled transmitter configurations
+										&mdash; for probabilistically shaped, high-speed THz wireless transmission beyond
+										100&thinsp;Gbit/s. I am also actively exploring neural-network-based approaches to
+										mitigate transceiver nonlinearities in THz systems.</p>
+										<p data-i18n-html="about.profile.p3">Alongside my research role, I have served as a lecturer for Information and
+										Communication programmes at Berlin universities, covering topics at the
+										intersection of communications engineering and signal processing.</p>
+									</div>
+									<div class="profile-photo">
+										<img src="inhophoto.jpeg" alt="In-Ho Baek" />
+									</div>
+								</div>
 
 								<hr />
 
@@ -161,13 +191,6 @@
 										&ldquo;Record 221&thinsp;Gb/s Dual Polarization THz Wireless Transmission Over
 										500&thinsp;m Using PCS-64QAM at 300&thinsp;GHz,&rdquo;
 										<em>Opto-Electronics and Communications Conference (OECC)</em>.
-										<strong data-i18n-html="about.pub.submitted">[Submitted &amp; In Review]</strong>
-									</li>
-									<li>
-										<strong>In-Ho Baek</strong>, J. Honecker, M. Bittiehn, R. Elschner, C. Schubert, R. Freund,
-										&ldquo;Experimental Demonstration of Neural-Network Based Transceiver Nonlinearity
-										Mitigation for Probabilistically Shaped Photonic THz Wireless Transmission,&rdquo;
-										in <em>Proc. Optical Fiber Communication Conference (OFC)</em>, 2026.
 										<strong data-i18n-html="about.pub.submitted">[Submitted &amp; In Review]</strong>
 									</li>
 									<li>
