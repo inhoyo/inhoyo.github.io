@@ -238,7 +238,7 @@ const TRANSLATIONS = {
     'about.exp.hhi.title':       'Wissenschaftler &mdash; Fraunhofer Heinrich-Hertz-Institut (HHI), Berlin',
     'about.exp.hhi.period':      'Juli 2021 &ndash; heute',
     'about.exp.hhi.dept':        'Abteilung Photonische Netze und Systeme',
-    'about.exp.hhi.intro':       'Forschung in optischer und THz-Kommunikation, einschlie&szlig;lich:',
+    'about.exp.hhi.intro':       'Forschung in optischer und THz-Kommunikation, einschließlich:',
     'about.exp.hhi.li1':         'Entwicklung fortschrittlicher DSP für ratenadaptive THz-Funkkommunikation',
     'about.exp.hhi.li2':         'DSP auf Chip für hochgeschwindige koh&auml;rente 800G-ASICs',
     'about.exp.hhi.li3':         'Charakterisierung von Ger&auml;ten und experimentellen Aufbauten',
@@ -276,7 +276,7 @@ const TRANSLATIONS = {
     'about.lang.title': 'Sprachkenntnisse',
     'about.lang.li1':   '<strong>Deutsch</strong> &mdash; Muttersprache',
     'about.lang.li2':   '<strong>Koreanisch</strong> (&#54620;&#44397;&#50612;) &mdash; Muttersprache',
-    'about.lang.li3':   '<strong>Englisch</strong> &mdash; Flie&szlig;end (mündlich und schriftlich)',
+    'about.lang.li3':   '<strong>Englisch</strong> &mdash; Fließend (mündlich und schriftlich)',
 
     'about.contact.title': 'Kontakt',
     'about.contact.body':  'Fraunhofer-Institut für Nachrichtentechnik &mdash; Heinrich-Hertz-Institut (HHI)<br />Abteilung Photonische Netze und Systeme, Berlin, Deutschland<br /><br />E-Mail: <a href="mailto:in-ho.baek@hhi.fraunhofer.de">in-ho.baek@hhi.fraunhofer.de</a><br />LinkedIn: <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener">linkedin.com/in/in-ho-baek</a><br />Google Scholar: <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar-Profil</a><br />IEEE Xplore: <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE-Autorenprofil</a>',
