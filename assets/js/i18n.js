@@ -121,7 +121,7 @@ const TRANSLATIONS = {
     'about.edu.exchange.title':     'Exchange Programme &mdash; Electrical Engineering &amp; Philosophy',
     'about.edu.exchange.body':      '<strong>Korea Advanced Institute of Science and Technology (KAIST)</strong>, Daejeon, South Korea &mdash; 2018&ndash;2019<br />Courses: Radar Systems Engineering &bull; MIMO Wireless Communications &bull; Philosophy of Science<br />Supported by the <strong>Baden-Württemberg Scholarship 2018</strong>',
     'about.edu.bsc.title':          'B.Sc. &mdash; Electrical / Information Engineering',
-    'about.edu.bsc.body':           '<strong>Karlsruhe Institute of Technology (KIT)</strong>, Karlsruhe &mdash; 2013&ndash;2018<br />Bachelor Thesis (at IMN, KIT): <em>Investigation of the Timing Jitter of Superconducting Single Photon Detectors with Varying Meander Shapes</em>',
+    'about.edu.bsc.body':           '<strong>Karlsruhe Institute of Technology (KIT)</strong>, Karlsruhe &mdash; 2013&ndash;2018<br />Bachelor Thesis (at IMS, KIT): <em>Investigation of the Timing Jitter of Superconducting Single Photon Detectors with Varying Meander Shapes</em>',
 
     'about.exp.title':              'Professional Experience',
     'about.exp.hhi.title':          'Scientist &mdash; Fraunhofer Heinrich Hertz Institute (HHI), Berlin',
@@ -232,7 +232,7 @@ const TRANSLATIONS = {
     'about.edu.exchange.title':  'Austauschprogramm &mdash; Elektrotechnik &amp; Philosophie',
     'about.edu.exchange.body':   '<strong>Korea Advanced Institute of Science and Technology (KAIST)</strong>, Daejeon, Südkorea &mdash; 2018&ndash;2019<br />Kurse: Radarsystemtechnik &bull; MIMO Funkübertragung &bull; Wissenschaftsphilosophie<br />Gef&ouml;rdert durch das <strong>Baden-Württemberg-Stipendium 2018</strong>',
     'about.edu.bsc.title':       'B.Sc. &mdash; Elektrotechnik / Informationstechnik',
-    'about.edu.bsc.body':        '<strong>Karlsruher Institut für Technologie (KIT)</strong>, Karlsruhe &mdash; 2013&ndash;2018<br />Bachelorarbeit (am IMN, KIT): <em>Untersuchung des Zeitjitters von supraleitenden Einzelphotonen-Detektoren mit verschiedenen M&auml;anderformen</em>',
+    'about.edu.bsc.body':        '<strong>Karlsruher Institut für Technologie (KIT)</strong>, Karlsruhe &mdash; 2013&ndash;2018<br />Bachelorarbeit (am IMS, KIT): <em>Untersuchung des Zeitjitters von supraleitenden Einzelphotonen-Detektoren mit verschiedenen M&auml;anderformen</em>',
 
     'about.exp.title':           'Berufliche Erfahrung',
     'about.exp.hhi.title':       'Wissenschaftler &mdash; Fraunhofer Heinrich-Hertz-Institut (HHI), Berlin',
@@ -343,7 +343,7 @@ const TRANSLATIONS = {
     'about.edu.exchange.title':  '교환 프로그램 &mdash; 전기공학 &amp; 철학',
     'about.edu.exchange.body':   '<strong>한국과학기술원 (KAIST)</strong>, 대전, 대한민국 &mdash; 2018&ndash;2019<br />수강 과목: 레이더 시스템 공학 &bull; MIMO 무선 통신 &bull; 과학철학<br /><strong>바덴뷔르템베르크 장학금 2018</strong> 수혜',
     'about.edu.bsc.title':       '학사 &mdash; 전기 / 정보 공학',
-    'about.edu.bsc.body':        '<strong>카를스루에 공과대학교 (KIT)</strong>, 카를스루에 &mdash; 2013&ndash;2018<br />학사 논문 (IMN, KIT): <em>Investigation of the Timing Jitter of Superconducting Single Photon Detectors with Varying Meander Shapes</em>',
+    'about.edu.bsc.body':        '<strong>카를스루에 공과대학교 (KIT)</strong>, 카를스루에 &mdash; 2013&ndash;2018<br />학사 논문 (IMS, KIT): <em>Investigation of the Timing Jitter of Superconducting Single Photon Detectors with Varying Meander Shapes</em>',
 
     'about.exp.title':           '경력',
     'about.exp.hhi.title':       '연구원 &mdash; 프라운호퍼 하인리히 헤르츠 연구소 (HHI), 베를린',
