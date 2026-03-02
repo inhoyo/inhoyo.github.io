@@ -5,7 +5,8 @@
       "WebFetch(domain:ieeexplore.ieee.org)",
       "WebFetch(domain:en.wikipedia.org)",
       "WebFetch(domain:commons.wikimedia.org)",
-      "Bash(python3 -c \":*)"
+      "Bash(python3 -c \":*)",
+      "Bash(python3:*)"
     ]
   }
 }
