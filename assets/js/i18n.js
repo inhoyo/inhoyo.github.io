@@ -93,6 +93,7 @@ const TRANSLATIONS = {
     'pub.title':     'Publications',
     'pub.subtitle':  'Complete list of first-author and co-authored publications.<br /><a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>&nbsp;&bull;&nbsp;<a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE Xplore</a>',
     'pub.submitted': 'Submitted',
+    'pub.accepted':  'Accepted',
     'pub.coauthor':  'Co-Author',
 
     /* Contact */
@@ -154,6 +155,7 @@ const TRANSLATIONS = {
     'about.pub.first':      'First Author',
     'about.pub.co':         'Co-Author',
     'about.pub.submitted':  '[Submitted &amp; In Review]',
+    'about.pub.accepted':   '[Accepted]',
     'about.pub.links':      '<a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Full list on Google Scholar</a>&nbsp;&bull;&nbsp;<a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE Xplore Profile</a>',
 
     'about.skills.title': 'Technical Skills',
@@ -206,6 +208,7 @@ const TRANSLATIONS = {
     'pub.title':     'Publikationen',
     'pub.subtitle':  'Vollst&auml;ndige Liste der Erst- und Mitautoren-Publikationen.<br /><a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>&nbsp;&bull;&nbsp;<a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE Xplore</a>',
     'pub.submitted': 'Eingereicht',
+    'pub.accepted':  'Angenommen',
     'pub.coauthor':  'Mitautor',
 
     'contact.title':       'Kontakt aufnehmen',
@@ -265,6 +268,7 @@ const TRANSLATIONS = {
     'about.pub.first':     'Erstautor',
     'about.pub.co':        'Mitautor',
     'about.pub.submitted': '[Eingereicht &amp; In Begutachtung]',
+    'about.pub.accepted':  '[Angenommen]',
     'about.pub.links':     '<a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Vollst&auml;ndige Liste bei Google Scholar</a>&nbsp;&bull;&nbsp;<a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE Xplore Profil</a>',
 
     'about.skills.title': 'Technische Kompetenzen',
@@ -317,6 +321,7 @@ const TRANSLATIONS = {
     'pub.title':     '논문',
     'pub.subtitle':  '제1저자 및 공동 저자 논문 전체 목록.<br /><a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>&nbsp;&bull;&nbsp;<a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE Xplore</a>',
     'pub.submitted': '제출됨',
+    'pub.accepted':  '수락됨',
     'pub.coauthor':  '공동 저자',
 
     'contact.title':       '연락하기',
@@ -376,6 +381,7 @@ const TRANSLATIONS = {
     'about.pub.first':     '제1저자',
     'about.pub.co':        '공동 저자',
     'about.pub.submitted': '[제출됨 &amp; 심사 중]',
+    'about.pub.accepted':  '[수락됨]',
     'about.pub.links':     '<a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar에서 전체 목록 보기</a>&nbsp;&bull;&nbsp;<a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE Xplore 저자 프로필</a>',
 
     'about.skills.title': '기술 역량',
