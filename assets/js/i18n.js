@@ -89,6 +89,8 @@ const TRANSLATIONS = {
     'research.2.text':  'A central theme of my research is Probabilistic Constellation Shaping (PCS) applied to THz wireless links. PCS enables flexible, rate-adaptive modulation by biasing the symbol distribution toward the Shannon limit. I study time-adaptive PCS for combined optical/THz links, the impact of photodiode nonlinearities on shaped transmissions, and their mitigation via neural-network-based DSP.',
     'research.3.title': 'Converged Optical &amp; THz<br />Links for 6G Networks',
     'research.3.text':  'I investigate the seamless integration of THz wireless segments into fiber-optic backhaul networks targeting future 6G requirements. This includes analysis of weather-related link availability for outdoor THz deployments, high-capacity system design supporting 6G transport, and adaptive baseband techniques for converged optical/THz links &mdash; the subject of my PhD dissertation at TU Berlin.',
+    'research.4.title': 'Neuromorphic<br />Photonic Computing',
+    'research.4.text':  'Optical signal processing on integrated photonic chips using neural network architectures &mdash; enabling modulation format identification, optical signal correction, and low-power feature generation entirely in the optical domain at sub-nanosecond latencies.',
 
     /* Publications */
     'pub.title':     'Publications',
@@ -241,6 +243,8 @@ const TRANSLATIONS = {
     'research.2.text':  'Ein zentrales Thema meiner Forschung ist das probabilistische Konstellationsshaping (PCS) für THz-Funkverbindungen. PCS erm&ouml;glicht eine flexible, ratenadaptive Modulation durch Verschiebung der Symbolverteilung in Richtung der Shannon-Grenze. Ich untersuche zeitadaptives PCS für kombinierte optische/THz-Strecken, den Einfluss von Photodioden-Nichtlinearit&auml;ten und deren Kompensation mittels neuronaler Netzwerke.',
     'research.3.title': 'Konvergierte optische &amp; THz-<br />Verbindungen für 6G-Netze',
     'research.3.text':  'Ich untersuche die nahtlose Integration von THz-Funksegmenten in Glasfaser-Backhaul&shy;netzwerke für zukünftige 6G-Anforderungen. Dies umfasst die Analyse wetterabh&auml;ngiger Streckenverfügbarkeiten, Systementwicklung für hochkapazitive 6G-Transportnetze sowie adaptive Basisband&shy;techniken für konvergierte optische/THz-Verbindungen &mdash; das Thema meiner Doktorarbeit an der TU Berlin.',
+    'research.4.title': 'Neuromorphe<br />Photonische Datenverarbeitung',
+    'research.4.text':  'Optische Signalverarbeitung auf integrierten photonischen Chips mit neuronalen Netzwerkarchitekturen &mdash; erm&ouml;glicht Modulationsformaterkennung, optische Signalkorrektur und energieeffiziente Merkmalsgewinnung vollständig im optischen Bereich mit Sub-Nanosekunden-Latenzen.',
 
     'pub.title':     'Publikationen',
     'pub.subtitle':  'Vollst&auml;ndige Liste der Erst- und Mitautoren-Publikationen.<br /><a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>&nbsp;&bull;&nbsp;<a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE Xplore</a>',
@@ -389,6 +393,8 @@ const TRANSLATIONS = {
     'research.2.text':  '연구의 핵심 주제는 THz 무선 링크에 적용된 확률적 성상 형성(PCS)입니다. PCS는 심볼 분포를 섀넌 한계 방향으로 편향시켜 유연한 전송률 적응 변조를 가능하게 합니다. 광/THz 결합 링크를 위한 시간 적응형 PCS, 광검출기 비선형성의 영향, 그리고 신경망 기반 DSP를 통한 완화를 연구합니다.',
     'research.3.title': '6G 네트워크를 위한<br />광/THz 통합 링크',
     'research.3.text':  '미래 6G 요구사항을 목표로 광섬유 백홀 네트워크에 THz 무선 세그먼트를 원활히 통합하는 방법을 연구합니다. 야외 THz 배포를 위한 날씨 관련 링크 가용성 분석, 고용량 시스템 설계, 그리고 수렴된 광/THz 링크를 위한 적응형 기저대역 기술을 포함하며 &mdash; TU 베를린 박사 논문의 주제입니다.',
+    'research.4.title': '뉴로모픽<br />포토닉 컴퓨팅',
+    'research.4.text':  '신경망 아키텍처를 활용한 집적 포토닉 칩에서의 광학 신호 처리 &mdash; 변조 형식 식별, 광학 신호 보정, 저전력 특징 생성을 나노초 이하의 지연 시간으로 완전히 광 영역에서 처리합니다.',
 
     'pub.title':     '논문',
     'pub.subtitle':  '제1저자 및 공동 저자 논문 전체 목록.<br /><a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>&nbsp;&bull;&nbsp;<a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE Xplore</a>',
