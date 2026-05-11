@@ -954,8 +954,43 @@ em { font-style: italic; }
 @media(max-width:768px) {
   .nav-links { display:none; }
   .nav-hamburger { display:flex; }
-  .hero { grid-template-columns:1fr; }
-  .hero-right { display:none; }
+
+  /* Hero: stack text above, videos below as a wide strip */
+  .hero {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+    min-height: 100svh;
+  }
+  .hero-left {
+    justify-content: flex-start;
+    padding-top: calc(var(--nav-h) + 2rem);
+    padding-bottom: 2rem;
+  }
+  /* Video strip — side by side below the text */
+  .hero-right {
+    display: flex;
+    flex-direction: row;
+    height: clamp(200px, 48vw, 270px);
+    border-top: 1px solid var(--border);
+    position: relative;
+  }
+  /* Override desktop left-fade → mobile top-fade */
+  .hero-right::before {
+    left: 0; right: 0; top: 0; bottom: auto;
+    width: 100%;
+    height: 70px;
+    background: linear-gradient(to bottom, var(--bg), transparent);
+  }
+  /* Vertical separator between the two videos */
+  .hero-video-panel:first-child {
+    border-bottom: none;
+    border-right: 1px solid var(--border);
+  }
+  /* Slightly higher opacity since area is smaller */
+  .hero-video-panel video { opacity: 0.6; }
+  /* Hide scroll indicator — videos are the section break now */
+  .hero-scroll-hint { display: none; }
+
   .pub-row { grid-template-columns:2rem 1fr; }
   .pub-row-meta { display:none; }
   .section-head { grid-template-columns:1fr; }
@@ -965,7 +1000,9 @@ em { font-style: italic; }
   .footer-wordmark { font-size:clamp(3rem,14vw,7rem); }
   .contact-row { flex-direction:column; align-items:flex-start; gap:1.5rem; }
 }
+
 @media(max-width:480px) {
   .hero-meta { flex-direction:column; align-items:flex-start; }
+  .hero-right { height: clamp(160px, 50vw, 220px); }
   .tl-item { grid-template-columns:1fr; gap:0.5rem; }
 }
