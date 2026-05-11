@@ -3,13 +3,15 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>About | In-Ho Baek</title>
-  <meta name="description" content="About In-Ho Baek — Scientist at Fraunhofer HHI and PhD candidate at TU Berlin. Education, experience, publications, and skills in THz communications and photonic networks." />
+  <title>About — In-Ho Baek</title>
+  <meta name="description" content="About In-Ho Baek — Scientist at Fraunhofer HHI, PhD candidate at TU Berlin. Education, experience, publications and skills in THz communications and photonic networks." />
   <link rel="stylesheet" href="assets/css/style.css" />
 </head>
-<body>
+<body data-page="about">
 
-<!-- ── Navigation ─────────────────────────────────────────────────────────── -->
+<div class="noise" aria-hidden="true"></div>
+
+<!-- ── Navigation ──────────────────────────────────────────────────────── -->
 <nav class="site-nav scrolled">
   <a href="index.html" class="nav-brand">In-Ho Baek</a>
   <ul class="nav-links">
@@ -30,97 +32,99 @@
   <a href="index.html#contact">Contact</a>
 </div>
 
-<!-- ── About Hero ─────────────────────────────────────────────────────────── -->
+<!-- ── About Hero ─────────────────────────────────────────────────────── -->
 <section class="about-hero">
   <div class="container">
-    <div class="about-hero-inner fade-up">
+    <div class="about-hero-grid fade-up">
       <img class="about-photo" src="inhophoto.jpeg" alt="In-Ho Baek" />
       <div class="about-hero-text">
-        <p class="hero-eyebrow">Fraunhofer HHI &nbsp;·&nbsp; TU Berlin</p>
-        <h1>In-Ho Baek</h1>
-        <p>Scientist at the Department of Photonic Networks and Systems, Fraunhofer HHI — developing high-capacity THz wireless systems and adaptive DSP for 6G photonic network integration.</p>
-        <div class="hero-actions" style="margin-top: 1.5rem; justify-content: flex-start;">
-          <a href="mailto:in-ho.baek@hhi.fraunhofer.de" class="btn btn-primary">Get in Touch &nbsp;&#8594;</a>
-          <a href="index.html" class="btn btn-outline">&larr; Back to Home</a>
+        <div class="hero-eyebrow" style="margin-bottom:1rem;">
+          <span class="hero-eyebrow-dot"></span>
+          <span class="label">Fraunhofer HHI &nbsp;·&nbsp; TU Berlin &nbsp;·&nbsp; HTW Berlin</span>
+        </div>
+        <h1 class="display" style="font-size:clamp(2.8rem,6vw,5.5rem);">In-Ho Baek</h1>
+        <p>Scientist at the Department of Photonic Networks and Systems, Fraunhofer HHI — developing high-capacity THz wireless systems, adaptive DSP, and photonic transmitter components for 6G network integration.</p>
+        <div class="about-hero-actions">
+          <a href="mailto:in-ho.baek@hhi.fraunhofer.de" class="btn btn-primary"><span>Get in Touch &nbsp;&#8594;</span></a>
+          <a href="index.html" class="btn btn-outline"><span>&larr; Home</span></a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- ── Main Content ───────────────────────────────────────────────────────── -->
+<!-- ── Main body ───────────────────────────────────────────────────────── -->
 <section class="section">
   <div class="container">
     <div class="about-body">
 
-      <!-- ── Left: Main content ── -->
+      <!-- Main column -->
       <div class="about-main">
 
-        <!-- Professional Profile -->
+        <!-- Profile -->
         <div class="fade-up">
-          <span class="section-label">Profile</span>
-          <h2 style="font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 1.25rem;">Professional Profile</h2>
-          <p style="margin-bottom: 1rem;">I am a Scientist at the <strong>Fraunhofer Institute for Telecommunications, Heinrich Hertz Institute (HHI)</strong>, Berlin, within the Department of Photonic Networks and Systems, where I have been working since July 2021. In parallel, I am pursuing a <strong>PhD (Dr.-Ing.)</strong> at <strong>Technische Universit&auml;t Berlin (TUB)</strong> under the working title <em>&ldquo;Investigating Adaptive Baseband Techniques for Converged Optical / THz Wireless Links.&rdquo;</em></p>
-          <p style="margin-bottom: 1rem;">My research focuses on high-capacity Terahertz (THz) wireless communications and their integration into next-generation 6G photonic network infrastructures. I develop advanced DSP algorithms for rate-adaptive THz links and conduct experimental characterisation of photonic transmitter components for probabilistically shaped, high-speed THz wireless transmission beyond 100&thinsp;Gbit/s.</p>
-          <p>Alongside my research role, I serve as a University Lecturer at HTW Berlin and BHT Berlin, covering communications engineering and signal processing at Bachelor&rsquo;s and Master&rsquo;s level.</p>
+          <div class="about-section-label">
+            <span class="label">Profile</span>
+          </div>
+          <p style="margin-bottom:1rem; color:var(--text-2); line-height:1.8;">I am a Scientist at the <strong style="color:var(--text-1)">Fraunhofer Institute for Telecommunications, Heinrich Hertz Institute (HHI)</strong>, Berlin, within the Department of Photonic Networks and Systems, where I have been working since July 2021. In parallel, I am pursuing a <strong style="color:var(--text-1)">PhD (Dr.-Ing.)</strong> at <strong style="color:var(--text-1)">Technische Universit&auml;t Berlin (TUB)</strong> under the working title <em>&ldquo;Investigating Adaptive Baseband Techniques for Converged Optical / THz Wireless Links.&rdquo;</em></p>
+          <p style="margin-bottom:1rem; color:var(--text-2); line-height:1.8;">My research focuses on high-capacity Terahertz (THz) wireless communications and their integration into next-generation 6G photonic network infrastructures. I develop advanced DSP algorithms for rate-adaptive THz links and conduct experimental characterisation of photonic transmitter components for probabilistically shaped, high-speed THz wireless transmission beyond 100&thinsp;Gbit/s.</p>
+          <p style="color:var(--text-2); line-height:1.8;">Alongside my research role, I serve as a University Lecturer at HTW Berlin and BHT Berlin, covering communications engineering and signal processing at Bachelor&rsquo;s and Master&rsquo;s level.</p>
         </div>
-
-        <hr />
 
         <!-- Education -->
         <div class="fade-up">
-          <span class="section-label">Education</span>
-          <h2 style="font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 1.5rem;">Academic Background</h2>
+          <div class="about-section-label">
+            <span class="label">Education</span>
+          </div>
           <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-year">2021 &ndash;<br />2026</div>
-              <div class="timeline-content">
-                <h4>PhD &mdash; Electrical Engineering / Information Technology</h4>
-                <p class="org">Technische Universit&auml;t Berlin (TUB)</p>
-                <p>Working title: <em>Investigating Adaptive Baseband Techniques for Converged Optical / THz Wireless Links</em><br />Desired degree: Dr.-Ing.</p>
+            <div class="tl-item">
+              <div class="tl-year">2021 –<br />2026</div>
+              <div class="tl-body">
+                <h4>PhD — Electrical Engineering / IT</h4>
+                <span class="tl-org">Technische Universit&auml;t Berlin (TUB)</span>
+                <p><em>Investigating Adaptive Baseband Techniques for Converged Optical / THz Wireless Links</em> — Desired degree: Dr.-Ing.</p>
               </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-year">2018 &ndash;<br />2021</div>
-              <div class="timeline-content">
-                <h4>M.Sc. &mdash; Electrical Engineering / Information Technology</h4>
-                <p class="org">Karlsruhe Institute of Technology (KIT)</p>
+            <div class="tl-item">
+              <div class="tl-year">2018 –<br />2021</div>
+              <div class="tl-body">
+                <h4>M.Sc. — Electrical Engineering / IT</h4>
+                <span class="tl-org">Karlsruhe Institute of Technology (KIT)</span>
                 <p>Focal points: Communication Engineering &amp; Optical Communications<br />
                 Master Thesis (at IPQ, KIT): <em>Data-Aided Carrier Phase Recovery Algorithms for Coherent Optical Communication Systems</em></p>
               </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-year">2018 &ndash;<br />2019</div>
-              <div class="timeline-content">
-                <h4>Exchange Programme &mdash; Electrical Engineering &amp; Philosophy</h4>
-                <p class="org">Korea Advanced Institute of Science and Technology (KAIST)</p>
-                <p>Courses: Radar Systems Engineering &bull; MIMO Wireless Communications &bull; Philosophy of Science<br />
-                Supported by the <strong>Baden-W&uuml;rttemberg Scholarship 2018</strong></p>
+            <div class="tl-item">
+              <div class="tl-year">2018 –<br />2019</div>
+              <div class="tl-body">
+                <h4>Exchange Programme — EE &amp; Philosophy</h4>
+                <span class="tl-org">Korea Advanced Institute of Science and Technology (KAIST)</span>
+                <p>Radar Systems Engineering &bull; MIMO Wireless Communications &bull; Philosophy of Science<br />
+                Supported by the <strong style="color:var(--text-1)">Baden-W&uuml;rttemberg Scholarship 2018</strong></p>
               </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-year">2014 &ndash;<br />2018</div>
-              <div class="timeline-content">
-                <h4>B.Sc. &mdash; Electrical / Information Engineering</h4>
-                <p class="org">Karlsruhe Institute of Technology (KIT)</p>
+            <div class="tl-item">
+              <div class="tl-year">2014 –<br />2018</div>
+              <div class="tl-body">
+                <h4>B.Sc. — Electrical / Information Engineering</h4>
+                <span class="tl-org">Karlsruhe Institute of Technology (KIT)</span>
                 <p>Bachelor Thesis (at IMS, KIT): <em>Investigation of the Timing Jitter of Superconducting Single Photon Detectors with Varying Meander Shapes</em></p>
               </div>
             </div>
           </div>
         </div>
 
-        <hr />
-
         <!-- Experience -->
         <div class="fade-up">
-          <span class="section-label">Experience</span>
-          <h2 style="font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 1.5rem;">Professional Experience</h2>
+          <div class="about-section-label">
+            <span class="label">Experience</span>
+          </div>
           <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-year">Jul 2021 &ndash;<br />Present</div>
-              <div class="timeline-content">
+            <div class="tl-item">
+              <div class="tl-year">Jul 2021 –<br />Present</div>
+              <div class="tl-body">
                 <h4>Scientist</h4>
-                <p class="org">Fraunhofer Heinrich Hertz Institute (HHI), Berlin</p>
+                <span class="tl-org">Fraunhofer Heinrich Hertz Institute (HHI), Berlin</span>
                 <p>Department of Photonic Networks and Systems</p>
                 <ul>
                   <li>Advanced DSP development for rate-adaptive THz wireless communications</li>
@@ -130,11 +134,11 @@
                 </ul>
               </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-year">Oct 2025 &ndash;<br />Mar 2026</div>
-              <div class="timeline-content">
+            <div class="tl-item">
+              <div class="tl-year">Oct 2025 –<br />Mar 2026</div>
+              <div class="tl-body">
                 <h4>Lecturer</h4>
-                <p class="org">HTW Berlin University of Applied Sciences</p>
+                <span class="tl-org">HTW Berlin University of Applied Sciences</span>
                 <p>B.Sc. Information and Communication Technology</p>
                 <ul>
                   <li>Fundamentals of telecommunications and communication systems</li>
@@ -143,11 +147,11 @@
                 </ul>
               </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-year">Oct 2022 &ndash;<br />Mar 2024</div>
-              <div class="timeline-content">
+            <div class="tl-item">
+              <div class="tl-year">Oct 2022 –<br />Mar 2024</div>
+              <div class="tl-body">
                 <h4>Lecturer</h4>
-                <p class="org">BHT Berlin — Berliner Hochschule f&uuml;r Technik</p>
+                <span class="tl-org">BHT Berlin — Berliner Hochschule f&uuml;r Technik</span>
                 <p>M.Sc. Information and Communication Technology</p>
                 <ul>
                   <li>Advanced communications engineering and system design</li>
@@ -156,150 +160,148 @@
                 </ul>
               </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-year">Oct 2020 &ndash;<br />Apr 2021</div>
-              <div class="timeline-content">
+            <div class="tl-item">
+              <div class="tl-year">Oct 2020 –<br />Apr 2021</div>
+              <div class="tl-body">
                 <h4>Master Thesis Researcher</h4>
-                <p class="org">Institute of Photonics and Quantum Electronics (IPQ), KIT</p>
+                <span class="tl-org">Institute of Photonics and Quantum Electronics (IPQ), KIT</span>
                 <p><em>Data-Aided Carrier Phase Recovery Algorithms for Coherent Optical Communication Systems</em></p>
               </div>
             </div>
           </div>
         </div>
 
-        <hr />
-
         <!-- Publications -->
         <div class="fade-up">
-          <span class="section-label">Publications</span>
-          <h2 style="font-size: clamp(1.6rem, 3vw, 2.2rem); margin-bottom: 1.5rem;">Full Publication List</h2>
+          <div class="about-section-label">
+            <span class="label">Publications</span>
+          </div>
 
-          <h4 style="color: var(--accent); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 1rem;">First Author</h4>
-          <div class="timeline" style="margin-bottom: 2rem;">
-            <div class="timeline-item">
-              <div class="timeline-year" style="color: var(--accent); font-weight: 700;">Accepted</div>
-              <div class="timeline-content">
+          <p class="label" style="color:var(--accent); margin-bottom:1.25rem;">First Author</p>
+          <div class="timeline" style="margin-bottom:2.5rem;">
+            <div class="tl-item">
+              <div class="tl-year" style="color:var(--accent); font-weight:700;">Accepted</div>
+              <div class="tl-body">
                 <h4>Neural-Network Based Transceiver Nonlinearity Mitigation for Probabilistically Shaped Photonic THz Wireless Transmission</h4>
-                <p class="org">IEEE Photonics Technology Letters (PTL)</p>
-                <p><strong>In-Ho Baek</strong>, J. Honecker, M. Bittiehn, R. Elschner, C. Schubert, R. Freund</p>
+                <span class="tl-org">IEEE Photonics Technology Letters (PTL)</span>
+                <p><strong style="color:var(--text-1)">In-Ho Baek</strong>, J. Honecker, M. Bittiehn, R. Elschner, C. Schubert, R. Freund</p>
               </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-year" style="color: var(--accent); font-weight: 700;">Accepted</div>
-              <div class="timeline-content">
+            <div class="tl-item">
+              <div class="tl-year" style="color:var(--accent); font-weight:700;">Accepted</div>
+              <div class="tl-body">
                 <h4>Record 221&thinsp;Gb/s Dual Polarization THz Wireless Transmission Over 500&thinsp;m Using PCS-64QAM at 300&thinsp;GHz</h4>
-                <p class="org">Opto-Electronics and Communications Conference (OECC)</p>
-                <p><strong>In-Ho Baek</strong>, O. Stiewe, R. Elschner, M. R&ouml;sch, A. Tessmann, M. N&ouml;lle, L. Molle, C. Schubert, R. Freund</p>
+                <span class="tl-org">Opto-Electronics and Communications Conference (OECC)</span>
+                <p><strong style="color:var(--text-1)">In-Ho Baek</strong>, O. Stiewe, R. Elschner, M. R&ouml;sch, A. Tessmann, M. N&ouml;lle, L. Molle, C. Schubert, R. Freund</p>
               </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-year">2025</div>
-              <div class="timeline-content">
+            <div class="tl-item">
+              <div class="tl-year">2025</div>
+              <div class="tl-body">
                 <h4>Experimental Characterization of Photodiode Transmitters for Probabilistically Shaped High-Speed THz Wireless Transmission</h4>
-                <p class="org">Journal of Lightwave Technology</p>
-                <p><strong>In-Ho Baek</strong>, O. Stiewe, J. Gl&auml;sel, S. Nellen, G. Schwanke, T. T. Tran, R. Elschner, C. Schubert, R. B. Kohlhaas, P. Runge, M. Schell, R. Freund</p>
+                <span class="tl-org">Journal of Lightwave Technology</span>
+                <p><strong style="color:var(--text-1)">In-Ho Baek</strong>, O. Stiewe, J. Gl&auml;sel, S. Nellen, G. Schwanke, T. T. Tran, R. Elschner, C. Schubert, R. B. Kohlhaas, P. Runge, M. Schell, R. Freund</p>
               </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-year">2024</div>
-              <div class="timeline-content">
+            <div class="tl-item">
+              <div class="tl-year">2024</div>
+              <div class="tl-body">
                 <h4>Experimental Characterization of a WR3-Coupled Photodiode Transmitter for High-Speed Terahertz Wireless Communication</h4>
-                <p class="org">Int. Topical Meeting on Microwave Photonics</p>
-                <p><strong>IH Baek</strong>, O. Stiewe, J. Gl&auml;sel, M. F. Ulukan, A. Schindler, F. Ganzer, T. T. Tran</p>
+                <span class="tl-org">Int. Topical Meeting on Microwave Photonics</span>
+                <p><strong style="color:var(--text-1)">IH Baek</strong>, O. Stiewe, J. Gl&auml;sel, M. F. Ulukan, A. Schindler, F. Ganzer, T. T. Tran</p>
               </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-year">2023</div>
-              <div class="timeline-content">
+            <div class="tl-item">
+              <div class="tl-year">2023</div>
+              <div class="tl-body">
                 <h4>32&thinsp;GBd, 109&thinsp;Gbit/s Probabilistically Shaped THz Wireless Transmission using PIN-PD Based Photonic Upconversion</h4>
-                <p class="org">IET Conference Proceedings CP839</p>
-                <p><strong>IH Baek</strong>, O. Stiewe, S. Nellen, G. Schwanke, R. Elschner, C. Schubert &mdash; pp. 1302&ndash;1305</p>
+                <span class="tl-org">IET Conference Proceedings CP839</span>
+                <p><strong style="color:var(--text-1)">IH Baek</strong>, O. Stiewe, S. Nellen, G. Schwanke, R. Elschner, C. Schubert — pp. 1302–1305</p>
               </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-year">2022</div>
-              <div class="timeline-content">
+            <div class="tl-item">
+              <div class="tl-year">2022</div>
+              <div class="tl-body">
                 <h4>Time Adaptive Probabilistic Shaping for Combined Optical/THz Links</h4>
-                <p class="org">23rd ITG-Symposium Photonic Networks</p>
-                <p><strong>IH Baek</strong>, F. Bart, R. Elschner, F. Meier, D. Hellmann, A. Maassen, C. Schubert &mdash; pp. 1&ndash;8</p>
+                <span class="tl-org">23rd ITG-Symposium Photonic Networks</span>
+                <p><strong style="color:var(--text-1)">IH Baek</strong>, F. Bart, R. Elschner, F. Meier, D. Hellmann, A. Maassen, C. Schubert — pp. 1–8</p>
               </div>
             </div>
           </div>
 
-          <h4 style="color: var(--text-3); font-size: 0.7rem; letter-spacing: 0.18em; text-transform: uppercase; margin-bottom: 1rem;">Co-Author</h4>
+          <p class="label" style="color:var(--text-3); margin-bottom:1.25rem;">Co-Author</p>
           <div class="timeline">
-            <div class="timeline-item">
-              <div class="timeline-year">2025</div>
-              <div class="timeline-content">
+            <div class="tl-item">
+              <div class="tl-year">2025</div>
+              <div class="tl-body">
                 <h4>Analysis of Weather-Related Link Availabilities for Fiber-Integrated THz-Wireless Transmission Systems</h4>
-                <p class="org">Journal of Lightwave Technology</p>
-                <p>R. Elschner, F. Bart, F. Meier, O. Stiewe, <strong>In-Ho Baek</strong>, S. Sch&uuml;tze, A. Maa&szlig;en, K. Das, R. B. Kohlhaas, S. Nellen, M. Deumer, T. Merkle, A. Tessmann, M. R&ouml;sch, C. Schubert, R. Freund, M. Schell</p>
+                <span class="tl-org">Journal of Lightwave Technology</span>
+                <p>R. Elschner, F. Bart, F. Meier, O. Stiewe, <strong style="color:var(--text-1)">In-Ho Baek</strong>, S. Sch&uuml;tze, A. Maa&szlig;en, K. Das, R. B. Kohlhaas, S. Nellen, M. Deumer, T. Merkle, A. Tessmann, M. R&ouml;sch, C. Schubert, R. Freund, M. Schell</p>
               </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-year">2025</div>
-              <div class="timeline-content">
+            <div class="tl-item">
+              <div class="tl-year">2025</div>
+              <div class="tl-body">
                 <h4>High-Capacity THz Wireless Transmission Supporting Future 6G Optical Networks</h4>
-                <p class="org">Optical Fiber Communication Conference (OFC) &mdash; M3D.1</p>
-                <p>C. Schubert, R. Elschner, O. Stiewe, <strong>IH Baek</strong>, S. Sch&uuml;tze, A. Maa&szlig;en, K. Das, R. B. Kohlhaas, S. Nellen, M. Deumer, T. Merkle, A. Tessmann, M. R&ouml;sch, F. Meier, F. Bart, R. Freund, M. Schell</p>
+                <span class="tl-org">Optical Fiber Communication Conference (OFC) — M3D.1</span>
+                <p>C. Schubert, R. Elschner, O. Stiewe, <strong style="color:var(--text-1)">IH Baek</strong>, S. Sch&uuml;tze, A. Maa&szlig;en, K. Das, R. B. Kohlhaas, S. Nellen, M. Deumer, T. Merkle, A. Tessmann, M. R&ouml;sch, F. Meier, F. Bart, R. Freund, M. Schell</p>
               </div>
             </div>
-            <div class="timeline-item">
-              <div class="timeline-year">2022</div>
-              <div class="timeline-content">
+            <div class="tl-item">
+              <div class="tl-year">2022</div>
+              <div class="tl-body">
                 <h4>Experimental Investigation of Information Bit Scrambling for Physical-Layer Security in Coherent Fiber-Optic Systems</h4>
-                <p class="org">23rd ITG-Symposium Photonic Networks</p>
-                <p>C. Schmidt-Langhorst, J. Pfeiffer, R. Elschner, R. Emmerich, F. Chowanek, <strong>IH Baek</strong>, R. F. H. Fischer, C. Schubert &mdash; pp. 1&ndash;6</p>
+                <span class="tl-org">23rd ITG-Symposium Photonic Networks</span>
+                <p>C. Schmidt-Langhorst, J. Pfeiffer, R. Elschner, R. Emmerich, F. Chowanek, <strong style="color:var(--text-1)">IH Baek</strong>, R. F. H. Fischer, C. Schubert — pp. 1–6</p>
               </div>
             </div>
           </div>
 
-          <div class="pub-links" style="margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid var(--border);">
-            <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&hl=en" target="_blank" rel="noopener">
-              <i class="fas fa-graduation-cap"></i> Google Scholar
-            </a>
-            <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">
-              <i class="fas fa-globe"></i> IEEE Xplore
-            </a>
+          <div class="pub-footer" style="margin-top:1.5rem; padding-top:1.5rem; border-top:1px solid var(--border);">
+            <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&hl=en" target="_blank" rel="noopener"><i class="fas fa-graduation-cap"></i> Google Scholar</a>
+            <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener"><i class="fas fa-globe"></i> IEEE Xplore</a>
           </div>
         </div>
 
       </div>
 
-      <!-- ── Right: Sidebar ── -->
+      <!-- Sidebar -->
       <aside class="about-sidebar fade-up delay-2">
         <div class="sidebar-card">
-          <h4>Connect</h4>
-          <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener">
+          <span class="sidebar-card-label">Connect</span>
+          <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener" class="sidebar-link">
             <i class="fab fa-linkedin-in"></i> LinkedIn
           </a>
-          <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&hl=en" target="_blank" rel="noopener">
+          <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&hl=en" target="_blank" rel="noopener" class="sidebar-link">
             <i class="fas fa-graduation-cap"></i> Google Scholar
           </a>
-          <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">
+          <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener" class="sidebar-link">
             <i class="fas fa-globe"></i> IEEE Xplore
           </a>
-          <a href="mailto:in-ho.baek@hhi.fraunhofer.de">
-            <i class="fas fa-envelope"></i> Email
+          <a href="mailto:in-ho.baek@hhi.fraunhofer.de" class="sidebar-link">
+            <i class="fas fa-envelope"></i> in-ho.baek@hhi.fraunhofer.de
           </a>
         </div>
 
         <div class="sidebar-card">
-          <h4>Affiliation</h4>
-          <a href="https://www.hhi.fraunhofer.de" target="_blank" rel="noopener">
+          <span class="sidebar-card-label">Affiliations</span>
+          <a href="https://www.hhi.fraunhofer.de" target="_blank" rel="noopener" class="sidebar-link">
             <i class="fas fa-building"></i> Fraunhofer HHI
           </a>
-          <a href="https://www.tu.berlin" target="_blank" rel="noopener">
-            <i class="fas fa-university"></i> TU Berlin
+          <a href="https://www.tu.berlin" target="_blank" rel="noopener" class="sidebar-link">
+            <i class="fas fa-university"></i> TU Berlin — PhD
           </a>
-          <a href="https://www.htw-berlin.de" target="_blank" rel="noopener">
+          <a href="https://www.htw-berlin.de" target="_blank" rel="noopener" class="sidebar-link">
             <i class="fas fa-chalkboard-teacher"></i> HTW Berlin
+          </a>
+          <a href="https://www.bht-berlin.de" target="_blank" rel="noopener" class="sidebar-link">
+            <i class="fas fa-chalkboard-teacher"></i> BHT Berlin
           </a>
         </div>
 
         <div class="sidebar-card">
-          <h4>Research Focus</h4>
-          <div class="pill-row" style="flex-direction: column; gap: 0.45rem;">
+          <span class="sidebar-card-label">Research Focus</span>
+          <div class="pill-row" style="flex-direction:column; gap:0.4rem;">
             <span class="pill">THz Wireless (300 GHz)</span>
             <span class="pill">Probabilistic Shaping</span>
             <span class="pill">Photonic Upconversion</span>
@@ -309,19 +311,19 @@
         </div>
 
         <div class="sidebar-card">
-          <h4>Languages</h4>
-          <div style="display: flex; flex-direction: column; gap: 0.5rem; padding-top: 0.25rem;">
-            <div style="font-size: 0.85rem;">
-              <span style="color: var(--text-1); font-weight: 500;">German</span>
-              <span style="color: var(--text-3); font-size: 0.75rem; margin-left: 0.5rem;">Native</span>
+          <span class="sidebar-card-label">Languages</span>
+          <div style="display:flex; flex-direction:column; gap:0.6rem; padding-top:0.2rem;">
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.85rem; color:var(--text-1); font-weight:500;">German</span>
+              <span style="font-size:0.72rem; color:var(--text-3);">Native</span>
             </div>
-            <div style="font-size: 0.85rem;">
-              <span style="color: var(--text-1); font-weight: 500;">Korean</span>
-              <span style="color: var(--text-3); font-size: 0.75rem; margin-left: 0.5rem;">Native</span>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.85rem; color:var(--text-1); font-weight:500;">Korean</span>
+              <span style="font-size:0.72rem; color:var(--text-3);">Native</span>
             </div>
-            <div style="font-size: 0.85rem;">
-              <span style="color: var(--text-1); font-weight: 500;">English</span>
-              <span style="color: var(--text-3); font-size: 0.75rem; margin-left: 0.5rem;">Fluent</span>
+            <div style="display:flex; justify-content:space-between; align-items:center;">
+              <span style="font-size:0.85rem; color:var(--text-1); font-weight:500;">English</span>
+              <span style="font-size:0.72rem; color:var(--text-3);">Fluent</span>
             </div>
           </div>
         </div>
@@ -331,17 +333,18 @@
   </div>
 </section>
 
-<!-- ── Footer ─────────────────────────────────────────────────────────────── -->
+<!-- ── Footer ──────────────────────────────────────────────────────────── -->
 <footer class="site-footer">
   <div class="container">
-    <div class="footer-inner">
+    <div class="footer-top">
       <span class="footer-copy">&copy; In-Ho Baek 2026 &mdash; Berlin, Germany</span>
-      <div class="social-icons" style="margin-top: 0;">
+      <div class="social-icons" style="margin-top:0;">
         <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener" class="social-icon"><i class="fab fa-linkedin-in"></i></a>
         <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&hl=en" target="_blank" rel="noopener" class="social-icon"><i class="fas fa-graduation-cap"></i></a>
         <a href="mailto:in-ho.baek@hhi.fraunhofer.de" class="social-icon"><i class="fas fa-envelope"></i></a>
       </div>
     </div>
+    <a href="index.html" class="footer-wordmark" aria-hidden="true">IN&thinsp;HO&thinsp;BAEK</a>
   </div>
 </footer>
 

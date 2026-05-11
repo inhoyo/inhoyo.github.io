@@ -1,65 +1,46 @@
-/* ── Nav scroll effect ───────────────────────────────────────────────────── */
+/* ── Nav scroll ──────────────────────────────────────────────────────────── */
 const nav = document.querySelector('.site-nav');
 if (nav) {
-  const onScroll = () => {
-    nav.classList.toggle('scrolled', window.scrollY > 40);
-  };
-  window.addEventListener('scroll', onScroll, { passive: true });
-  onScroll();
+  const tick = () => nav.classList.toggle('scrolled', window.scrollY > 40);
+  window.addEventListener('scroll', tick, { passive: true });
+  tick();
 }
 
 /* ── Mobile menu ─────────────────────────────────────────────────────────── */
-const hamburger = document.querySelector('.nav-hamburger');
+const burger = document.querySelector('.nav-hamburger');
 const mobileMenu = document.querySelector('.mobile-menu');
-if (hamburger && mobileMenu) {
-  const toggleMenu = () => {
-    const open = hamburger.classList.toggle('open');
+if (burger && mobileMenu) {
+  burger.addEventListener('click', () => {
+    const open = burger.classList.toggle('open');
     mobileMenu.classList.toggle('open', open);
     document.body.style.overflow = open ? 'hidden' : '';
-  };
-  hamburger.addEventListener('click', toggleMenu);
+  });
   mobileMenu.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
-    hamburger.classList.remove('open');
+    burger.classList.remove('open');
     mobileMenu.classList.remove('open');
     document.body.style.overflow = '';
   }));
 }
 
-/* ── Intersection Observer — fade-up on scroll ───────────────────────────── */
-const fadeEls = document.querySelectorAll('.fade-up');
-if (fadeEls.length) {
-  const observer = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('visible');
-          observer.unobserve(entry.target);
-        }
-      });
-    },
-    { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-  );
-  fadeEls.forEach(el => observer.observe(el));
+/* ── Marquee — duplicate inner content for seamless loop ─────────────────── */
+const track = document.getElementById('marqueeTrack');
+if (track) {
+  track.innerHTML += track.innerHTML;
 }
 
-/* ── Active nav link on scroll ───────────────────────────────────────────── */
-const sections = document.querySelectorAll('section[id]');
-const navAnchors = document.querySelectorAll('.nav-links a[href^="#"], .mobile-menu a[href^="#"]');
-if (sections.length && navAnchors.length) {
-  const sectionObserver = new IntersectionObserver(
-    entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          navAnchors.forEach(a => {
-            a.style.color = '';
-            if (a.getAttribute('href') === `#${entry.target.id}`) {
-              a.style.color = 'var(--text-1)';
-            }
-          });
-        }
-      });
-    },
-    { threshold: 0.3 }
+/* ── Intersection Observer — fade-up ─────────────────────────────────────── */
+const fadeEls = document.querySelectorAll('.fade-up');
+if (fadeEls.length) {
+  const io = new IntersectionObserver(
+    entries => entries.forEach(e => {
+      if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+    }),
+    { threshold: 0.1, rootMargin: '0px 0px -40px 0px' }
   );
-  sections.forEach(s => sectionObserver.observe(s));
+  fadeEls.forEach(el => io.observe(el));
+}
+
+/* ── About page: nav always scrolled ────────────────────────────────────── */
+if (nav && document.body.dataset.page === 'about') {
+  nav.classList.add('scrolled');
 }
