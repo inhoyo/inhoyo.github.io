@@ -173,7 +173,7 @@ const TRANSLATIONS = {
     'about.lang.li3':   '<strong>English</strong> &mdash; Fluent (spoken and written)',
 
     'about.contact.title': 'Contact',
-    'about.contact.body':  'Fraunhofer Institute for Telecommunications &mdash; Heinrich Hertz Institute (HHI)<br />Department of Photonic Networks and Systems, Berlin, Germany<br /><br />Email: <a href="mailto:in-ho.baek@hhi.fraunhofer.de">in-ho.baek@hhi.fraunhofer.de</a><br />LinkedIn: <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener">linkedin.com/in/in-ho-baek</a><br />Google Scholar: <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar Profile</a><br />IEEE Xplore: <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE Author Profile</a>',
+    'about.contact.body':  'Fraunhofer Institute for Telecommunications &mdash; Heinrich Hertz Institute (HHI)<br />Department of Photonic Networks and Systems, Berlin, Germany<br /><br />Email: <a href="mailto:in-ho.baek@proton.me">in-ho.baek@proton.me</a><br />LinkedIn: <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener">linkedin.com/in/in-ho-baek</a><br />Google Scholar: <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar Profile</a><br />IEEE Xplore: <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE Author Profile</a>',
 
     /* ── Redesigned page sections ─────────────────────── */
     'hero.eyebrow':         'Scientist &nbsp;·&nbsp; PhD Candidate &nbsp;·&nbsp; University Lecturer',
@@ -324,7 +324,7 @@ const TRANSLATIONS = {
     'about.lang.li3':   '<strong>Englisch</strong> &mdash; Fließend (mündlich und schriftlich)',
 
     'about.contact.title': 'Kontakt',
-    'about.contact.body':  'Fraunhofer-Institut für Nachrichtentechnik &mdash; Heinrich-Hertz-Institut (HHI)<br />Abteilung Photonische Netze und Systeme, Berlin, Deutschland<br /><br />E-Mail: <a href="mailto:in-ho.baek@hhi.fraunhofer.de">in-ho.baek@hhi.fraunhofer.de</a><br />LinkedIn: <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener">linkedin.com/in/in-ho-baek</a><br />Google Scholar: <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar-Profil</a><br />IEEE Xplore: <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE-Autorenprofil</a>',
+    'about.contact.body':  'Fraunhofer-Institut für Nachrichtentechnik &mdash; Heinrich-Hertz-Institut (HHI)<br />Abteilung Photonische Netze und Systeme, Berlin, Deutschland<br /><br />E-Mail: <a href="mailto:in-ho.baek@proton.me">in-ho.baek@proton.me</a><br />LinkedIn: <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener">linkedin.com/in/in-ho-baek</a><br />Google Scholar: <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar-Profil</a><br />IEEE Xplore: <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE-Autorenprofil</a>',
 
     'hero.eyebrow':         'Wissenschaftler &nbsp;·&nbsp; Doktorand &nbsp;·&nbsp; Lehrbeauftragter',
     'hero.headline':        'Fortschritte in <span class="accent-text">6G Photonik</span><br>Netzwerken &amp;<br>THz-Kommunikation',
@@ -474,7 +474,7 @@ const TRANSLATIONS = {
     'about.lang.li3':   '<strong>영어</strong> &mdash; 유창 (말하기 및 쓰기)',
 
     'about.contact.title': '연락처',
-    'about.contact.body':  '프라운호퍼 통신 연구소 &mdash; 하인리히 헤르츠 연구소 (HHI)<br />광자 네트워크 및 시스템 부서, 베를린, 독일<br /><br />이메일: <a href="mailto:in-ho.baek@hhi.fraunhofer.de">in-ho.baek@hhi.fraunhofer.de</a><br />LinkedIn: <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener">linkedin.com/in/in-ho-baek</a><br />Google Scholar: <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar 프로필</a><br />IEEE Xplore: <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE 저자 프로필</a>',
+    'about.contact.body':  '프라운호퍼 통신 연구소 &mdash; 하인리히 헤르츠 연구소 (HHI)<br />광자 네트워크 및 시스템 부서, 베를린, 독일<br /><br />이메일: <a href="mailto:in-ho.baek@proton.me">in-ho.baek@proton.me</a><br />LinkedIn: <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener">linkedin.com/in/in-ho-baek</a><br />Google Scholar: <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar 프로필</a><br />IEEE Xplore: <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE 저자 프로필</a>',
 
     'hero.eyebrow':         '연구원 &nbsp;·&nbsp; 박사 과정생 &nbsp;·&nbsp; 대학 강사',
     'hero.headline':        '<span class="accent-text">6G 포토닉</span> 네트워크와<br>THz 무선 통신의<br>발전을 선도하다',
