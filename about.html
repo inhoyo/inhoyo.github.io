@@ -15,10 +15,10 @@
 <nav class="site-nav scrolled">
   <a href="index.html" class="nav-brand">In-Ho Baek</a>
   <ul class="nav-links">
-    <li><a href="index.html#research">Research</a></li>
-    <li><a href="index.html#publications">Publications</a></li>
-    <li><a href="about.html">About</a></li>
-    <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+    <li><a href="index.html#research"     data-i18n="nav.research">Research</a></li>
+    <li><a href="index.html#publications" data-i18n="nav.publications">Publications</a></li>
+    <li><a href="about.html"              data-i18n="nav.about">About</a></li>
+    <li><a href="index.html#contact" class="nav-cta" data-i18n="nav.contact">Contact</a></li>
   </ul>
   <button class="nav-hamburger" aria-label="Toggle menu">
     <span></span><span></span><span></span>
@@ -26,10 +26,10 @@
 </nav>
 
 <div class="mobile-menu">
-  <a href="index.html#research">Research</a>
-  <a href="index.html#publications">Publications</a>
-  <a href="about.html">About</a>
-  <a href="index.html#contact">Contact</a>
+  <a href="index.html#research"     data-i18n="nav.research">Research</a>
+  <a href="index.html#publications" data-i18n="nav.publications">Publications</a>
+  <a href="about.html"              data-i18n="nav.about">About</a>
+  <a href="index.html#contact"      data-i18n="nav.contact">Contact</a>
 </div>
 
 <!-- ── About Hero ─────────────────────────────────────────────────────── -->
@@ -40,12 +40,12 @@
       <div class="about-hero-text">
         <div class="hero-eyebrow" style="margin-bottom:1rem;">
           <span class="hero-eyebrow-dot"></span>
-          <span class="label">Fraunhofer HHI &nbsp;·&nbsp; TU Berlin &nbsp;·&nbsp; HTW Berlin</span>
+          <span class="label" data-i18n-html="about.page.hero.eyebrow">Fraunhofer HHI &nbsp;·&nbsp; TU Berlin &nbsp;·&nbsp; HTW Berlin</span>
         </div>
         <h1 class="display" style="font-size:clamp(2.8rem,6vw,5.5rem);">In-Ho Baek</h1>
-        <p>Scientist at the Department of Photonic Networks and Systems, Fraunhofer HHI — developing high-capacity THz wireless systems, adaptive DSP, and photonic transmitter components for 6G network integration.</p>
+        <p data-i18n-html="about.page.desc">Scientist at the Department of Photonic Networks and Systems, Fraunhofer HHI — developing high-capacity THz wireless systems, adaptive DSP, and photonic transmitter components for 6G network integration.</p>
         <div class="about-hero-actions">
-          <a href="mailto:in-ho.baek@hhi.fraunhofer.de" class="btn btn-primary"><span>Get in Touch &nbsp;&#8594;</span></a>
+          <a href="mailto:in-ho.baek@hhi.fraunhofer.de" class="btn btn-primary"><span data-i18n="contact.title">Get in Touch</span> &nbsp;&#8594;</a>
           <a href="index.html" class="btn btn-outline"><span>&larr; Home</span></a>
         </div>
       </div>
@@ -64,7 +64,7 @@
         <!-- Profile -->
         <div class="fade-up">
           <div class="about-section-label">
-            <span class="label">Profile</span>
+            <span class="label" data-i18n="about.page.profile.label">Profile</span>
           </div>
           <p style="margin-bottom:1rem; color:var(--text-2); line-height:1.8;">I am a Scientist at the <strong style="color:var(--text-1)">Fraunhofer Institute for Telecommunications, Heinrich Hertz Institute (HHI)</strong>, Berlin, within the Department of Photonic Networks and Systems, where I have been working since July 2021. In parallel, I am pursuing a <strong style="color:var(--text-1)">PhD (Dr.-Ing.)</strong> at <strong style="color:var(--text-1)">Technische Universit&auml;t Berlin (TUB)</strong> under the working title <em>&ldquo;Investigating Adaptive Baseband Techniques for Converged Optical / THz Wireless Links.&rdquo;</em></p>
           <p style="margin-bottom:1rem; color:var(--text-2); line-height:1.8;">My research focuses on high-capacity Terahertz (THz) wireless communications and their integration into next-generation 6G photonic network infrastructures. I develop advanced DSP algorithms for rate-adaptive THz links and conduct experimental characterisation of photonic transmitter components for probabilistically shaped, high-speed THz wireless transmission beyond 100&thinsp;Gbit/s.</p>
@@ -74,7 +74,7 @@
         <!-- Education -->
         <div class="fade-up">
           <div class="about-section-label">
-            <span class="label">Education</span>
+            <span class="label" data-i18n="about.page.edu.label">Education</span>
           </div>
           <div class="timeline">
             <div class="tl-item">
@@ -117,7 +117,7 @@
         <!-- Experience -->
         <div class="fade-up">
           <div class="about-section-label">
-            <span class="label">Experience</span>
+            <span class="label" data-i18n="about.page.exp.label">Experience</span>
           </div>
           <div class="timeline">
             <div class="tl-item">
@@ -174,7 +174,7 @@
         <!-- Publications -->
         <div class="fade-up">
           <div class="about-section-label">
-            <span class="label">Publications</span>
+            <span class="label" data-i18n="about.page.pub.label">Publications</span>
           </div>
 
           <p class="label" style="color:var(--accent); margin-bottom:1.25rem;">First Author</p>
@@ -268,7 +268,7 @@
       <!-- Sidebar -->
       <aside class="about-sidebar fade-up delay-2">
         <div class="sidebar-card">
-          <span class="sidebar-card-label">Connect</span>
+          <span class="sidebar-card-label" data-i18n="about.page.connect">Connect</span>
           <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener" class="sidebar-link">
             <i class="fab fa-linkedin-in"></i> LinkedIn
           </a>
@@ -284,7 +284,7 @@
         </div>
 
         <div class="sidebar-card">
-          <span class="sidebar-card-label">Affiliations</span>
+          <span class="sidebar-card-label" data-i18n="about.page.affils">Affiliations</span>
           <a href="https://www.hhi.fraunhofer.de" target="_blank" rel="noopener" class="sidebar-link">
             <i class="fas fa-building"></i> Fraunhofer HHI
           </a>
@@ -300,7 +300,7 @@
         </div>
 
         <div class="sidebar-card">
-          <span class="sidebar-card-label">Research Focus</span>
+          <span class="sidebar-card-label" data-i18n="about.page.focus">Research Focus</span>
           <div class="pill-row" style="flex-direction:column; gap:0.4rem;">
             <span class="pill">THz Wireless (300 GHz)</span>
             <span class="pill">Probabilistic Shaping</span>
@@ -349,5 +349,6 @@
 </footer>
 
 <script src="assets/js/app.js"></script>
+<script src="assets/js/i18n.js"></script>
 </body>
 </html>

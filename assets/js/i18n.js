@@ -9,41 +9,42 @@
   s.textContent = `
     #lang-switcher {
       position: fixed;
-      bottom: 1.6em;
-      right: 1.6em;
+      bottom: 1.5em;
+      right: 1.5em;
       z-index: 10000;
       display: flex;
-      gap: 3px;
-      background: rgba(20,20,30,0.72);
-      padding: 5px 6px;
+      gap: 2px;
+      background: rgba(12,10,9,0.88);
+      padding: 4px 5px;
       border-radius: 8px;
-      backdrop-filter: blur(6px);
-      box-shadow: 0 2px 10px rgba(0,0,0,0.35);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border: 1px solid rgba(61,58,53,0.7);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.5);
     }
     .lang-btn {
       background: transparent;
-      color: rgba(255,255,255,0.65);
-      border: 1px solid rgba(255,255,255,0.2);
-      padding: 5px 11px;
-      font-size: 0.72em;
+      color: rgba(237,232,227,0.38);
+      border: 1px solid transparent;
+      padding: 5px 10px;
+      font-size: 0.65em;
       font-family: inherit;
       cursor: pointer;
       border-radius: 5px;
       text-transform: uppercase;
-      letter-spacing: 0.07em;
-      transition: background 0.18s, color 0.18s, border-color 0.18s;
+      letter-spacing: 0.12em;
+      transition: all 0.18s ease;
       line-height: 1;
     }
     .lang-btn:hover {
-      background: rgba(255,255,255,0.12);
-      color: #fff;
-      border-color: rgba(255,255,255,0.45);
+      color: rgba(237,232,227,0.85);
+      background: rgba(61,58,53,0.45);
     }
     .lang-btn.active {
-      background: rgba(255,255,255,0.22);
-      color: #fff;
-      border-color: rgba(255,255,255,0.55);
-      font-weight: 700;
+      background: rgba(79,195,247,0.12);
+      color: #4FC3F7;
+      border-color: rgba(79,195,247,0.28);
+      font-weight: 600;
     }
   `;
   document.head.appendChild(s);
@@ -171,6 +172,42 @@ const TRANSLATIONS = {
 
     'about.contact.title': 'Contact',
     'about.contact.body':  'Fraunhofer Institute for Telecommunications &mdash; Heinrich Hertz Institute (HHI)<br />Department of Photonic Networks and Systems, Berlin, Germany<br /><br />Email: <a href="mailto:in-ho.baek@hhi.fraunhofer.de">in-ho.baek@hhi.fraunhofer.de</a><br />LinkedIn: <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener">linkedin.com/in/in-ho-baek</a><br />Google Scholar: <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar Profile</a><br />IEEE Xplore: <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE Author Profile</a>',
+
+    /* ── Redesigned page sections ─────────────────────── */
+    'hero.eyebrow':         'Scientist &nbsp;·&nbsp; PhD Candidate &nbsp;·&nbsp; University Lecturer',
+    'hero.headline':        'Advancing <span class="accent-text">6G Photonic</span><br>Networks &amp;<br>THz Wireless',
+    'hero.desc':            'Fraunhofer Heinrich Hertz Institute, Berlin &mdash; designing experimental THz systems and adaptive DSP that push wireless beyond 100&thinsp;Gbit/s at 300&thinsp;GHz.',
+    'hero.btn.collab':      'Let\'s Collaborate',
+    'hero.btn.research':    'View Research',
+    'affils.label':         'Affiliated with',
+    'sec.01.label':         '01 &mdash; Research',
+    'sec.01.title':         'Areas of Focus',
+    'sec.01.desc':          'My work spans the full THz signal chain &mdash; from photonic upconversion and probabilistic shaping to converged optical/wireless 6G architectures.',
+    'sec.02.label':         '02 &mdash; Publications',
+    'sec.02.title':         'Research Output',
+    'sec.02.desc':          'First-author papers highlighted. Full list on Google Scholar and IEEE Xplore.',
+    'sec.03.label':         '03 &mdash; Expertise',
+    'sec.03.title':         'Technical Skills',
+    'sec.04.label':         '04 &mdash; Contact',
+    'contact.statement':    'Let\'s build<br><span class="accent-text">the future</span><br>of wireless.',
+    'contact.btn.email':    'Send an Email',
+    'contact.btn.about':    'About Me',
+    'skills.research':      'Research Areas',
+    'skills.tech':          'Technologies',
+    'skills.tools':         'Tools &amp; Methods',
+    'skills.lang':          'Languages',
+    'footer.tagline':       'THz Communications &amp; Photonic Networks',
+    'pub.first.label':      'First Author',
+    'pub.co.label':         'Co-Author',
+    'about.page.hero.eyebrow': 'Fraunhofer HHI &nbsp;·&nbsp; TU Berlin &nbsp;·&nbsp; HTW Berlin',
+    'about.page.desc':         'Scientist at the Department of Photonic Networks and Systems, Fraunhofer HHI &mdash; developing high-capacity THz wireless systems, adaptive DSP, and photonic transmitter components for 6G network integration.',
+    'about.page.profile.label':'Profile',
+    'about.page.edu.label':    'Education',
+    'about.page.exp.label':    'Experience',
+    'about.page.pub.label':    'Publications',
+    'about.page.connect':      'Connect',
+    'about.page.affils':       'Affiliations',
+    'about.page.focus':        'Research Focus',
   },
 
   /* ── GERMAN ──────────────────────────────────────────────────────────── */
@@ -284,6 +321,41 @@ const TRANSLATIONS = {
 
     'about.contact.title': 'Kontakt',
     'about.contact.body':  'Fraunhofer-Institut für Nachrichtentechnik &mdash; Heinrich-Hertz-Institut (HHI)<br />Abteilung Photonische Netze und Systeme, Berlin, Deutschland<br /><br />E-Mail: <a href="mailto:in-ho.baek@hhi.fraunhofer.de">in-ho.baek@hhi.fraunhofer.de</a><br />LinkedIn: <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener">linkedin.com/in/in-ho-baek</a><br />Google Scholar: <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar-Profil</a><br />IEEE Xplore: <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE-Autorenprofil</a>',
+
+    'hero.eyebrow':         'Wissenschaftler &nbsp;·&nbsp; Doktorand &nbsp;·&nbsp; Lehrbeauftragter',
+    'hero.headline':        'Fortschritte in <span class="accent-text">6G Photonik</span><br>Netzwerken &amp;<br>THz-Kommunikation',
+    'hero.desc':            'Fraunhofer Heinrich-Hertz-Institut, Berlin &mdash; experimentelle THz-Systeme und adaptive DSP für Datenraten über 100&thinsp;Gbit/s bei 300&thinsp;GHz.',
+    'hero.btn.collab':      'Zusammenarbeiten',
+    'hero.btn.research':    'Forschung ansehen',
+    'affils.label':         'Zugeh&ouml;rigkeiten',
+    'sec.01.label':         '01 &mdash; Forschung',
+    'sec.01.title':         'Forschungsgebiete',
+    'sec.01.desc':          'Meine Arbeit umfasst die gesamte THz-Signalkette &mdash; von der photonischen Aufwärtskonvertierung und PCS bis zu konvergierten optischen/THz-6G-Architekturen.',
+    'sec.02.label':         '02 &mdash; Publikationen',
+    'sec.02.title':         'Forschungsoutput',
+    'sec.02.desc':          'Erstautor-Publikationen hervorgehoben. Vollständige Liste auf Google Scholar und IEEE Xplore.',
+    'sec.03.label':         '03 &mdash; Kompetenzen',
+    'sec.03.title':         'Technische F&auml;higkeiten',
+    'sec.04.label':         '04 &mdash; Kontakt',
+    'contact.statement':    'Lass uns <span class="accent-text">die Zukunft</span><br>des Funks gestalten.',
+    'contact.btn.email':    'E-Mail senden',
+    'contact.btn.about':    '&Uuml;ber mich',
+    'skills.research':      'Forschungsgebiete',
+    'skills.tech':          'Technologien',
+    'skills.tools':         'Werkzeuge &amp; Methoden',
+    'skills.lang':          'Sprachen',
+    'footer.tagline':       'THz-Kommunikation &amp; Photonische Netzwerke',
+    'pub.first.label':      'Erstautor',
+    'pub.co.label':         'Mitautor',
+    'about.page.hero.eyebrow': 'Fraunhofer HHI &nbsp;·&nbsp; TU Berlin &nbsp;·&nbsp; HTW Berlin',
+    'about.page.desc':         'Wissenschaftler in der Abteilung Photonische Netze und Systeme, Fraunhofer HHI &mdash; Entwicklung hochkapazitiver THz-Systeme, adaptiver DSP und photonischer Sendebaugruppen für 6G-Netzwerkintegration.',
+    'about.page.profile.label':'Profil',
+    'about.page.edu.label':    'Ausbildung',
+    'about.page.exp.label':    'Erfahrung',
+    'about.page.pub.label':    'Publikationen',
+    'about.page.connect':      'Kontakt',
+    'about.page.affils':       'Zugeh&ouml;rigkeiten',
+    'about.page.focus':        'Forschungsschwerpunkte',
   },
 
   /* ── KOREAN ──────────────────────────────────────────────────────────── */
@@ -397,6 +469,41 @@ const TRANSLATIONS = {
 
     'about.contact.title': '연락처',
     'about.contact.body':  '프라운호퍼 통신 연구소 &mdash; 하인리히 헤르츠 연구소 (HHI)<br />광자 네트워크 및 시스템 부서, 베를린, 독일<br /><br />이메일: <a href="mailto:in-ho.baek@hhi.fraunhofer.de">in-ho.baek@hhi.fraunhofer.de</a><br />LinkedIn: <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener">linkedin.com/in/in-ho-baek</a><br />Google Scholar: <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar 프로필</a><br />IEEE Xplore: <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE 저자 프로필</a>',
+
+    'hero.eyebrow':         '연구원 &nbsp;·&nbsp; 박사 과정생 &nbsp;·&nbsp; 대학 강사',
+    'hero.headline':        '<span class="accent-text">6G 포토닉</span> 네트워크와<br>THz 무선 통신의<br>발전을 선도하다',
+    'hero.desc':            '프라운호퍼 하인리히 헤르츠 연구소, 베를린 &mdash; 300&thinsp;GHz에서 100&thinsp;Gbit/s를 초과하는 실험적 THz 시스템과 적응형 DSP를 개발합니다.',
+    'hero.btn.collab':      '협력 문의',
+    'hero.btn.research':    '연구 보기',
+    'affils.label':         '소속',
+    'sec.01.label':         '01 &mdash; 연구',
+    'sec.01.title':         '연구 분야',
+    'sec.01.desc':          '제 연구는 광자 업변환과 확률적 성상 형성부터 통합 광학/THz 6G 아키텍처까지 전체 THz 신호 체인을 아우릅니다.',
+    'sec.02.label':         '02 &mdash; 논문',
+    'sec.02.title':         '연구 성과',
+    'sec.02.desc':          '제1저자 논문 강조 표시. 전체 목록은 Google Scholar 및 IEEE Xplore에서 확인하세요.',
+    'sec.03.label':         '03 &mdash; 전문성',
+    'sec.03.title':         '기술 역량',
+    'sec.04.label':         '04 &mdash; 연락처',
+    'contact.statement':    '<span class="accent-text">무선의 미래</span>를<br>함께 만들어 갑시다.',
+    'contact.btn.email':    '이메일 보내기',
+    'contact.btn.about':    '소개 보기',
+    'skills.research':      '연구 분야',
+    'skills.tech':          '기술',
+    'skills.tools':         '도구 &amp; 방법',
+    'skills.lang':          '언어',
+    'footer.tagline':       'THz 통신 &amp; 포토닉 네트워크',
+    'pub.first.label':      '제1저자',
+    'pub.co.label':         '공동 저자',
+    'about.page.hero.eyebrow': '프라운호퍼 HHI &nbsp;·&nbsp; TU 베를린 &nbsp;·&nbsp; HTW 베를린',
+    'about.page.desc':         '광자 네트워크 및 시스템 부서 연구원, 프라운호퍼 HHI &mdash; 6G 네트워크 통합을 위한 고용량 THz 무선 시스템, 적응형 DSP 및 광자 송신기 부품 개발.',
+    'about.page.profile.label':'전문 프로필',
+    'about.page.edu.label':    '학력',
+    'about.page.exp.label':    '경력',
+    'about.page.pub.label':    '논문',
+    'about.page.connect':      '연락처',
+    'about.page.affils':       '소속',
+    'about.page.focus':        '연구 중점 분야',
   },
 };
 
