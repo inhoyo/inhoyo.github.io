@@ -416,8 +416,55 @@ em { font-style: italic; }
 /* ── Affiliations logos ───────────────────────────────────────────────────── */
 .affils-section {
   padding: clamp(3rem,6vw,5rem) 0;
-  border-bottom:1px solid var(--border);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  /* Lighter warm surface so logos have contrast against the page bg */
+  background: #1A1816;
+  position: relative;
+  overflow: hidden;
 }
+
+/* Subtle dot-grid texture for futuristic feel */
+.affils-section::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle, rgba(255,255,255,0.045) 1px, transparent 1px);
+  background-size: 28px 28px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Moving light band — sweeps left→right on a loop */
+.affils-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -65%;
+  width: 55%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(79,195,247,0.04) 25%,
+    rgba(255,255,255,0.07) 50%,
+    rgba(79,195,247,0.04) 75%,
+    transparent 100%
+  );
+  animation: affil-band 7s ease-in-out infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+@keyframes affil-band {
+  0%   { left: -65%; }
+  60%  { left: 115%; }
+  100% { left: 115%; }
+}
+
+/* Ensure content sits above overlays */
+.affils-header,
+.logo-row { position: relative; z-index: 2; }
+
 .affils-header {
   display:flex;
   align-items:center;
@@ -439,13 +486,17 @@ em { font-style: italic; }
 .logo-row a {
   display:flex;
   align-items:center;
-  opacity:0.32;
-  /* grayscale → invert makes any dark/colored logo appear as white */
-  filter: grayscale(1) invert(1) brightness(0.88);
-  transition: opacity 0.3s ease, filter 0.3s ease;
+  /* grayscale → invert: any dark SVG becomes white regardless of original color */
+  filter: grayscale(1) invert(1) brightness(0.92);
+  opacity: 0.62;
+  transition: opacity 0.3s ease, filter 0.35s ease, transform 0.3s ease;
 }
-.logo-row a:hover { opacity:0.85; filter: grayscale(0.3) invert(1) brightness(1); }
-.logo-row img { height:28px; width:auto; }
+.logo-row a:hover {
+  opacity: 1;
+  filter: grayscale(0.2) invert(1) brightness(1.05);
+  transform: translateY(-2px);
+}
+.logo-row img { height:30px; width:auto; }
 
 /* ── Research ────────────────────────────────────────────────────────────── */
 .section-head {
