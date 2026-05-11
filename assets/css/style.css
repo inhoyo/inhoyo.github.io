@@ -295,10 +295,23 @@ em { font-style: italic; }
   background:var(--accent);
   flex-shrink:0;
 }
-.hero-headline {
-  font-size: clamp(3rem,7.5vw,7rem);
-  margin-bottom: clamp(1.5rem,3vw,2.5rem);
+.hero-name {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(4rem,10vw,9.5rem);
+  line-height: 0.9;
+  letter-spacing: -0.035em;
+  color: var(--text-1);
+  margin-bottom: clamp(1.25rem,2.5vw,2rem);
 }
+.hero-headline {
+  font-size: clamp(1rem,2.2vw,1.55rem);
+  margin-bottom: clamp(1.5rem,3vw,2.5rem);
+  color: var(--text-2);
+  line-height: 1.4;
+  letter-spacing: -0.01em;
+}
+.hero-headline .accent-text { color: var(--accent); }
 .hero-headline .line { display:block; }
 .hero-meta {
   display:flex;
