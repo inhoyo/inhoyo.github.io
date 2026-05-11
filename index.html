@@ -1,447 +1,343 @@
-<!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<title>In-Ho Baek | THz &amp; Photonic Networks Researcher</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<meta name="description" content="Personal academic website of In-Ho Baek, Scientist at Fraunhofer HHI, PhD candidate at TU Berlin, and University Lecturer — specialising in Terahertz wireless communications and photonic networks for 6G." />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-		<style>
-			/* Affiliations logo bar */
-			#affiliations .logo-bar {
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-				align-items: center;
-				gap: 2.8em;
-				margin-top: 1.4em;
-			}
-			#affiliations .logo-bar a {
-				display: inline-block;
-				opacity: 0.80;
-				transition: opacity 0.2s ease;
-			}
-			#affiliations .logo-bar a:hover { opacity: 1; }
-			#affiliations .logo-bar img {
-				height: 44px;
-				width: auto;
-				display: block;
-			}
-			/* Banner three-column layout: video | text | video */
-			#banner > .inner {
-				width: 100%;
-				max-width: 92em;
-				padding: 0 2em;
-				box-sizing: border-box;
-			}
-			#banner .banner-layout {
-				display: flex;
-				flex-direction: row;
-				align-items: center;
-				justify-content: center;
-				gap: 2.5em;
-				flex-wrap: wrap;
-			}
-			#banner .banner-text {
-				flex: 1 1 260px;
-				min-width: 220px;
-				order: 2;
-				text-align: center;
-			}
-			#banner .banner-video-wrap {
-				flex: 0 0 clamp(150px, 20vw, 280px);
-				width: clamp(150px, 20vw, 280px);
-				position: relative;
-				height: 66vh;
-				max-height: 500px;
-				border-radius: 14px;
-				overflow: hidden;
-				box-shadow: 0 10px 50px rgba(0,0,0,0.65);
-			}
-			#banner .banner-video-wrap.left  { order: 1; }
-			#banner .banner-video-wrap.right { order: 3; }
-			#banner .banner-video-wrap video {
-				width: 100%;
-				height: 100%;
-				object-fit: cover;
-				display: block;
-			}
-			/* Inner gradient fades blending videos into dark background */
-			#banner .banner-video-wrap.left::after {
-				content: '';
-				position: absolute;
-				top: 0; right: 0; bottom: 0;
-				width: 70px;
-				background: linear-gradient(to left, rgba(0,0,0,0.70), transparent);
-				z-index: 1;
-				pointer-events: none;
-			}
-			#banner .banner-video-wrap.right::before {
-				content: '';
-				position: absolute;
-				top: 0; left: 0; bottom: 0;
-				width: 70px;
-				background: linear-gradient(to right, rgba(0,0,0,0.70), transparent);
-				z-index: 1;
-				pointer-events: none;
-			}
-			/* Tablet: shrink video height */
-			@media (max-width: 1200px) {
-				#banner .banner-video-wrap { height: 52vh; max-height: 400px; }
-			}
-			/* Mobile: text full-width on top, videos side-by-side below */
-			@media (max-width: 736px) {
-				#banner .banner-layout { gap: 0.8em; }
-				#banner .banner-text { flex-basis: 100%; order: 1; }
-				#banner .banner-video-wrap {
-					flex: 1 1 0;
-					height: 28vh;
-					max-height: 220px;
-					order: 2;
-					border-radius: 10px;
-				}
-			}
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>In-Ho Baek | THz &amp; Photonic Networks Researcher</title>
+  <meta name="description" content="Personal website of In-Ho Baek — Scientist at Fraunhofer HHI, PhD candidate at TU Berlin, specialising in Terahertz wireless communications and photonic networks for 6G." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
 
-			/* Role badges */
-			.role-badges {
-				display: flex;
-				flex-wrap: wrap;
-				justify-content: center;
-				gap: 0.55em;
-				margin: 0.7em 0 1.1em;
-			}
-			.role-badge {
-				background: rgba(255,255,255,0.15);
-				border: 1px solid rgba(255,255,255,0.4);
-				border-radius: 2em;
-				padding: 0.28em 0.85em;
-				font-size: 0.8em;
-				letter-spacing: 0.08em;
-				text-transform: uppercase;
-				color: #fff;
-			}
-		</style>
-	</head>
-	<body class="landing is-preload">
+<!-- ── Navigation ─────────────────────────────────────────────────────────── -->
+<nav class="site-nav">
+  <a href="index.html" class="nav-brand">In-Ho Baek</a>
+  <ul class="nav-links">
+    <li><a href="#research">Research</a></li>
+    <li><a href="#publications">Publications</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="#contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<!-- Mobile menu overlay -->
+<div class="mobile-menu">
+  <a href="#research">Research</a>
+  <a href="#publications">Publications</a>
+  <a href="about.html">About</a>
+  <a href="#contact">Contact</a>
+</div>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">In-Ho Baek</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="index.html"    data-i18n="nav.home">Home</a></li>
-											<li><a href="about.html"    data-i18n="nav.about">About</a></li>
-											<li><a href="#research"     data-i18n="nav.research">Research</a></li>
-											<li><a href="#publications" data-i18n="nav.publications">Publications</a></li>
-											<li><a href="#contact"      data-i18n="nav.contact">Contact</a></li>
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
+<!-- ── Hero ───────────────────────────────────────────────────────────────── -->
+<section class="hero">
+  <!-- Flanking video panels -->
+  <div class="hero-video-panel left">
+    <video autoplay loop muted playsinline>
+      <source src="images/backvid.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class="hero-video-panel right">
+    <video autoplay loop muted playsinline>
+      <source src="images/lectura.mp4" type="video/mp4" />
+    </video>
+  </div>
 
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<div class="banner-layout">
-								<div class="banner-text">
-									<h2>In-Ho Baek</h2>
-									<div class="role-badges">
-										<span class="role-badge" data-i18n="banner.role.scientist">Scientist</span>
-										<span class="role-badge" data-i18n="banner.role.phd">PhD Candidate</span>
-										<span class="role-badge" data-i18n="banner.role.lecturer">University Lecturer</span>
-									</div>
-									<p>
-										<span data-i18n="banner.institution">Fraunhofer Heinrich Hertz Institute (HHI), Berlin</span><br />
-										<em data-i18n-html="banner.tagline">Terahertz Communications &amp; Photonic Networks</em>
-									</p>
-									<ul class="actions special">
-										<li><a href="about.html" class="button primary" data-i18n="banner.btn.about">About Me</a></li>
-										<li><a href="#research"  class="button scrolly" data-i18n="banner.btn.research">Research</a></li>
-									</ul>
-								</div>
-								<div class="banner-video-wrap left">
-									<video autoplay loop muted playsinline>
-										<source src="images/backvid.mp4" type="video/mp4" />
-									</video>
-								</div>
-								<div class="banner-video-wrap right">
-									<video autoplay loop muted playsinline>
-										<source src="images/lectura.mp4" type="video/mp4" />
-									</video>
-								</div>
-							</div>
-						</div>
-						<a href="#intro" class="more scrolly" data-i18n="banner.more">Learn More</a>
-					</section>
+  <div class="hero-content">
+    <p class="hero-eyebrow">Scientist &nbsp;·&nbsp; PhD Candidate &nbsp;·&nbsp; Lecturer</p>
+    <h1 class="hero-headline">
+      Advancing <span class="accent">6G Photonic</span><br />
+      Networks &amp; THz<br />Communications
+    </h1>
+    <p class="hero-sub">
+      Fraunhofer Heinrich Hertz Institute, Berlin &mdash;<br />
+      pushing wireless beyond 100&thinsp;Gbit/s at 300&thinsp;GHz.
+    </p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn btn-primary">Let's Collaborate &nbsp;&#8594;</a>
+      <a href="#research" class="btn btn-outline">View Research</a>
+    </div>
+  </div>
 
-				<!-- Intro -->
-					<section id="intro" class="wrapper style1 special">
-						<div class="inner">
-							<header class="major">
-								<h2 data-i18n="intro.title">Research Overview</h2>
-								<p data-i18n-html="intro.text">My work is centred on high-capacity Terahertz (THz) wireless communications<br />
-								and their integration into future 6G photonic network infrastructures.<br />
-								At Fraunhofer HHI I develop advanced digital signal processing techniques<br />
-								and experimental systems pushing beyond 100&thinsp;Gbit/s over THz wireless links.<br />
-								I also serve as a <strong>University Lecturer</strong> at HTW Berlin and BHT Berlin,<br />
-								teaching communications engineering at Bachelor&rsquo;s and Master&rsquo;s level.</p>
-							</header>
-							<ul class="icons major">
-								<li><span class="icon solid fa-broadcast-tower major style1"><span class="label" data-i18n="intro.icon.thz">THz Wireless</span></span></li>
-								<li><span class="icon solid fa-microchip major style3"><span class="label" data-i18n="intro.icon.dsp">DSP</span></span></li>
-								<li><span class="icon solid fa-project-diagram major style2"><span class="label" data-i18n="intro.icon.photonic">Photonic Networks</span></span></li>
-							</ul>
-						</div>
-					</section>
+  <div class="hero-scroll">
+    <i class="fas fa-chevron-down"></i>
+    <span>Scroll</span>
+  </div>
+</section>
 
-				<!-- Affiliations -->
-					<section id="affiliations" class="wrapper style5">
-						<div class="inner" style="text-align:center;">
-							<h3 data-i18n-html="affiliations.title">Affiliations &amp; Memberships</h3>
-							<div class="logo-bar">
-								<!-- Current employer -->
-								<a href="https://www.hhi.fraunhofer.de" target="_blank" rel="noopener" title="Fraunhofer Heinrich Hertz Institute (HHI) — Employer">
-									<img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Fraunhofer-logo.svg"
-									     alt="Fraunhofer" />
-								</a>
-								<!-- PhD institution -->
-								<a href="https://www.tu.berlin" target="_blank" rel="noopener" title="Technische Universit&auml;t Berlin — PhD">
-									<img src="https://upload.wikimedia.org/wikipedia/commons/3/30/TU-Berlin-Logo.svg"
-									     alt="TU Berlin" />
-								</a>
-								<!-- Teaching — HTW Berlin -->
-								<a href="https://www.htw-berlin.de" target="_blank" rel="noopener" title="HTW Berlin — University Lecturer">
-									<img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/HTW_Berlin_logo.svg"
-									     alt="HTW Berlin" />
-								</a>
-								<!-- Teaching — BHT Berlin -->
-								<a href="https://www.bht-berlin.de" target="_blank" rel="noopener" title="BHT Berlin — University Lecturer">
-									<img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Logo_Berliner_Hochschule_f%C3%BCr_Technik_%282021%29.svg"
-									     alt="BHT Berlin" />
-								</a>
-								<!-- Education — KIT -->
-								<a href="https://www.kit.edu" target="_blank" rel="noopener" title="Karlsruhe Institute of Technology — M.Sc. &amp; B.Sc.">
-									<img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Logo_KIT.svg"
-									     alt="KIT Karlsruhe" />
-								</a>
-								<!-- Education — KAIST exchange -->
-								<a href="https://www.kaist.ac.kr" target="_blank" rel="noopener" title="KAIST — Exchange Programme">
-									<img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/KAIST_logo.svg"
-									     alt="KAIST" />
-								</a>
-								<!-- Scholarship — Baden-Württemberg Stiftung -->
-								<a href="https://www.bwstiftung.de" target="_blank" rel="noopener" title="Baden-W&uuml;rttemberg Stiftung — Scholarship 2018">
-									<img src="https://upload.wikimedia.org/wikipedia/commons/2/2f/Baden-W%C3%BCrttemberg_Stiftung_Logo.svg"
-									     alt="Baden-W&uuml;rttemberg Stiftung" />
-								</a>
-								<!-- Former employer — EnBW -->
-								<a href="https://www.enbw.com" target="_blank" rel="noopener" title="EnBW AG — Working Student">
-									<img src="https://upload.wikimedia.org/wikipedia/commons/e/e5/EnBW-Logo.svg"
-									     alt="EnBW" />
-								</a>
-								<!-- Former employer — Siemens -->
-								<a href="https://www.siemens.com" target="_blank" rel="noopener" title="Siemens AG — Working Student">
-									<img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/Siemens_AG_logo.svg"
-									     alt="Siemens" />
-								</a>
-								<!-- IEEE membership / publications -->
-								<a href="https://www.ieee.org" target="_blank" rel="noopener" title="IEEE Member">
-									<img src="https://upload.wikimedia.org/wikipedia/commons/2/21/IEEE_logo.svg"
-									     alt="IEEE" />
-								</a>
-							</div>
-						</div>
-					</section>
+<!-- ── Affiliations strip ──────────────────────────────────────────────────── -->
+<div class="affils-strip">
+  <div class="container">
+    <p class="affils-label">Affiliated with</p>
+    <div class="logo-row">
+      <a href="https://www.hhi.fraunhofer.de" target="_blank" rel="noopener" title="Fraunhofer Heinrich Hertz Institute — Employer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/7/79/Fraunhofer-logo.svg" alt="Fraunhofer" height="32" />
+      </a>
+      <a href="https://www.tu.berlin" target="_blank" rel="noopener" title="TU Berlin — PhD">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/30/TU-Berlin-Logo.svg" alt="TU Berlin" height="32" />
+      </a>
+      <a href="https://www.htw-berlin.de" target="_blank" rel="noopener" title="HTW Berlin — Lecturer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/b/bc/HTW_Berlin_logo.svg" alt="HTW Berlin" height="32" />
+      </a>
+      <a href="https://www.bht-berlin.de" target="_blank" rel="noopener" title="BHT Berlin — Lecturer">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/ed/Logo_Berliner_Hochschule_f%C3%BCr_Technik_%282021%29.svg" alt="BHT Berlin" height="32" />
+      </a>
+      <a href="https://www.kit.edu" target="_blank" rel="noopener" title="KIT Karlsruhe — M.Sc. &amp; B.Sc.">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3a/Logo_KIT.svg" alt="KIT" height="32" />
+      </a>
+      <a href="https://www.kaist.ac.kr" target="_blank" rel="noopener" title="KAIST — Exchange Programme">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/0/0a/KAIST_logo.svg" alt="KAIST" height="32" />
+      </a>
+      <a href="https://www.ieee.org" target="_blank" rel="noopener" title="IEEE Member">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/21/IEEE_logo.svg" alt="IEEE" height="32" />
+      </a>
+    </div>
+  </div>
+</div>
 
-				<!-- Research -->
-					<section id="research" class="wrapper alt style2">
-						<section class="spotlight">
-							<div class="image"><img src="images/THz_PN.jpg" alt="Terahertz wireless communications" /></div><div class="content">
-								<h2 data-i18n-html="research.1.title">Terahertz Wireless<br />Communications</h2>
-								<p data-i18n-html="research.1.text">I design and characterise experimental high-speed wireless transmission systems
-								operating in the 300&thinsp;GHz band (WR-3). My research covers the full signal chain &mdash; from
-								photonic upconversion using PIN photodiode and WR3-coupled transmitters through to
-								receiver-side DSP and link characterisation &mdash; with demonstrated throughputs exceeding
-								109&thinsp;Gbit/s over fiber-integrated point-to-point THz links, and a record
-								<strong>221&thinsp;Gb/s dual-polarisation</strong> transmission over 500&thinsp;m.</p>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="images/pcs.png" alt="Probabilistic Constellation Shaping" /></div><div class="content">
-								<h2 data-i18n-html="research.2.title">Probabilistic Constellation<br />Shaping &amp; Rate Adaptation</h2>
-								<p data-i18n-html="research.2.text">A central theme of my research is Probabilistic Constellation Shaping (PCS)
-								applied to THz wireless links. PCS enables flexible, rate-adaptive modulation
-								by biasing the symbol distribution toward the Shannon limit. I study time-adaptive
-								PCS for combined optical/THz links, the impact of photodiode nonlinearities on
-								shaped transmissions, and their mitigation via neural-network-based DSP.</p>
-							</div>
-						</section>
-						<section class="spotlight">
-							<div class="image"><img src="images/converged.png" alt="Converged optical and THz networks for 6G" /></div><div class="content">
-								<h2 data-i18n-html="research.3.title">Converged Optical &amp; THz<br />Links for 6G Networks</h2>
-								<p data-i18n-html="research.3.text">I investigate the seamless integration of THz wireless segments into fiber-optic
-								backhaul networks targeting future 6G requirements. This includes analysis of
-								weather-related link availability for outdoor THz deployments, high-capacity
-								system design supporting 6G transport, and adaptive baseband techniques for
-								converged optical/THz links &mdash; the subject of my PhD dissertation at TU Berlin.</p>
-							</div>
-						</section>
-					</section>
+<!-- ── Research ───────────────────────────────────────────────────────────── -->
+<section class="section" id="research">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-label">Research</span>
+      <h2>Areas of Focus</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="research-grid">
+      <article class="research-card fade-up delay-1">
+        <img class="research-card-img" src="images/THz_PN.jpg" alt="Terahertz wireless communications" />
+        <div class="research-card-body">
+          <p class="research-card-num">01</p>
+          <h3>Terahertz Wireless Communications</h3>
+          <p>Experimental high-speed transmission systems in the 300&thinsp;GHz (WR-3) band. Photonic upconversion via PIN photodiode transmitters with demonstrated throughputs exceeding 109&thinsp;Gbit/s, and a record <strong>221&thinsp;Gb/s</strong> dual-polarisation link over 500&thinsp;m.</p>
+        </div>
+      </article>
+      <article class="research-card fade-up delay-2">
+        <img class="research-card-img" src="images/pcs.png" alt="Probabilistic Constellation Shaping" />
+        <div class="research-card-body">
+          <p class="research-card-num">02</p>
+          <h3>Probabilistic Constellation Shaping &amp; Rate Adaptation</h3>
+          <p>PCS enables flexible, rate-adaptive modulation by biasing symbol distributions toward the Shannon limit. I study time-adaptive PCS for combined optical/THz links and neural-network-based mitigation of photodiode nonlinearities.</p>
+        </div>
+      </article>
+      <article class="research-card fade-up delay-3">
+        <img class="research-card-img" src="images/converged.png" alt="Converged optical and THz networks for 6G" />
+        <div class="research-card-body">
+          <p class="research-card-num">03</p>
+          <h3>Converged Optical &amp; THz Links for 6G</h3>
+          <p>Seamless integration of THz wireless segments into fiber-optic backhaul targeting 6G requirements. Adaptive baseband techniques for converged links — the core topic of my PhD dissertation at TU Berlin.</p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>
 
-				<!-- Publications -->
-					<section id="publications" class="wrapper style3 special">
-						<div class="inner">
-							<header class="major">
-								<h2 data-i18n="pub.title">Publications</h2>
-								<p data-i18n-html="pub.subtitle">Complete list of first-author and co-authored publications.<br />
-								<a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Google Scholar</a>
-								&nbsp;&bull;&nbsp;
-								<a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE Xplore</a></p>
-							</header>
-							<ul class="features">
+<!-- ── Publications ───────────────────────────────────────────────────────── -->
+<section class="section pub-section" id="publications">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-label">Publications</span>
+      <h2>Research Output</h2>
+      <div class="divider"></div>
+    </div>
 
-								<!-- Accepted -->
-								<li class="icon solid fa-check-circle">
-									<h3>IEEE PTL &mdash; <em data-i18n="pub.accepted">Accepted</em></h3>
-									<p><strong>In-Ho Baek</strong>, J. Honecker, M. Bittiehn, R. Elschner,
-									C. Schubert, R. Freund,
-									&ldquo;Experimental Demonstration of Neural-Network Based Transceiver
-									Nonlinearity Mitigation for Probabilistically Shaped Photonic THz Wireless
-									Transmission,&rdquo; <em>IEEE Photonics Technology Letters</em>.</p>
-								</li>
-								<li class="icon solid fa-check-circle">
-									<h3>OECC &mdash; <em data-i18n="pub.accepted">Accepted</em></h3>
-									<p><strong>In-Ho Baek</strong>, O. Stiewe, R. Elschner, M. R&ouml;sch,
-									A. Tessmann, M. N&ouml;lle, L. Molle, C. Schubert, R. Freund,
-									&ldquo;Record 221&thinsp;Gb/s Dual Polarization THz Wireless Transmission
-									Over 500&thinsp;m Using PCS-64QAM at 300&thinsp;GHz,&rdquo;
-									<em>Opto-Electronics and Communications Conference (OECC)</em>.</p>
-								</li>
+    <div class="pub-grid">
 
-								<!-- First author — published -->
-								<li class="icon solid fa-book-open">
-									<h3>J. Lightwave Technol. 2025</h3>
-									<p><strong>In-Ho Baek</strong>, O. Stiewe, J. Gl&auml;sel, S. Nellen,
-									G. Schwanke, T. T. Tran, R. Elschner, C. Schubert, R. B. Kohlhaas,
-									P. Runge, M. Schell, R. Freund,
-									&ldquo;Experimental Characterization of Photodiode Transmitters for
-									Probabilistically Shaped High-Speed THz Wireless Transmission,&rdquo;
-									<em>Journal of Lightwave Technology</em>, 2025.</p>
-								</li>
-								<li class="icon solid fa-file-alt">
-									<h3>Microwave Photonics 2024</h3>
-									<p><strong>IH Baek</strong>, O. Stiewe, J. Gl&auml;sel, M. F. Ulukan,
-									A. Schindler, F. Ganzer, T. T. Tran,
-									&ldquo;Experimental Characterization of a WR3-Coupled Photodiode Transmitter
-									for High-Speed Terahertz Wireless Communication,&rdquo;
-									<em>Int. Topical Meeting on Microwave Photonics</em>, 2024.</p>
-								</li>
-								<li class="icon solid fa-file-alt">
-									<h3>IET Conference Proceedings 2023</h3>
-									<p><strong>IH Baek</strong>, O. Stiewe, S. Nellen, G. Schwanke,
-									R. Elschner, C. Schubert,
-									&ldquo;32&thinsp;GBd, 109&thinsp;Gbit/s Probabilistically Shaped THz
-									Wireless Transmission using PIN-PD Based Photonic Upconversion,&rdquo;
-									<em>IET Conf. Proc. CP839</em>, pp. 1302&ndash;1305, 2023.</p>
-								</li>
-								<li class="icon solid fa-file-alt">
-									<h3>ITG Symposium 2022</h3>
-									<p><strong>IH Baek</strong>, F. Bart, R. Elschner, F. Meier, D. Hellmann,
-									A. Maassen, C. Schubert,
-									&ldquo;Time Adaptive Probabilistic Shaping for Combined Optical/THz Links,&rdquo;
-									<em>Photonic Networks; 23rd ITG-Symposium</em>, pp. 1&ndash;8, 2022.</p>
-								</li>
+      <!-- Accepted -->
+      <article class="pub-card first-author fade-up delay-1">
+        <div class="pub-card-meta">
+          <span class="pub-venue">IEEE PTL</span>
+          <span class="pub-badge">Accepted</span>
+        </div>
+        <h3>Neural-Network Based Transceiver Nonlinearity Mitigation for Probabilistically Shaped Photonic THz Wireless Transmission</h3>
+        <p><strong>In-Ho Baek</strong>, J. Honecker, M. Bittiehn, R. Elschner, C. Schubert, R. Freund &mdash; <em>IEEE Photonics Technology Letters</em></p>
+      </article>
 
-								<!-- Co-authored -->
-								<li class="icon solid fa-book-open">
-									<h3>J. Lightwave Technol. 2025 &mdash; <em data-i18n="pub.coauthor">Co-Author</em></h3>
-									<p>R. Elschner, F. Bart, F. Meier, O. Stiewe, <strong>IH Baek</strong>
-									et al.,
-									&ldquo;Analysis of Weather-Related Link Availabilities for Fiber-Integrated
-									THz-Wireless Transmission Systems,&rdquo;
-									<em>Journal of Lightwave Technology</em>, 2025.</p>
-								</li>
-								<li class="icon solid fa-file-alt">
-									<h3>OFC 2025 &mdash; <em data-i18n="pub.coauthor">Co-Author</em></h3>
-									<p>C. Schubert, R. Elschner, O. Stiewe, <strong>IH Baek</strong> et al.,
-									&ldquo;High-Capacity THz Wireless Transmission Supporting Future 6G Optical
-									Networks,&rdquo;
-									<em>Optical Fiber Communication Conference (OFC)</em>, M3D.1, 2025.</p>
-								</li>
-								<li class="icon solid fa-file-alt">
-									<h3>ITG Symposium 2022 &mdash; <em data-i18n="pub.coauthor">Co-Author</em></h3>
-									<p>C. Schmidt-Langhorst, J. Pfeiffer, R. Elschner, R. Emmerich,
-									F. Chowanek, <strong>IH Baek</strong>, R. F. H. Fischer, C. Schubert,
-									&ldquo;Experimental Investigation of Information Bit Scrambling for
-									Physical-Layer Security in Coherent Fiber-Optic Systems,&rdquo;
-									<em>Photonic Networks; 23rd ITG-Symposium</em>, pp. 1&ndash;6, 2022.</p>
-								</li>
+      <article class="pub-card first-author fade-up delay-2">
+        <div class="pub-card-meta">
+          <span class="pub-venue">OECC</span>
+          <span class="pub-badge">Accepted</span>
+        </div>
+        <h3>Record 221&thinsp;Gb/s Dual Polarization THz Wireless Transmission Over 500&thinsp;m Using PCS-64QAM at 300&thinsp;GHz</h3>
+        <p><strong>In-Ho Baek</strong>, O. Stiewe, R. Elschner, M. R&ouml;sch, A. Tessmann, M. N&ouml;lle, L. Molle, C. Schubert, R. Freund &mdash; <em>OECC 2025</em></p>
+      </article>
 
-							</ul>
-						</div>
-					</section>
+      <article class="pub-card first-author fade-up delay-3">
+        <div class="pub-card-meta">
+          <span class="pub-venue">JLT</span>
+          <span class="pub-year">2025</span>
+        </div>
+        <h3>Experimental Characterization of Photodiode Transmitters for Probabilistically Shaped High-Speed THz Wireless Transmission</h3>
+        <p><strong>In-Ho Baek</strong>, O. Stiewe, J. Gl&auml;sel, S. Nellen, G. Schwanke, T. T. Tran, R. Elschner, C. Schubert, R. B. Kohlhaas, P. Runge, M. Schell, R. Freund &mdash; <em>Journal of Lightwave Technology</em>, 2025</p>
+      </article>
 
-				<!-- Contact -->
-					<section id="contact" class="wrapper style4">
-						<div class="inner">
-							<header>
-								<h2 data-i18n="contact.title">Get in Touch</h2>
-								<p data-i18n-html="contact.text">I welcome discussions on research collaborations, project inquiries,<br />
-								and opportunities in THz communications and photonic networks.</p>
-								<p>
-									<strong>Fraunhofer Institute for Telecommunications</strong><br />
-									Heinrich Hertz Institute (HHI)<br />
-									<span data-i18n="contact.dept">Department of Photonic Networks and Systems</span><br />
-									<span data-i18n="contact.city">Berlin, Germany</span><br /><br />
-									<a href="mailto:in-ho.baek@proton.me">in-ho.baek@proton.me</a>
-								</p>
-							</header>
-							<ul class="actions stacked">
-								<li><a href="about.html" class="button fit primary" data-i18n="contact.btn.about">About Me</a></li>
-								<li><a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&hl=en" target="_blank" rel="noopener" class="button fit" data-i18n="contact.btn.scholar">Google Scholar Profile</a></li>
-							</ul>
-						</div>
-					</section>
+      <article class="pub-card first-author fade-up delay-4">
+        <div class="pub-card-meta">
+          <span class="pub-venue">MWP</span>
+          <span class="pub-year">2024</span>
+        </div>
+        <h3>Experimental Characterization of a WR3-Coupled Photodiode Transmitter for High-Speed Terahertz Wireless Communication</h3>
+        <p><strong>In-Ho Baek</strong>, O. Stiewe, J. Gl&auml;sel, M. F. Ulukan, A. Schindler, F. Ganzer, T. T. Tran &mdash; <em>Int. Topical Meeting on Microwave Photonics</em>, 2024</p>
+      </article>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
-							<li><a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&hl=en" target="_blank" rel="noopener" class="icon solid fa-graduation-cap"><span class="label">Google Scholar</span></a></li>
-							<li><a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener" class="icon solid fa-globe"><span class="label">IEEE Xplore</span></a></li>
-							<li><a href="mailto:in-ho.baek@proton.me" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; In-Ho Baek 2026</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
+      <article class="pub-card first-author fade-up delay-5">
+        <div class="pub-card-meta">
+          <span class="pub-venue">IET</span>
+          <span class="pub-year">2023</span>
+        </div>
+        <h3>32&thinsp;GBd, 109&thinsp;Gbit/s Probabilistically Shaped THz Wireless Transmission using PIN-PD Based Photonic Upconversion</h3>
+        <p><strong>In-Ho Baek</strong>, O. Stiewe, S. Nellen, G. Schwanke, R. Elschner, C. Schubert &mdash; <em>IET Conf. Proc. CP839</em>, pp. 1302&ndash;1305, 2023</p>
+      </article>
 
-		</div>
+      <article class="pub-card first-author fade-up delay-6">
+        <div class="pub-card-meta">
+          <span class="pub-venue">ITG</span>
+          <span class="pub-year">2022</span>
+        </div>
+        <h3>Time Adaptive Probabilistic Shaping for Combined Optical/THz Links</h3>
+        <p><strong>In-Ho Baek</strong>, F. Bart, R. Elschner, F. Meier, D. Hellmann, A. Maassen, C. Schubert &mdash; <em>23rd ITG-Symposium Photonic Networks</em>, pp. 1&ndash;8, 2022</p>
+      </article>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
-			<script src="assets/js/i18n.js"></script>
+      <article class="pub-card fade-up delay-1">
+        <div class="pub-card-meta">
+          <span class="pub-venue">JLT</span>
+          <span class="pub-year">2025</span>
+        </div>
+        <h3>Analysis of Weather-Related Link Availabilities for Fiber-Integrated THz-Wireless Transmission Systems</h3>
+        <p>R. Elschner, F. Bart, F. Meier, O. Stiewe, <strong>IH Baek</strong> et al. &mdash; <em>Journal of Lightwave Technology</em>, 2025</p>
+      </article>
 
-	</body>
+      <article class="pub-card fade-up delay-2">
+        <div class="pub-card-meta">
+          <span class="pub-venue">OFC</span>
+          <span class="pub-year">2025</span>
+        </div>
+        <h3>High-Capacity THz Wireless Transmission Supporting Future 6G Optical Networks</h3>
+        <p>C. Schubert, R. Elschner, O. Stiewe, <strong>IH Baek</strong> et al. &mdash; <em>Optical Fiber Communication Conference (OFC)</em>, M3D.1, 2025</p>
+      </article>
+
+      <article class="pub-card fade-up delay-3">
+        <div class="pub-card-meta">
+          <span class="pub-venue">ITG</span>
+          <span class="pub-year">2022</span>
+        </div>
+        <h3>Experimental Investigation of Information Bit Scrambling for Physical-Layer Security in Coherent Fiber-Optic Systems</h3>
+        <p>C. Schmidt-Langhorst, J. Pfeiffer, R. Elschner, R. Emmerich, F. Chowanek, <strong>IH Baek</strong>, R. F. H. Fischer, C. Schubert &mdash; <em>23rd ITG-Symposium Photonic Networks</em>, pp. 1&ndash;6, 2022</p>
+      </article>
+
+    </div>
+
+    <div class="pub-links fade-up" style="margin-top: 2.5rem;">
+      <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&hl=en" target="_blank" rel="noopener">
+        <i class="fas fa-graduation-cap"></i> Google Scholar
+      </a>
+      <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">
+        <i class="fas fa-globe"></i> IEEE Xplore
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ── Skills ─────────────────────────────────────────────────────────────── -->
+<section class="section skills-section" id="skills">
+  <div class="container">
+    <div class="section-header fade-up">
+      <span class="section-label">Expertise</span>
+      <h2>Technical Skills</h2>
+      <div class="divider"></div>
+    </div>
+    <div class="skill-groups">
+      <div class="fade-up delay-1">
+        <p class="skill-group-label">Research Areas</p>
+        <div class="pill-row">
+          <span class="pill">Terahertz (THz) Wireless</span>
+          <span class="pill">Probabilistic Constellation Shaping</span>
+          <span class="pill">Photonic Upconversion</span>
+          <span class="pill">6G Network Integration</span>
+          <span class="pill">Coherent Optical Communications</span>
+          <span class="pill">Advanced DSP</span>
+        </div>
+      </div>
+      <div class="fade-up delay-2">
+        <p class="skill-group-label">Technologies &amp; Systems</p>
+        <div class="pill-row">
+          <span class="pill">WR-3 Band (300 GHz)</span>
+          <span class="pill">PIN Photodiode Transmitters</span>
+          <span class="pill">WR3-Coupled Transceivers</span>
+          <span class="pill">Coherent 800G ASICs</span>
+          <span class="pill">QAM Modulation</span>
+          <span class="pill">Neural Network DSP</span>
+        </div>
+      </div>
+      <div class="fade-up delay-3">
+        <p class="skill-group-label">Tools &amp; Methods</p>
+        <div class="pill-row">
+          <span class="pill">MATLAB</span>
+          <span class="pill">Experimental THz Testbeds</span>
+          <span class="pill">Oscilloscopes &amp; Spectrum Analysers</span>
+          <span class="pill">Signal Generators</span>
+          <span class="pill">Project Management</span>
+        </div>
+      </div>
+      <div class="fade-up delay-4">
+        <p class="skill-group-label">Languages</p>
+        <div class="pill-row">
+          <span class="pill">German — Native</span>
+          <span class="pill">Korean (한국어) — Native</span>
+          <span class="pill">English — Fluent</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Contact ────────────────────────────────────────────────────────────── -->
+<section class="section contact-section" id="contact">
+  <div class="container">
+    <div class="contact-inner fade-up">
+      <span class="section-label">Contact</span>
+      <h2>Let's Collaborate</h2>
+      <div class="divider" style="margin-bottom: 1.5rem;"></div>
+      <p>Open to research collaborations, project inquiries, and opportunities in THz communications and photonic networks.</p>
+      <div class="contact-detail">
+        <strong>Fraunhofer Institute for Telecommunications &mdash; Heinrich Hertz Institute (HHI)</strong>
+        <span>Department of Photonic Networks and Systems, Berlin, Germany</span>
+        <a href="mailto:in-ho.baek@hhi.fraunhofer.de" style="color: var(--accent); margin-top: 0.5rem;">in-ho.baek@hhi.fraunhofer.de</a>
+      </div>
+      <div class="contact-actions">
+        <a href="mailto:in-ho.baek@hhi.fraunhofer.de" class="btn btn-primary">Send an Email &nbsp;&#8594;</a>
+        <a href="about.html" class="btn btn-outline">About Me</a>
+      </div>
+      <div class="social-icons" style="margin-top: 2.5rem;">
+        <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener" class="social-icon" title="LinkedIn">
+          <i class="fab fa-linkedin-in"></i>
+        </a>
+        <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&hl=en" target="_blank" rel="noopener" class="social-icon" title="Google Scholar">
+          <i class="fas fa-graduation-cap"></i>
+        </a>
+        <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener" class="social-icon" title="IEEE Xplore">
+          <i class="fas fa-globe"></i>
+        </a>
+        <a href="mailto:in-ho.baek@hhi.fraunhofer.de" class="social-icon" title="Email">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── Footer ─────────────────────────────────────────────────────────────── -->
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-inner">
+      <span class="footer-copy">&copy; In-Ho Baek 2026 &mdash; Berlin, Germany</span>
+      <span class="footer-copy">THz Communications &amp; Photonic Networks</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/js/app.js"></script>
+</body>
 </html>
