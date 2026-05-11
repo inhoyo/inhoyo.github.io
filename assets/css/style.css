@@ -415,7 +415,7 @@ em { font-style: italic; }
 
 /* ── Affiliations logos ───────────────────────────────────────────────────── */
 .affils-section {
-  padding: clamp(3rem,6vw,5rem) 0;
+  padding: 0;
   border-top: 1px solid var(--border);
   border-bottom: 1px solid var(--border);
   /* Lighter warm surface so logos have contrast against the page bg */
@@ -463,40 +463,52 @@ em { font-style: italic; }
 
 /* Ensure content sits above overlays */
 .affils-header,
-.logo-row { position: relative; z-index: 2; }
+.affils-marquee { position: relative; z-index: 2; }
 
 .affils-header {
   display:flex;
   align-items:center;
   gap:1.5rem;
-  margin-bottom:2.5rem;
+  padding: clamp(2rem,4vw,3.5rem) 0 1.25rem;
 }
 .affils-line {
   flex:1;
   height:1px;
   background:var(--border);
 }
-.logo-row {
-  display:flex;
-  flex-wrap:wrap;
-  align-items:center;
-  justify-content:space-between;
-  gap:clamp(1.5rem,4vw,3rem);
+
+/* Scrolling logo marquee */
+.affils-marquee {
+  overflow: hidden;
+  padding-bottom: clamp(2rem,4vw,3.5rem);
 }
-.logo-row a {
-  display:flex;
-  align-items:center;
+.affils-track {
+  display: flex;
+  align-items: center;
+  gap: clamp(3rem,6vw,6rem);
+  width: max-content;
+  animation: affils-scroll 32s linear infinite;
+}
+.affils-track:hover { animation-play-state: paused; }
+.affils-track a {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
   /* grayscale → invert: any dark SVG becomes white regardless of original color */
-  filter: grayscale(1) invert(1) brightness(0.92);
-  opacity: 0.62;
+  filter: grayscale(1) invert(1) brightness(0.88);
+  opacity: 0.58;
   transition: opacity 0.3s ease, filter 0.35s ease, transform 0.3s ease;
 }
-.logo-row a:hover {
+.affils-track a:hover {
   opacity: 1;
   filter: grayscale(0.2) invert(1) brightness(1.05);
   transform: translateY(-2px);
 }
-.logo-row img { height:30px; width:auto; }
+.affils-track img { height: 28px; width: auto; }
+@keyframes affils-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
 
 /* ── Research ────────────────────────────────────────────────────────────── */
 .section-head {
@@ -985,6 +997,10 @@ em { font-style: italic; }
 @media(max-width:768px) {
   .nav-links { display:none; }
   .nav-hamburger { display:flex; }
+
+  /* Speed up all marquees on mobile */
+  .marquee-track { animation-duration: 16s; }
+  .affils-track  { animation-duration: 18s; }
 
   /* Hero: stack text above, videos below as a wide strip */
   .hero {
