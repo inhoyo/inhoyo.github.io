@@ -970,7 +970,7 @@ em { font-style: italic; }
   .hero-right {
     display: flex;
     flex-direction: row;
-    height: clamp(200px, 48vw, 270px);
+    height: clamp(320px, 55vh, 480px);
     border-top: 1px solid var(--border);
     position: relative;
   }
@@ -986,8 +986,11 @@ em { font-style: italic; }
     border-bottom: none;
     border-right: 1px solid var(--border);
   }
-  /* Slightly higher opacity since area is smaller */
-  .hero-video-panel video { opacity: 0.6; }
+  /* Pin video to top so face/head is always in frame */
+  .hero-video-panel video {
+    opacity: 0.6;
+    object-position: center top;
+  }
   /* Hide scroll indicator — videos are the section break now */
   .hero-scroll-hint { display: none; }
 
@@ -1003,6 +1006,6 @@ em { font-style: italic; }
 
 @media(max-width:480px) {
   .hero-meta { flex-direction:column; align-items:flex-start; }
-  .hero-right { height: clamp(160px, 50vw, 220px); }
+  .hero-right { height: clamp(280px, 50vh, 400px); }
   .tl-item { grid-template-columns:1fr; gap:0.5rem; }
 }
