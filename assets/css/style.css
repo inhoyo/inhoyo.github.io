@@ -1075,6 +1075,19 @@ em { font-style: italic; }
   .about-photo { display:none; }
   .footer-wordmark { font-size:clamp(3rem,14vw,7rem); }
   .contact-row { flex-direction:column; align-items:flex-start; gap:1.5rem; }
+
+  /* Research panels — mobile */
+  .rp { min-height: unset; }
+  .rp-body {
+    padding-top: clamp(2.5rem, 7vw, 3.5rem);
+    padding-bottom: clamp(2.5rem, 7vw, 3.5rem);
+  }
+  /* Taller ellipse covers portrait-oriented panels */
+  .rp-img {
+    -webkit-mask-image: radial-gradient(ellipse 100% 80% at 50% 50%, black 15%, rgba(0,0,0,0.5) 50%, transparent 100%);
+    mask-image: radial-gradient(ellipse 100% 80% at 50% 50%, black 15%, rgba(0,0,0,0.5) 50%, transparent 100%);
+    opacity: 0.32;
+  }
 }
 
 @media(max-width:480px) {
