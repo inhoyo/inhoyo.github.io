@@ -551,119 +551,127 @@ em { font-style: italic; }
   text-align:right;
 }
 
-/* Research editorial grid — 3 col, 2 row */
-.research-grid {
-  display:grid;
-  grid-template-columns: 1.25fr 1fr 1fr;
-  grid-template-rows: auto auto;
-  gap:1.5px;
-  background:var(--border);
-  border:1.5px solid var(--border);
-  border-radius:var(--radius);
-  overflow:hidden;
+/* ── Research — Immersive Panels ─────────────────────────────────────────── */
+.research-immersive {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 0;
 }
-.research-card {
-  background:var(--bg);
-  padding:2.5rem;
-  position:relative;
-  transition:background 0.3s ease;
-  overflow:hidden;
+#researchCanvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 0;
+  opacity: 0.65;
 }
-.research-card:hover { background:var(--surface); }
-.research-card.featured {
-  grid-row:1/3;
-  padding:0;
-  display:flex;
-  flex-direction:column;
+.research-panels {
+  position: relative;
+  z-index: 1;
+  margin-top: clamp(2.5rem, 5vw, 4rem);
 }
-.research-card.featured .research-card-img-wrap {
-  flex:1;
-  min-height:280px;
-  overflow:hidden;
+
+/* Individual panel */
+.rp {
+  position: relative;
+  min-height: 52vh;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  border-top: 1px solid rgba(255,255,255,0.04);
 }
-.research-card.featured img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  filter:brightness(0.7) saturate(0.6);
-  transition:filter 0.4s ease, transform 0.6s var(--ease);
+.rp:first-child { border-top: none; }
+
+/* Ambient glow on hover — left side for normal, right for flipped */
+.rp::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(ellipse 55% 70% at 25% 50%, rgba(79,195,247,0.06) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 1s ease;
+  pointer-events: none;
+  z-index: 1;
 }
-.research-card.featured:hover img {
-  filter:brightness(0.85) saturate(0.8);
-  transform:scale(1.03);
+.rp--flip::before {
+  background: radial-gradient(ellipse 55% 70% at 75% 50%, rgba(79,195,247,0.06) 0%, transparent 70%);
 }
-.research-card.featured .research-card-body {
-  padding:2rem 2.5rem;
-  border-top:1px solid var(--border);
+.rp:hover::before { opacity: 1; }
+
+/* Background image — bleeds into darkness via mask */
+.rp-visual {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
 }
-.research-card-num {
-  font-size:0.65rem;
-  font-weight:700;
-  letter-spacing:0.2em;
-  text-transform:uppercase;
-  color:var(--accent);
-  margin-bottom:0.75rem;
+.rp-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.28;
+  filter: saturate(0.35) brightness(0.65);
+  will-change: transform;
+  -webkit-mask-image: radial-gradient(ellipse 85% 95% at 50% 50%, black 20%, rgba(0,0,0,0.55) 55%, transparent 100%);
+  mask-image: radial-gradient(ellipse 85% 95% at 50% 50%, black 20%, rgba(0,0,0,0.55) 55%, transparent 100%);
+  transition: opacity 0.9s ease, filter 0.9s ease;
 }
-.research-card h3 {
-  font-family:'Syne',sans-serif;
-  font-size:clamp(1.1rem,2vw,1.4rem);
-  font-weight:800;
-  letter-spacing:-0.02em;
-  line-height:1.2;
-  color:var(--text-1);
-  margin-bottom:0.75rem;
+.rp:hover .rp-img {
+  opacity: 0.5;
+  filter: saturate(0.7) brightness(0.85);
 }
-.research-card p {
-  font-size:0.85rem;
-  color:var(--text-2);
-  line-height:1.7;
+
+/* Panel with no image — subtle accent atmosphere */
+.rp--no-img {
+  background: radial-gradient(ellipse 50% 80% at 70% 50%, rgba(79,195,247,0.025) 0%, transparent 70%);
 }
-.research-card .research-card-img-wrap {
-  width:100%;
-  height:180px;
-  overflow:hidden;
-  margin-bottom:1.5rem;
+
+/* Content */
+.rp-body {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+  padding-top: clamp(3.5rem, 6vw, 5.5rem);
+  padding-bottom: clamp(3.5rem, 6vw, 5.5rem);
 }
-.research-card:not(.featured) img {
-  width:100%;
-  height:100%;
-  object-fit:cover;
-  filter:brightness(0.65) saturate(0.5);
-  transition:filter 0.4s ease, transform 0.6s var(--ease);
+.rp--flip .rp-body { flex-direction: row-reverse; }
+
+/* Decorative outline number */
+.rp-num {
+  font-family: 'Syne', sans-serif;
+  font-weight: 800;
+  font-size: clamp(5rem, 11vw, 10rem);
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(79,195,247,0.14);
+  flex-shrink: 0;
+  min-width: clamp(5.5rem, 12vw, 11rem);
+  user-select: none;
+  transition: -webkit-text-stroke-color 0.7s ease;
 }
-.research-card:not(.featured):hover img {
-  filter:brightness(0.85) saturate(0.75);
-  transform:scale(1.04);
+.rp:hover .rp-num { -webkit-text-stroke-color: rgba(79,195,247,0.42); }
+
+/* Text */
+.rp-content { flex: 1; max-width: clamp(320px, 42vw, 580px); }
+.rp-content h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.5rem, 3vw, 2.4rem);
+  font-weight: 800;
+  color: var(--text-1);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin-bottom: 1.1rem;
+  transition: color 0.5s ease;
 }
-.research-card.wide {
-  grid-column: 2 / 4;
-  display:flex;
-  flex-direction:row;
-  align-items:flex-start;
-  gap:2.5rem;
-  position:relative;
-  overflow:hidden;
-}
-.research-card.wide::before {
-  content:'';
-  position:absolute;
-  inset:0;
-  background:radial-gradient(ellipse at 75% 60%, rgba(79,195,247,0.06) 0%, transparent 65%);
-  pointer-events:none;
-}
-.research-card.wide .wide-icon {
-  flex-shrink:0;
-  width:3rem;
-  height:3rem;
-  border-radius:50%;
-  background:rgba(79,195,247,0.08);
-  border:1px solid rgba(79,195,247,0.2);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:var(--accent);
-  font-size:1.2rem;
-  margin-top:0.25rem;
+.rp:hover .rp-content h3 { color: var(--accent); }
+.rp-content p {
+  font-size: 0.88rem;
+  color: var(--text-2);
+  line-height: 1.85;
+  max-width: 460px;
 }
 
 /* ── Publications — row style ────────────────────────────────────────────── */
@@ -1001,9 +1009,9 @@ em { font-style: italic; }
 /* ── Responsive ──────────────────────────────────────────────────────────── */
 @media(max-width:1024px) {
   .hero { grid-template-columns:1fr 160px; }
-  .research-grid { grid-template-columns:1fr; }
-  .research-card.featured { grid-row:auto; }
-  .research-card.wide { grid-column:1; flex-direction:column; gap:1rem; }
+  .rp-body { flex-direction: column !important; align-items: flex-start; gap: 1.25rem; }
+  .rp-num { font-size: clamp(3.5rem, 14vw, 6rem); min-width: auto; }
+  .rp-content { max-width: 100%; }
   .about-body { grid-template-columns:1fr; }
   .about-sidebar { position:static; }
   .skills-grid { grid-template-columns:1fr; }
