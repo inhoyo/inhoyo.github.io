@@ -45,6 +45,39 @@ p { font-size: 0.92rem; color: var(--text-2); line-height: 1.8; }
 strong { color: var(--text-1); font-weight: 600; }
 em { font-style: italic; }
 
+html[lang="de"] body {
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+html[lang="de"] :where(
+  .hero-headline,
+  .hero-desc,
+  .about-hero-text p,
+  .section-title,
+  .section-head-right,
+  .rp-content h3,
+  .rp-content p,
+  .pub-row-body h3,
+  .pub-row-body p,
+  .tl-body h4,
+  .tl-body p,
+  .tl-body li,
+  .contact-statement,
+  .contact-info,
+  .sidebar-link,
+  .mobile-menu a,
+  .btn,
+  .pill,
+  .label,
+  .section-num,
+  .skill-group-label,
+  .sidebar-card-label
+) {
+  overflow-wrap: anywhere;
+  word-break: normal;
+}
+
 /* ── Noise overlay ───────────────────────────────────────────────────────── */
 .noise {
   position: fixed;
@@ -655,7 +688,7 @@ em { font-style: italic; }
 .rp:hover .rp-num { -webkit-text-stroke-color: rgba(79,195,247,0.42); }
 
 /* Text */
-.rp-content { flex: 1; max-width: clamp(320px, 42vw, 580px); }
+.rp-content { flex: 1; max-width: clamp(320px, 42vw, 580px); min-width:0; }
 .rp-content h3 {
   font-family: 'Syne', sans-serif;
   font-size: clamp(1.5rem, 3vw, 2.4rem);
@@ -700,6 +733,7 @@ em { font-style: italic; }
   font-family:'Syne',sans-serif;
   letter-spacing:0.05em;
 }
+.pub-row-body { min-width:0; }
 .pub-row-body h3 {
   font-family:'Syne',sans-serif;
   font-size:clamp(0.92rem,1.5vw,1.05rem);
@@ -844,7 +878,7 @@ em { font-style: italic; }
   padding-top:2.5rem;
   border-top:1px solid var(--border);
 }
-.contact-info { font-size:0.83rem; color:var(--text-2); line-height:1.8; }
+.contact-info { min-width:0; font-size:0.83rem; color:var(--text-2); line-height:1.8; }
 .contact-info strong { color:var(--text-1); display:block; }
 
 /* Social icons */
@@ -948,6 +982,7 @@ em { font-style: italic; }
 }
 .tl-item:last-child { border-bottom:none; }
 .tl-year { font-size:0.72rem; font-weight:600; color:var(--text-3); padding-top:0.2rem; line-height:1.5; }
+.tl-body { min-width:0; }
 .tl-body h4 {
   font-family:'Syne',sans-serif;
   font-size:1rem;
@@ -1019,6 +1054,14 @@ em { font-style: italic; }
 @media(max-width:768px) {
   .nav-links { display:none; }
   .nav-hamburger { display:flex; }
+  .mobile-menu a { letter-spacing:0; max-width:100%; overflow-wrap:anywhere; }
+
+  html[lang="de"] .label,
+  html[lang="de"] .section-num,
+  html[lang="de"] .skill-group-label,
+  html[lang="de"] .sidebar-card-label {
+    letter-spacing:0.12em;
+  }
 
   /* Speed up all marquees on mobile */
   .marquee-track { animation-duration: 16s; }
@@ -1075,6 +1118,8 @@ em { font-style: italic; }
   .about-photo { display:none; }
   .footer-wordmark { font-size:clamp(3rem,14vw,7rem); }
   .contact-row { flex-direction:column; align-items:flex-start; gap:1.5rem; }
+  .pub-footer { flex-direction:column; gap:0.85rem; }
+  .pub-footer a { align-items:flex-start; overflow-wrap:anywhere; }
 
   /* Research panels — mobile */
   .rp { min-height: unset; }
@@ -1095,5 +1140,18 @@ em { font-style: italic; }
   .hero-meta { flex-direction:column; align-items:flex-start; gap:1rem; }
   .hero-right { height: clamp(240px, 45vh, 360px); }
   .tl-item { grid-template-columns:1fr; gap:0.5rem; }
-  .btn { font-size:0.8rem; padding:0.65rem 1.1rem; }
+  .btn {
+    font-size:0.8rem;
+    padding:0.65rem 1.1rem;
+    max-width:100%;
+    white-space:normal;
+    justify-content:center;
+    text-align:center;
+  }
+  .hero-actions,
+  .about-hero-actions { width:100%; }
+  .pill { max-width:100%; white-space:normal; }
+  html[lang="de"] .hero-headline { font-size:clamp(0.85rem, 4vw, 1.08rem); }
+  html[lang="de"] .contact-statement { font-size:clamp(2rem, 12vw, 3rem); }
+  html[lang="de"] .mobile-menu a { font-size:clamp(1.85rem, 10vw, 2.7rem); }
 }

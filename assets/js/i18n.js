@@ -46,6 +46,17 @@
       border-color: rgba(79,195,247,0.28);
       font-weight: 600;
     }
+    @media (max-width: 480px) {
+      #lang-switcher {
+        right: 50%;
+        bottom: 0.75rem;
+        transform: translateX(50%);
+      }
+      .lang-btn {
+        padding: 5px 8px;
+        font-size: 0.6em;
+      }
+    }
   `;
   document.head.appendChild(s);
 }());
@@ -153,6 +164,18 @@ const TRANSLATIONS = {
     'about.exp.thesis.title':       'Master Thesis &mdash; Institute of Photonics and Quantum Electronics (IPQ), KIT',
     'about.exp.thesis.period':      'October 2020 &ndash; April 2021',
     'about.exp.thesis.body':        'Data-Aided Carrier Phase Recovery Algorithms for Coherent Optical Communication Systems',
+    'about.exp.enbw.title':         'Student Trainee, Project Engineer &mdash; EnBW, Karlsruhe',
+    'about.exp.enbw.period':        'April 2020 &ndash; June 2021',
+    'about.exp.enbw.dept':          'Rheinhafen Steam Power Plant RDK',
+    'about.exp.enbw.li1':           'Calculation, reconstruction, and infrastructure adjustments of the power plant high-voltage site grid',
+    'about.exp.siemens.title':      'Working Student &mdash; Siemens, Karlsruhe',
+    'about.exp.siemens.period':     'April 2019 &ndash; March 2020',
+    'about.exp.siemens.dept':       'Digital Industries &mdash; Factory Automation',
+    'about.exp.kit_ta.title':       'Teaching Assistant &mdash; Karlsruhe Institute of Technology (KIT)',
+    'about.exp.kit_ta.period':      '2015 &ndash; 2016',
+    'about.exp.kit_ta.course':      'Teaching Assistant for the course Electric Circuits',
+    'about.exp.kit_ta.li1':         'Held tutorial classes',
+    'about.exp.kit_ta.li2':         'Corrected and graded exercise sheets',
 
     'about.pub.title':      'Publications',
     'about.pub.first':      'First Author',
@@ -304,6 +327,18 @@ const TRANSLATIONS = {
     'about.exp.thesis.title':    'Masterarbeit &mdash; Institut für Photonik und Quantenelektronik (IPQ), KIT',
     'about.exp.thesis.period':   'Oktober 2020 &ndash; April 2021',
     'about.exp.thesis.body':     'Data-Aided Carrier Phase Recovery Algorithms for Coherent Optical Communication Systems',
+    'about.exp.enbw.title':      'Werkstudent, Projektengineering &mdash; EnBW, Karlsruhe',
+    'about.exp.enbw.period':     'April 2020 &ndash; Juni 2021',
+    'about.exp.enbw.dept':       'Rheinhafen-Dampfkraftwerk RDK',
+    'about.exp.enbw.li1':        'Berechnung, Rekonstruktion und infrastrukturelle Anpassungen des Hochspannungs&shy;standortnetzes des Kraftwerks',
+    'about.exp.siemens.title':   'Werkstudent &mdash; Siemens, Karlsruhe',
+    'about.exp.siemens.period':  'April 2019 &ndash; M&auml;rz 2020',
+    'about.exp.siemens.dept':    'Digital Industries &mdash; Factory Automation',
+    'about.exp.kit_ta.title':    'Tutor / Teaching Assistant &mdash; Karlsruher Institut f&uuml;r Technologie (KIT)',
+    'about.exp.kit_ta.period':   '2015 &ndash; 2016',
+    'about.exp.kit_ta.course':   'Tutor f&uuml;r die Lehrveranstaltung Elektrische Schaltungen',
+    'about.exp.kit_ta.li1':      'Durchf&uuml;hrung von Tutorien',
+    'about.exp.kit_ta.li2':      'Korrektur und Bewertung von &Uuml;bungsbl&auml;ttern',
 
     'about.pub.title':     'Publikationen',
     'about.pub.first':     'Erstautor',
@@ -454,6 +489,18 @@ const TRANSLATIONS = {
     'about.exp.thesis.title':    '석사 논문 &mdash; 광자공학 및 양자전자학 연구소 (IPQ), KIT',
     'about.exp.thesis.period':   '2020년 10월 &ndash; 2021년 4월',
     'about.exp.thesis.body':     'Data-Aided Carrier Phase Recovery Algorithms for Coherent Optical Communication Systems',
+    'about.exp.enbw.title':      '학생 연수생, 프로젝트 엔지니어 &mdash; EnBW, 카를스루에',
+    'about.exp.enbw.period':     '2020년 4월 &ndash; 2021년 6월',
+    'about.exp.enbw.dept':       '라인하펜 증기발전소 RDK',
+    'about.exp.enbw.li1':        '발전소 고전압 부지 전력망 계산, 재구축 및 인프라 조정',
+    'about.exp.siemens.title':   '워킹 스튜던트 &mdash; Siemens, 카를스루에',
+    'about.exp.siemens.period':  '2019년 4월 &ndash; 2020년 3월',
+    'about.exp.siemens.dept':    'Digital Industries &mdash; Factory Automation',
+    'about.exp.kit_ta.title':    '조교 &mdash; 카를스루에 공과대학교 (KIT)',
+    'about.exp.kit_ta.period':   '2015년 &ndash; 2016년',
+    'about.exp.kit_ta.course':   'Electric Circuits 과목 조교',
+    'about.exp.kit_ta.li1':      '튜토리얼 수업 진행',
+    'about.exp.kit_ta.li2':      '연습 문제지 채점 및 평가',
 
     'about.pub.title':     '논문',
     'about.pub.first':     '제1저자',
