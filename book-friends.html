@@ -3,11 +3,116 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Book 15 Minutes — In-Ho Baek</title>
-  <meta name="description" content="Book a 15-minute slot with In-Ho Baek." />
+  <title>Book an Evening — In-Ho Baek</title>
+  <meta name="description" content="Book an evening with In-Ho Baek — friends & family." />
   <link rel="stylesheet" href="assets/css/style.css" />
   <style>
-    /* ── Booking page styles ─────────────────────────────────────────────── */
+    /* ── Password gate ───────────────────────────────────────────────────── */
+    .pw-overlay {
+      position: fixed;
+      inset: 0;
+      background: var(--bg);
+      z-index: 9999;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.5rem;
+    }
+    .pw-card {
+      background: var(--surface);
+      border: 1px solid var(--border-2);
+      border-radius: 18px;
+      padding: 2.75rem 2.5rem 2.25rem;
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+      animation: fadeIn 0.4s ease;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .pw-icon {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .pw-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: var(--text-1);
+      margin-bottom: 0.4rem;
+    }
+    .pw-title span { color: var(--gold); }
+    .pw-subtitle {
+      font-size: 0.85rem;
+      color: var(--text-2);
+      margin-bottom: 1.75rem;
+      line-height: 1.7;
+    }
+    .pw-input-wrap { position: relative; }
+    .pw-input {
+      width: 100%;
+      background: var(--surface-2);
+      border: 1px solid var(--border-2);
+      border-radius: 10px;
+      padding: 0.7rem 2.6rem 0.7rem 1rem;
+      font-size: 0.95rem;
+      color: var(--text-1);
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      letter-spacing: 0.12em;
+      text-align: center;
+      transition: border-color 0.2s;
+    }
+    .pw-input:focus { border-color: var(--gold); }
+    .pw-eye {
+      position: absolute;
+      right: 0.75rem;
+      top: 50%;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      color: var(--text-2);
+      cursor: pointer;
+      font-size: 1rem;
+      padding: 0.2rem;
+      line-height: 1;
+    }
+    .pw-eye:hover { color: var(--text-1); }
+    .pw-error {
+      display: none;
+      font-size: 0.78rem;
+      color: rgba(220,53,69,0.85);
+      margin-top: 0.55rem;
+    }
+    .pw-btn {
+      width: 100%;
+      margin-top: 1rem;
+      background: var(--gold);
+      color: #080808;
+      border: none;
+      border-radius: 10px;
+      padding: 0.75rem;
+      font-size: 0.9rem;
+      font-weight: 700;
+      font-family: 'Inter', sans-serif;
+      cursor: pointer;
+      transition: opacity 0.2s;
+      letter-spacing: 0.03em;
+    }
+    .pw-btn:hover { opacity: 0.86; }
+    .pw-back {
+      display: block;
+      margin-top: 1.2rem;
+      font-size: 0.78rem;
+      color: var(--text-3);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .pw-back:hover { color: var(--text-2); }
+
+    /* ── Booking page (same pattern as book.html) ────────────────────────── */
     .book-hero {
       padding: calc(var(--nav-h) + 4rem) var(--pad-x) 3rem;
       max-width: var(--max-w);
@@ -21,7 +126,7 @@
       color: var(--text-1);
       margin-bottom: 0.75rem;
     }
-    .book-hero h1 span { color: var(--accent); }
+    .book-hero h1 span { color: var(--gold); }
     .book-hero p {
       font-size: 0.95rem;
       color: var(--text-2);
@@ -30,7 +135,7 @@
       line-height: 1.8;
     }
 
-    /* ── Calendar strip ──────────────────────────────────────────────────── */
+    /* ── Calendar ────────────────────────────────────────────────────────── */
     .cal-section {
       max-width: 900px;
       margin: 0 auto;
@@ -63,19 +168,30 @@
       user-select: none;
     }
     .cal-day.has-slots {
-      border-color: var(--accent);
+      border-color: var(--gold);
       cursor: pointer;
     }
-    .cal-day.has-slots:hover {
-      background: var(--accent-dim);
-    }
+    .cal-day.has-slots:hover { background: rgba(200,169,110,0.10); }
     .cal-day.selected {
-      background: var(--accent-dim);
-      border-color: var(--accent);
-      box-shadow: 0 0 0 2px var(--accent);
+      background: rgba(200,169,110,0.12);
+      border-color: var(--gold);
+      box-shadow: 0 0 0 2px var(--gold);
     }
-    .cal-day.no-slots {
-      opacity: 0.35;
+    .cal-day.no-slots { opacity: 0.35; }
+    .cal-day.booked {
+      background: rgba(220, 53, 69, 0.10);
+      border-color: rgba(220, 53, 69, 0.45);
+      opacity: 1;
+    }
+    .cal-day.booked .cal-day-num { color: rgba(220, 53, 69, 0.80); }
+    .cal-day.booked .cal-day-name,
+    .cal-day.booked .cal-day-mon  { color: rgba(220, 53, 69, 0.50); }
+    .cal-booked-tag {
+      font-size: 0.52rem;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: rgba(220, 53, 69, 0.65);
+      margin-top: 0.3rem;
     }
     .cal-day-name {
       font-size: 0.65rem;
@@ -92,32 +208,14 @@
       line-height: 1;
       margin-bottom: 0.2rem;
     }
-    .cal-day.has-slots .cal-day-num { color: var(--accent); }
-    .cal-day-mon {
-      font-size: 0.6rem;
-      color: var(--text-3);
-    }
+    .cal-day.has-slots .cal-day-num { color: var(--gold); }
+    .cal-day-mon { font-size: 0.6rem; color: var(--text-3); }
     .cal-dot {
       width: 4px;
       height: 4px;
-      background: var(--accent);
+      background: var(--gold);
       border-radius: 50%;
       margin: 0.3rem auto 0;
-    }
-    .cal-day.booked {
-      background: rgba(220, 53, 69, 0.10);
-      border-color: rgba(220, 53, 69, 0.45);
-      opacity: 1;
-    }
-    .cal-day.booked .cal-day-num { color: rgba(220, 53, 69, 0.80); }
-    .cal-day.booked .cal-day-name,
-    .cal-day.booked .cal-day-mon  { color: rgba(220, 53, 69, 0.50); }
-    .cal-booked-tag {
-      font-size: 0.52rem;
-      letter-spacing: 0.07em;
-      text-transform: uppercase;
-      color: rgba(220, 53, 69, 0.65);
-      margin-top: 0.3rem;
     }
 
     /* ── Slots panel ─────────────────────────────────────────────────────── */
@@ -139,26 +237,19 @@
       color: var(--text-1);
       margin-bottom: 1rem;
     }
-    .slots-grid {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.6rem;
-    }
+    .slots-grid { display: flex; flex-wrap: wrap; gap: 0.6rem; }
     .slot-chip {
       background: var(--surface);
-      border: 1px solid var(--accent);
+      border: 1px solid var(--gold);
       border-radius: 50px;
-      padding: 0.5rem 1.2rem;
+      padding: 0.5rem 1.4rem;
       font-size: 0.88rem;
-      color: var(--accent);
+      color: var(--gold);
       cursor: pointer;
       transition: background 0.2s, color 0.2s;
       font-weight: 500;
     }
-    .slot-chip:hover {
-      background: var(--accent);
-      color: #080808;
-    }
+    .slot-chip:hover { background: var(--gold); color: #080808; }
 
     /* ── Modal ───────────────────────────────────────────────────────────── */
     .modal-backdrop {
@@ -189,10 +280,8 @@
     }
     .modal-close {
       position: absolute;
-      top: 1.2rem;
-      right: 1.2rem;
-      background: none;
-      border: none;
+      top: 1.2rem; right: 1.2rem;
+      background: none; border: none;
       color: var(--text-2);
       font-size: 1.4rem;
       cursor: pointer;
@@ -211,13 +300,11 @@
     }
     .modal-slot-info {
       font-size: 0.82rem;
-      color: var(--accent);
+      color: var(--gold);
       margin-bottom: 1.75rem;
       font-weight: 500;
     }
-    .form-field {
-      margin-bottom: 1.1rem;
-    }
+    .form-field { margin-bottom: 1.1rem; }
     .form-field label {
       display: block;
       font-size: 0.75rem;
@@ -226,7 +313,8 @@
       color: var(--text-2);
       margin-bottom: 0.4rem;
     }
-    .form-field input {
+    .form-field input,
+    .form-field textarea {
       width: 100%;
       background: var(--surface-2);
       border: 1px solid var(--border-2);
@@ -237,36 +325,34 @@
       font-family: 'Inter', sans-serif;
       outline: none;
       transition: border-color 0.2s;
+      resize: none;
     }
-    .form-field input:focus {
-      border-color: var(--accent);
-    }
-    .form-field input::placeholder { color: var(--text-3); }
+    .form-field input:focus,
+    .form-field textarea:focus { border-color: var(--gold); }
+    .form-field input::placeholder,
+    .form-field textarea::placeholder { color: var(--text-3); }
     .form-submit {
       width: 100%;
       margin-top: 0.5rem;
-      background: var(--accent);
+      background: var(--gold);
       color: #080808;
       border: none;
       border-radius: 8px;
       padding: 0.8rem;
       font-size: 0.92rem;
-      font-weight: 600;
+      font-weight: 700;
       cursor: pointer;
       font-family: 'Inter', sans-serif;
       transition: opacity 0.2s, transform 0.15s;
     }
-    .form-submit:hover { opacity: 0.88; transform: translateY(-1px); }
+    .form-submit:hover { opacity: 0.86; transform: translateY(-1px); }
     .form-submit:disabled { opacity: 0.5; cursor: not-allowed; }
     .form-success {
       display: none;
       text-align: center;
       padding: 1rem 0;
     }
-    .form-success-icon {
-      font-size: 2.5rem;
-      margin-bottom: 0.75rem;
-    }
+    .form-success-icon { font-size: 2.5rem; margin-bottom: 0.75rem; }
     .form-success h3 {
       font-family: 'Syne', sans-serif;
       font-size: 1.2rem;
@@ -274,10 +360,7 @@
       color: var(--text-1);
       margin-bottom: 0.5rem;
     }
-    .form-success p {
-      font-size: 0.87rem;
-      color: var(--text-2);
-    }
+    .form-success p { font-size: 0.87rem; color: var(--text-2); }
     .form-note {
       font-size: 0.75rem;
       color: var(--text-3);
@@ -285,33 +368,27 @@
       margin-top: 0.9rem;
       line-height: 1.6;
     }
-    .ff-btn {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.45rem;
-      border: 1px solid var(--gold);
-      color: var(--gold);
-      background: rgba(200,169,110,0.07);
-      border-radius: 50px;
-      padding: 0.5rem 1.3rem;
-      font-size: 0.84rem;
-      font-weight: 500;
-      margin-top: 1.4rem;
-      transition: background 0.2s;
-      text-decoration: none;
-    }
-    .ff-btn:hover { background: rgba(200,169,110,0.16); }
-    .no-slots-msg {
-      text-align: center;
-      color: var(--text-2);
-      font-size: 0.9rem;
-      padding: 2rem 0;
-    }
   </style>
 </head>
-<body data-page="book">
+<body data-page="book-friends">
 
 <div class="noise" aria-hidden="true"></div>
+
+<!-- ── Password gate ──────────────────────────────────────────────────── -->
+<div class="pw-overlay" id="pw-overlay">
+  <div class="pw-card">
+    <div class="pw-icon">&#128274;</div>
+    <p class="pw-title">Friends &amp; <span>Family</span></p>
+    <p class="pw-subtitle">This page is for friends and family only.<br>Enter the password to continue.</p>
+    <div class="pw-input-wrap">
+      <input class="pw-input" id="pw-input" type="password" placeholder="Password" autocomplete="current-password" />
+      <button class="pw-eye" id="pw-eye" type="button" aria-label="Toggle password visibility">&#128065;</button>
+    </div>
+    <p class="pw-error" id="pw-error">Wrong password — try again.</p>
+    <button class="pw-btn" id="pw-btn" type="button">Enter</button>
+    <a href="book.html" class="pw-back">← Back to professional booking</a>
+  </div>
+</div>
 
 <!-- ── Navigation ──────────────────────────────────────────────────────── -->
 <nav class="site-nav scrolled">
@@ -336,21 +413,20 @@
 
 <!-- ── Page header ────────────────────────────────────────────────────── -->
 <div class="book-hero">
-  <h1>Book <span>15 Minutes</span></h1>
-  <p>Pick a slot that works for you. I'll send a calendar invite with a video call link to confirm.</p>
-  <a href="book-friends.html" class="ff-btn">Friends &amp; Family &mdash; Book an Evening &nbsp;&#10139;</a>
+  <h1>Book an <span>Evening</span></h1>
+  <p>Pick a free evening and I'll get back to you to sort out the details. Looking forward to it!</p>
 </div>
 
 <!-- ── Calendar strip ─────────────────────────────────────────────────── -->
 <div class="cal-section">
-  <p class="cal-label">Next 14 days — slots highlighted in blue</p>
+  <p class="cal-label">Next 14 days — evenings highlighted in gold</p>
   <div class="cal-strip" id="cal-strip"></div>
   <p class="cal-label" style="margin-top:0.4rem; text-align:right;" id="cal-range"></p>
 </div>
 
 <!-- ── Slots for selected day ─────────────────────────────────────────── -->
 <div class="slots-panel" id="slots-panel">
-  <p class="slots-hint" id="slots-hint">Select a highlighted day above to see available times.</p>
+  <p class="slots-hint" id="slots-hint">Select a highlighted day above to reserve an evening.</p>
   <div id="slots-content" style="display:none;"></div>
 </div>
 
@@ -360,43 +436,44 @@
     <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
 
     <div id="form-body">
-      <p class="modal-title" id="modal-title">Request this slot</p>
+      <p class="modal-title" id="modal-title">Reserve this evening</p>
       <p class="modal-slot-info" id="modal-slot-info"></p>
 
-      <!--
-        FORMSPREE SETUP (one-time, 5 min):
-        1. Go to https://formspree.io and sign up (free)
-        2. Create a new form → copy your Form ID
-        3. Replace YOUR_FORM_ID below with it
-        That's it — every submission will be emailed to you.
-      -->
-      <form id="booking-form" action="https://formspree.io/f/mbdeyazw" method="POST">
+      <form id="booking-form" action="https://formspree.io/f/mgobylby" method="POST">
         <input type="hidden" name="slot" id="form-slot-hidden" />
         <input type="hidden" name="_subject" id="form-subject" />
 
         <div class="form-field">
           <label for="f-name">Your Name</label>
-          <input type="text" id="f-name" name="name" placeholder="Jane Smith" required autocomplete="name" />
+          <input type="text" id="f-name" name="name" placeholder="Your name" required autocomplete="name" />
         </div>
         <div class="form-field">
-          <label for="f-email">Email Address</label>
-          <input type="email" id="f-email" name="email" placeholder="jane@example.com" required autocomplete="email" />
+          <label for="f-phone">Phone / WhatsApp</label>
+          <input type="tel" id="f-phone" name="phone" placeholder="+49 …" autocomplete="tel" />
         </div>
         <div class="form-field">
-          <label for="f-phone">Phone Number <span style="color:var(--text-3);font-size:0.7rem;">(optional)</span></label>
-          <input type="tel" id="f-phone" name="phone" placeholder="+49 30 ..." autocomplete="tel" />
+          <label for="f-email">Email</label>
+          <input type="email" id="f-email" name="email" placeholder="your@email.com" autocomplete="email" />
+        </div>
+        <div class="form-field">
+          <label for="f-time">Preferred time that evening <span style="color:var(--text-3);font-size:0.7rem;">(optional)</span></label>
+          <input type="text" id="f-time" name="preferred_time" placeholder="e.g. around 19:00, anytime after 18:00 …" />
+        </div>
+        <div class="form-field">
+          <label for="f-msg">Message <span style="color:var(--text-3);font-size:0.7rem;">(optional)</span></label>
+          <textarea id="f-msg" name="message" rows="2" placeholder="Any plans in mind?"></textarea>
         </div>
 
-        <button type="submit" class="form-submit" id="form-submit-btn">Send Request &nbsp;&#8594;</button>
+        <button type="submit" class="form-submit" id="form-submit-btn">Send &nbsp;&#9825;</button>
       </form>
 
-      <p class="form-note" id="form-note">Your details are only used to confirm this booking and will not be shared.</p>
+      <p class="form-note" id="form-note">See you soon!</p>
     </div>
 
     <div class="form-success" id="form-success">
-      <div class="form-success-icon">&#9989;</div>
-      <h3>Request sent!</h3>
-      <p>I'll confirm your slot by email within 24 hours. Looking forward to talking!</p>
+      <div class="form-success-icon">&#127774;</div>
+      <h3>Can't wait!</h3>
+      <p>Got your message — I'll reach out to confirm the details.</p>
     </div>
   </div>
 </div>
@@ -404,23 +481,53 @@
 <!-- ── Scripts ────────────────────────────────────────────────────────── -->
 <script src="assets/js/app.js"></script>
 <script>
-/* ─────────────────────────────────────────────────────────────────────────
-   AVAILABLE SLOTS — edit this array to add / remove times.
-   Format: { date: "YYYY-MM-DD", time: "HH:MM" }  (slot is always 15 min)
-   ───────────────────────────────────────────────────────────────────────── */
-const AVAILABLE_SLOTS = [
-  { date: "2026-06-10", time: "15:05" },
-  { date: "2026-06-10", time: "18:00" },
-  { date: "2026-06-15", time: "15:15" },
-  { date: "2026-06-15", time: "16:45" },
-  { date: "2026-06-16", time: "12:00" },
-];
+/* ── Password gate ───────────────────────────────────────────────────── */
+const SESSION_KEY = "ff-unlocked";
+const CORRECT_PW  = "ilovekimchi";
+
+(function () {
+  if (sessionStorage.getItem(SESSION_KEY) === "1") {
+    document.getElementById("pw-overlay").style.display = "none";
+  }
+})();
+
+function tryUnlock() {
+  const val = document.getElementById("pw-input").value;
+  if (val === CORRECT_PW) {
+    sessionStorage.setItem(SESSION_KEY, "1");
+    document.getElementById("pw-overlay").style.display = "none";
+  } else {
+    const err = document.getElementById("pw-error");
+    err.style.display = "block";
+    document.getElementById("pw-input").value = "";
+    document.getElementById("pw-input").focus();
+    document.getElementById("pw-input").classList.add("shake");
+    setTimeout(() => document.getElementById("pw-input").classList.remove("shake"), 500);
+  }
+}
+
+document.getElementById("pw-btn").addEventListener("click", tryUnlock);
+document.getElementById("pw-input").addEventListener("keydown", e => {
+  if (e.key === "Enter") tryUnlock();
+});
+document.getElementById("pw-eye").addEventListener("click", function () {
+  const inp = document.getElementById("pw-input");
+  inp.type = inp.type === "password" ? "text" : "password";
+  this.textContent = inp.type === "password" ? "👁" : "🙈";
+});
 
 /* ─────────────────────────────────────────────────────────────────────────
-   FULLY BOOKED DATES — shown with a red tile, not clickable.
+   AVAILABLE EVENINGS — add dates when you're free in the evening.
+   Format: "YYYY-MM-DD"
    ───────────────────────────────────────────────────────────────────────── */
+const AVAILABLE_EVENINGS = new Set([
+  "2026-06-09",  // today
+]);
+
 const BOOKED_DATES = new Set([
+  "2026-06-10",
   "2026-06-11","2026-06-12","2026-06-13","2026-06-14",
+  "2026-06-15","2026-06-16",
   "2026-06-17","2026-06-18","2026-06-19","2026-06-20",
   "2026-06-21","2026-06-22","2026-06-23","2026-06-24",
   "2026-06-25","2026-06-26","2026-06-27","2026-06-28",
@@ -433,14 +540,6 @@ function localISODate(d) {
   const m = String(d.getMonth() + 1).padStart(2, "0");
   const day = String(d.getDate()).padStart(2, "0");
   return `${y}-${m}-${day}`;
-}
-
-function addMinutes(hhmm, mins) {
-  const [h, m] = hhmm.split(":").map(Number);
-  const total = h * 60 + m + mins;
-  const nh = String(Math.floor(total / 60)).padStart(2, "0");
-  const nm = String(total % 60).padStart(2, "0");
-  return `${nh}:${nm}`;
 }
 
 function formatDateLong(iso) {
@@ -470,42 +569,31 @@ const days = Array.from({ length: 14 }, (_, i) => {
   return localISODate(d);
 });
 
-// Index slots by date
-const slotsByDate = {};
-AVAILABLE_SLOTS.forEach(s => {
-  if (!slotsByDate[s.date]) slotsByDate[s.date] = [];
-  slotsByDate[s.date].push(s.time);
-});
-
 /* ── Render calendar strip ───────────────────────────────────────────── */
-const strip = document.getElementById("cal-strip");
+const strip  = document.getElementById("cal-strip");
 const rangeEl = document.getElementById("cal-range");
-
 rangeEl.textContent = `${formatDateShort(days[0])} – ${formatDateShort(days[days.length - 1])}`;
-
-let selectedDate = null;
 
 days.forEach(iso => {
   const [y, mo, d] = iso.split("-").map(Number);
-  const dateObj = new Date(y, mo - 1, d);
-  const hasSlots = !!slotsByDate[iso];
+  const dateObj   = new Date(y, mo - 1, d);
+  const hasEvening = AVAILABLE_EVENINGS.has(iso);
+  const isBooked   = BOOKED_DATES.has(iso);
 
-  const isBooked = BOOKED_DATES.has(iso);
   const el = document.createElement("div");
-  el.className = "cal-day" + (isBooked ? " booked" : hasSlots ? " has-slots" : " no-slots");
+  el.className  = "cal-day" + (isBooked ? " booked" : hasEvening ? " has-slots" : " no-slots");
   el.dataset.date = iso;
   el.innerHTML = `
     <div class="cal-day-name">${DAY_NAMES[dateObj.getDay()]}</div>
     <div class="cal-day-num">${d}</div>
     <div class="cal-day-mon">${MON_NAMES[mo - 1]}</div>
-    ${isBooked  ? '<div class="cal-booked-tag">Booked</div>' : ""}
-    ${hasSlots  ? '<div class="cal-dot"></div>'              : ""}
+    ${isBooked   ? '<div class="cal-booked-tag">Booked</div>' : ""}
+    ${hasEvening ? '<div class="cal-dot"></div>'              : ""}
   `;
 
-  if (hasSlots) {
+  if (hasEvening) {
     el.addEventListener("click", () => selectDay(iso, el));
   }
-
   strip.appendChild(el);
 });
 
@@ -513,23 +601,11 @@ days.forEach(iso => {
 function selectDay(iso, el) {
   document.querySelectorAll(".cal-day").forEach(d => d.classList.remove("selected"));
   el.classList.add("selected");
-  selectedDate = iso;
-  renderSlots(iso);
-}
 
-function renderSlots(iso) {
-  const hint = document.getElementById("slots-hint");
+  const hint   = document.getElementById("slots-hint");
   const content = document.getElementById("slots-content");
-
-  hint.style.display = "none";
+  hint.style.display    = "none";
   content.style.display = "block";
-
-  const times = slotsByDate[iso] || [];
-
-  if (times.length === 0) {
-    content.innerHTML = `<p class="no-slots-msg">No available slots on this day.</p>`;
-    return;
-  }
 
   const label = document.createElement("p");
   label.className = "slots-date-label";
@@ -538,14 +614,11 @@ function renderSlots(iso) {
   const grid = document.createElement("div");
   grid.className = "slots-grid";
 
-  times.sort().forEach(t => {
-    const endTime = addMinutes(t, 15);
-    const chip = document.createElement("button");
-    chip.className = "slot-chip";
-    chip.textContent = `${t} – ${endTime}`;
-    chip.addEventListener("click", () => openModal(iso, t, endTime));
-    grid.appendChild(chip);
-  });
+  const chip = document.createElement("button");
+  chip.className   = "slot-chip";
+  chip.textContent = "Evening time 🌙";
+  chip.addEventListener("click", () => openModal(iso));
+  grid.appendChild(chip);
 
   content.innerHTML = "";
   content.appendChild(label);
@@ -553,18 +626,17 @@ function renderSlots(iso) {
 }
 
 /* ── Modal ───────────────────────────────────────────────────────────── */
-function openModal(iso, start, end) {
-  const slotStr = `${formatDateLong(iso)}, ${start} – ${end}`;
+function openModal(iso) {
+  const slotStr = `${formatDateLong(iso)}, Evening`;
   document.getElementById("modal-slot-info").textContent = slotStr;
   document.getElementById("form-slot-hidden").value = slotStr;
-  document.getElementById("form-subject").value = `15-min booking request: ${slotStr}`;
+  document.getElementById("form-subject").value = `Evening booking request: ${slotStr}`;
 
-  // Reset form state
   document.getElementById("booking-form").style.display = "";
-  document.getElementById("form-success").style.display = "none";
-  document.getElementById("form-note").style.display = "";
-  document.getElementById("form-submit-btn").disabled = false;
-  document.getElementById("form-submit-btn").textContent = "Send Request  →";
+  document.getElementById("form-success").style.display  = "none";
+  document.getElementById("form-note").style.display     = "";
+  document.getElementById("form-submit-btn").disabled    = false;
+  document.getElementById("form-submit-btn").textContent = "Send ♡";
   document.getElementById("booking-form").reset();
 
   document.getElementById("modal").classList.add("open");
@@ -580,16 +652,13 @@ document.getElementById("modal-close").addEventListener("click", closeModal);
 document.getElementById("modal").addEventListener("click", e => {
   if (e.target === document.getElementById("modal")) closeModal();
 });
-document.addEventListener("keydown", e => {
-  if (e.key === "Escape") closeModal();
-});
+document.addEventListener("keydown", e => { if (e.key === "Escape") closeModal(); });
 
-/* ── Form submission (Formspree AJAX) ────────────────────────────────── */
+/* ── Form submission ─────────────────────────────────────────────────── */
 document.getElementById("booking-form").addEventListener("submit", async function(e) {
   e.preventDefault();
-
   const btn = document.getElementById("form-submit-btn");
-  btn.disabled = true;
+  btn.disabled    = true;
   btn.textContent = "Sending…";
 
   try {
@@ -598,20 +667,19 @@ document.getElementById("booking-form").addEventListener("submit", async functio
       body: new FormData(this),
       headers: { Accept: "application/json" }
     });
-
     if (resp.ok) {
       this.style.display = "none";
-      document.getElementById("form-note").style.display = "none";
+      document.getElementById("form-note").style.display    = "none";
       document.getElementById("form-success").style.display = "block";
     } else {
-      btn.disabled = false;
-      btn.textContent = "Send Request  →";
-      alert("Something went wrong. Please try emailing me directly at in-ho.baek@hhi.fraunhofer.de");
+      btn.disabled    = false;
+      btn.textContent = "Send ♡";
+      alert("Something went wrong — drop me a WhatsApp instead!");
     }
   } catch {
-    btn.disabled = false;
-    btn.textContent = "Send Request  →";
-    alert("Could not send — please email in-ho.baek@hhi.fraunhofer.de directly.");
+    btn.disabled    = false;
+    btn.textContent = "Send ♡";
+    alert("Could not send — drop me a WhatsApp instead!");
   }
 });
 </script>
