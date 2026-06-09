@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Book 15 Minutes — In-Ho Baek</title>
+  <meta name="description" content="Book a 15-minute slot with In-Ho Baek." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <style>
+    /* ── Booking page styles ─────────────────────────────────────────────── */
+    .book-hero {
+      padding: calc(var(--nav-h) + 4rem) var(--pad-x) 3rem;
+      max-width: var(--max-w);
+      margin: 0 auto;
+      text-align: center;
+    }
+    .book-hero h1 {
+      font-family: 'Syne', sans-serif;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 800;
+      color: var(--text-1);
+      margin-bottom: 0.75rem;
+    }
+    .book-hero h1 span { color: var(--accent); }
+    .book-hero p {
+      font-size: 0.95rem;
+      color: var(--text-2);
+      max-width: 480px;
+      margin: 0 auto;
+      line-height: 1.8;
+    }
+
+    /* ── Calendar strip ──────────────────────────────────────────────────── */
+    .cal-section {
+      max-width: 900px;
+      margin: 0 auto;
+      padding: 0 var(--pad-x) 2rem;
+    }
+    .cal-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-3);
+      margin-bottom: 1rem;
+    }
+    .cal-strip {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    @media (max-width: 600px) {
+      .cal-strip { grid-template-columns: repeat(4, 1fr); }
+    }
+    .cal-day {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 0.65rem 0.4rem;
+      text-align: center;
+      cursor: default;
+      transition: border-color 0.2s, background 0.2s;
+      user-select: none;
+    }
+    .cal-day.has-slots {
+      border-color: var(--accent);
+      cursor: pointer;
+    }
+    .cal-day.has-slots:hover {
+      background: var(--accent-dim);
+    }
+    .cal-day.selected {
+      background: var(--accent-dim);
+      border-color: var(--accent);
+      box-shadow: 0 0 0 2px var(--accent);
+    }
+    .cal-day.no-slots {
+      opacity: 0.35;
+    }
+    .cal-day-name {
+      font-size: 0.65rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-2);
+      margin-bottom: 0.3rem;
+    }
+    .cal-day-num {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-1);
+      line-height: 1;
+      margin-bottom: 0.2rem;
+    }
+    .cal-day.has-slots .cal-day-num { color: var(--accent); }
+    .cal-day-mon {
+      font-size: 0.6rem;
+      color: var(--text-3);
+    }
+    .cal-dot {
+      width: 4px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 50%;
+      margin: 0.3rem auto 0;
+    }
+
+    /* ── Slots panel ─────────────────────────────────────────────────────── */
+    .slots-panel {
+      max-width: 900px;
+      margin: 2rem auto 0;
+      padding: 0 var(--pad-x) 6rem;
+    }
+    .slots-hint {
+      text-align: center;
+      color: var(--text-2);
+      font-size: 0.88rem;
+      padding: 3rem 0;
+    }
+    .slots-date-label {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--text-1);
+      margin-bottom: 1rem;
+    }
+    .slots-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+    }
+    .slot-chip {
+      background: var(--surface);
+      border: 1px solid var(--accent);
+      border-radius: 50px;
+      padding: 0.5rem 1.2rem;
+      font-size: 0.88rem;
+      color: var(--accent);
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+      font-weight: 500;
+    }
+    .slot-chip:hover {
+      background: var(--accent);
+      color: #080808;
+    }
+
+    /* ── Modal ───────────────────────────────────────────────────────────── */
+    .modal-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(8,8,8,0.8);
+      backdrop-filter: blur(6px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .modal-backdrop.open { display: flex; }
+    .modal-box {
+      background: var(--surface);
+      border: 1px solid var(--border-2);
+      border-radius: 16px;
+      padding: 2.5rem;
+      width: 100%;
+      max-width: 440px;
+      position: relative;
+      animation: slideUp 0.3s var(--ease);
+    }
+    @keyframes slideUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .modal-close {
+      position: absolute;
+      top: 1.2rem;
+      right: 1.2rem;
+      background: none;
+      border: none;
+      color: var(--text-2);
+      font-size: 1.4rem;
+      cursor: pointer;
+      line-height: 1;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      transition: color 0.2s;
+    }
+    .modal-close:hover { color: var(--text-1); }
+    .modal-title {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.3rem;
+      font-weight: 800;
+      color: var(--text-1);
+      margin-bottom: 0.4rem;
+    }
+    .modal-slot-info {
+      font-size: 0.82rem;
+      color: var(--accent);
+      margin-bottom: 1.75rem;
+      font-weight: 500;
+    }
+    .form-field {
+      margin-bottom: 1.1rem;
+    }
+    .form-field label {
+      display: block;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--text-2);
+      margin-bottom: 0.4rem;
+    }
+    .form-field input {
+      width: 100%;
+      background: var(--surface-2);
+      border: 1px solid var(--border-2);
+      border-radius: 8px;
+      padding: 0.65rem 0.9rem;
+      font-size: 0.92rem;
+      color: var(--text-1);
+      font-family: 'Inter', sans-serif;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-field input:focus {
+      border-color: var(--accent);
+    }
+    .form-field input::placeholder { color: var(--text-3); }
+    .form-submit {
+      width: 100%;
+      margin-top: 0.5rem;
+      background: var(--accent);
+      color: #080808;
+      border: none;
+      border-radius: 8px;
+      padding: 0.8rem;
+      font-size: 0.92rem;
+      font-weight: 600;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      transition: opacity 0.2s, transform 0.15s;
+    }
+    .form-submit:hover { opacity: 0.88; transform: translateY(-1px); }
+    .form-submit:disabled { opacity: 0.5; cursor: not-allowed; }
+    .form-success {
+      display: none;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    .form-success-icon {
+      font-size: 2.5rem;
+      margin-bottom: 0.75rem;
+    }
+    .form-success h3 {
+      font-family: 'Syne', sans-serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--text-1);
+      margin-bottom: 0.5rem;
+    }
+    .form-success p {
+      font-size: 0.87rem;
+      color: var(--text-2);
+    }
+    .form-note {
+      font-size: 0.75rem;
+      color: var(--text-3);
+      text-align: center;
+      margin-top: 0.9rem;
+      line-height: 1.6;
+    }
+    .no-slots-msg {
+      text-align: center;
+      color: var(--text-2);
+      font-size: 0.9rem;
+      padding: 2rem 0;
+    }
+  </style>
+</head>
+<body data-page="book">
+
+<div class="noise" aria-hidden="true"></div>
+
+<!-- ── Navigation ──────────────────────────────────────────────────────── -->
+<nav class="site-nav scrolled">
+  <a href="index.html" class="nav-brand">In-Ho Baek</a>
+  <ul class="nav-links">
+    <li><a href="index.html#research">Research</a></li>
+    <li><a href="index.html#publications">Publications</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="index.html#contact" class="nav-cta">Contact</a></li>
+  </ul>
+  <button class="nav-hamburger" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu">
+  <a href="index.html#research">Research</a>
+  <a href="index.html#publications">Publications</a>
+  <a href="about.html">About</a>
+  <a href="index.html#contact">Contact</a>
+</div>
+
+<!-- ── Page header ────────────────────────────────────────────────────── -->
+<div class="book-hero">
+  <h1>Book <span>15 Minutes</span></h1>
+  <p>Pick a slot that works for you. I'll send a calendar invite with a video call link to confirm.</p>
+</div>
+
+<!-- ── Calendar strip ─────────────────────────────────────────────────── -->
+<div class="cal-section">
+  <p class="cal-label">Next 14 days — slots highlighted in blue</p>
+  <div class="cal-strip" id="cal-strip"></div>
+  <p class="cal-label" style="margin-top:0.4rem; text-align:right;" id="cal-range"></p>
+</div>
+
+<!-- ── Slots for selected day ─────────────────────────────────────────── -->
+<div class="slots-panel" id="slots-panel">
+  <p class="slots-hint" id="slots-hint">Select a highlighted day above to see available times.</p>
+  <div id="slots-content" style="display:none;"></div>
+</div>
+
+<!-- ── Booking modal ──────────────────────────────────────────────────── -->
+<div class="modal-backdrop" id="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+  <div class="modal-box">
+    <button class="modal-close" id="modal-close" aria-label="Close">&times;</button>
+
+    <div id="form-body">
+      <p class="modal-title" id="modal-title">Request this slot</p>
+      <p class="modal-slot-info" id="modal-slot-info"></p>
+
+      <!--
+        FORMSPREE SETUP (one-time, 5 min):
+        1. Go to https://formspree.io and sign up (free)
+        2. Create a new form → copy your Form ID
+        3. Replace YOUR_FORM_ID below with it
+        That's it — every submission will be emailed to you.
+      -->
+      <form id="booking-form" action="https://formspree.io/f/mbdeyazw" method="POST">
+        <input type="hidden" name="slot" id="form-slot-hidden" />
+        <input type="hidden" name="_subject" id="form-subject" />
+
+        <div class="form-field">
+          <label for="f-name">Your Name</label>
+          <input type="text" id="f-name" name="name" placeholder="Jane Smith" required autocomplete="name" />
+        </div>
+        <div class="form-field">
+          <label for="f-email">Email Address</label>
+          <input type="email" id="f-email" name="email" placeholder="jane@example.com" required autocomplete="email" />
+        </div>
+        <div class="form-field">
+          <label for="f-phone">Phone Number <span style="color:var(--text-3);font-size:0.7rem;">(optional)</span></label>
+          <input type="tel" id="f-phone" name="phone" placeholder="+49 30 ..." autocomplete="tel" />
+        </div>
+
+        <button type="submit" class="form-submit" id="form-submit-btn">Send Request &nbsp;&#8594;</button>
+      </form>
+
+      <p class="form-note">Your details are only used to confirm this booking and will not be shared.</p>
+    </div>
+
+    <div class="form-success" id="form-success">
+      <div class="form-success-icon">&#9989;</div>
+      <h3>Request sent!</h3>
+      <p>I'll confirm your slot by email within 24 hours. Looking forward to talking!</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── Scripts ────────────────────────────────────────────────────────── -->
+<script src="assets/js/main.js"></script>
+<script>
+/* ─────────────────────────────────────────────────────────────────────────
+   AVAILABLE SLOTS — edit this array to add / remove times.
+   Format: { date: "YYYY-MM-DD", time: "HH:MM" }
+   Each entry is one 15-minute slot starting at `time`.
+   ───────────────────────────────────────────────────────────────────────── */
+const AVAILABLE_SLOTS = [
+  // Example: tomorrow at 18:00 (15 min slot → 18:00 – 18:15)
+  { date: tomorrowISO(), time: "18:00" },
+];
+
+/* ── Helpers ─────────────────────────────────────────────────────────── */
+function tomorrowISO() {
+  const d = new Date();
+  d.setDate(d.getDate() + 1);
+  return d.toISOString().slice(0, 10);
+}
+
+function todayISO() {
+  return new Date().toISOString().slice(0, 10);
+}
+
+function addMinutes(hhmm, mins) {
+  const [h, m] = hhmm.split(":").map(Number);
+  const total = h * 60 + m + mins;
+  const nh = String(Math.floor(total / 60)).padStart(2, "0");
+  const nm = String(total % 60).padStart(2, "0");
+  return `${nh}:${nm}`;
+}
+
+function formatDateLong(iso) {
+  const [y, mo, d] = iso.split("-").map(Number);
+  return new Date(y, mo - 1, d).toLocaleDateString("en-GB", {
+    weekday: "long", day: "numeric", month: "long", year: "numeric"
+  });
+}
+
+function formatDateShort(iso) {
+  const [y, mo, d] = iso.split("-").map(Number);
+  return new Date(y, mo - 1, d).toLocaleDateString("en-GB", {
+    day: "numeric", month: "short"
+  });
+}
+
+/* ── Build 14-day window ─────────────────────────────────────────────── */
+const DAY_NAMES = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+const MON_NAMES = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+const days = Array.from({ length: 14 }, (_, i) => {
+  const d = new Date(today);
+  d.setDate(today.getDate() + i);
+  return d.toISOString().slice(0, 10);
+});
+
+// Index slots by date
+const slotsByDate = {};
+AVAILABLE_SLOTS.forEach(s => {
+  if (!slotsByDate[s.date]) slotsByDate[s.date] = [];
+  slotsByDate[s.date].push(s.time);
+});
+
+/* ── Render calendar strip ───────────────────────────────────────────── */
+const strip = document.getElementById("cal-strip");
+const rangeEl = document.getElementById("cal-range");
+
+rangeEl.textContent = `${formatDateShort(days[0])} – ${formatDateShort(days[13])}`;
+
+let selectedDate = null;
+
+days.forEach(iso => {
+  const [y, mo, d] = iso.split("-").map(Number);
+  const dateObj = new Date(y, mo - 1, d);
+  const hasSlots = !!slotsByDate[iso];
+
+  const el = document.createElement("div");
+  el.className = "cal-day" + (hasSlots ? " has-slots" : " no-slots");
+  el.dataset.date = iso;
+  el.innerHTML = `
+    <div class="cal-day-name">${DAY_NAMES[dateObj.getDay()]}</div>
+    <div class="cal-day-num">${d}</div>
+    <div class="cal-day-mon">${MON_NAMES[mo - 1]}</div>
+    ${hasSlots ? '<div class="cal-dot"></div>' : ""}
+  `;
+
+  if (hasSlots) {
+    el.addEventListener("click", () => selectDay(iso, el));
+  }
+
+  strip.appendChild(el);
+});
+
+/* ── Select a day ────────────────────────────────────────────────────── */
+function selectDay(iso, el) {
+  document.querySelectorAll(".cal-day").forEach(d => d.classList.remove("selected"));
+  el.classList.add("selected");
+  selectedDate = iso;
+  renderSlots(iso);
+}
+
+function renderSlots(iso) {
+  const hint = document.getElementById("slots-hint");
+  const content = document.getElementById("slots-content");
+
+  hint.style.display = "none";
+  content.style.display = "block";
+
+  const times = slotsByDate[iso] || [];
+
+  if (times.length === 0) {
+    content.innerHTML = `<p class="no-slots-msg">No available slots on this day.</p>`;
+    return;
+  }
+
+  const label = document.createElement("p");
+  label.className = "slots-date-label";
+  label.textContent = formatDateLong(iso);
+
+  const grid = document.createElement("div");
+  grid.className = "slots-grid";
+
+  times.sort().forEach(t => {
+    const endTime = addMinutes(t, 15);
+    const chip = document.createElement("button");
+    chip.className = "slot-chip";
+    chip.textContent = `${t} – ${endTime}`;
+    chip.addEventListener("click", () => openModal(iso, t, endTime));
+    grid.appendChild(chip);
+  });
+
+  content.innerHTML = "";
+  content.appendChild(label);
+  content.appendChild(grid);
+}
+
+/* ── Modal ───────────────────────────────────────────────────────────── */
+function openModal(iso, start, end) {
+  const slotStr = `${formatDateLong(iso)}, ${start} – ${end}`;
+  document.getElementById("modal-slot-info").textContent = slotStr;
+  document.getElementById("form-slot-hidden").value = slotStr;
+  document.getElementById("form-subject").value = `15-min booking request: ${slotStr}`;
+
+  // Reset form state
+  document.getElementById("booking-form").style.display = "";
+  document.getElementById("form-success").style.display = "none";
+  document.getElementById("form-note").style.display = "";
+  document.getElementById("form-submit-btn").disabled = false;
+  document.getElementById("form-submit-btn").textContent = "Send Request  →";
+  document.getElementById("booking-form").reset();
+
+  document.getElementById("modal").classList.add("open");
+  document.body.style.overflow = "hidden";
+}
+
+function closeModal() {
+  document.getElementById("modal").classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+document.getElementById("modal-close").addEventListener("click", closeModal);
+document.getElementById("modal").addEventListener("click", e => {
+  if (e.target === document.getElementById("modal")) closeModal();
+});
+document.addEventListener("keydown", e => {
+  if (e.key === "Escape") closeModal();
+});
+
+/* ── Form submission (Formspree AJAX) ────────────────────────────────── */
+document.getElementById("booking-form").addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  const btn = document.getElementById("form-submit-btn");
+  btn.disabled = true;
+  btn.textContent = "Sending…";
+
+  try {
+    const resp = await fetch(this.action, {
+      method: "POST",
+      body: new FormData(this),
+      headers: { Accept: "application/json" }
+    });
+
+    if (resp.ok) {
+      this.style.display = "none";
+      document.getElementById("form-note").style.display = "none";
+      document.getElementById("form-success").style.display = "block";
+    } else {
+      btn.disabled = false;
+      btn.textContent = "Send Request  →";
+      alert("Something went wrong. Please try emailing me directly at in-ho.baek@hhi.fraunhofer.de");
+    }
+  } catch {
+    btn.disabled = false;
+    btn.textContent = "Send Request  →";
+    alert("Could not send — please email in-ho.baek@hhi.fraunhofer.de directly.");
+  }
+});
+</script>
+</body>
+</html>
