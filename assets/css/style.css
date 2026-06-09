@@ -944,8 +944,8 @@ html[lang="de"] :where(
   align-items:flex-end;
 }
 .about-photo {
-  width:clamp(130px,15vw,180px);
-  height:clamp(160px,20vw,230px);
+  width:clamp(200px,22vw,300px);
+  height:clamp(250px,28vw,380px);
   object-fit:cover;
   object-position:center top;
   border-radius:var(--radius);
