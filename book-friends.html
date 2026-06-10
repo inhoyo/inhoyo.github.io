@@ -560,7 +560,9 @@ function formatDateShort(iso) {
 const DAY_NAMES = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 const MON_NAMES = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
-const today = new Date();
+// All dates are CET — start the window from today in CET
+const cetNow = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Berlin" }));
+const today = new Date(cetNow);
 today.setHours(0, 0, 0, 0);
 
 const days = Array.from({ length: 14 }, (_, i) => {

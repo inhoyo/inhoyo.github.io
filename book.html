@@ -462,7 +462,9 @@ function formatDateShort(iso) {
 const DAY_NAMES = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 const MON_NAMES = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
-const today = new Date();
+// All slot times are CET — compare against current CET time
+const cetNow = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Berlin" }));
+const today = new Date(cetNow);
 today.setHours(0, 0, 0, 0);
 
 const days = Array.from({ length: 14 }, (_, i) => {
@@ -471,9 +473,16 @@ const days = Array.from({ length: 14 }, (_, i) => {
   return localISODate(d);
 });
 
-// Index slots by date
+// Drop slots that have already passed in CET
+const activeSlots = AVAILABLE_SLOTS.filter(({ date, time }) => {
+  const [y, mo, d] = date.split("-").map(Number);
+  const [h, min] = time.split(":").map(Number);
+  return new Date(y, mo - 1, d, h, min) > cetNow;
+});
+
+// Index active slots by date
 const slotsByDate = {};
-AVAILABLE_SLOTS.forEach(s => {
+activeSlots.forEach(s => {
   if (!slotsByDate[s.date]) slotsByDate[s.date] = [];
   slotsByDate[s.date].push(s.time);
 });
