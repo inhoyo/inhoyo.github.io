@@ -1155,3 +1155,101 @@ html[lang="de"] :where(
   html[lang="de"] .contact-statement { font-size:clamp(2rem, 12vw, 3rem); }
   html[lang="de"] .mobile-menu a { font-size:clamp(1.85rem, 10vw, 2.7rem); }
 }
+
+/* ── Legal pages (Impressum / Datenschutzerklärung) ─────────────────────── */
+.legal-content { max-width: 740px; }
+.legal-section { margin-bottom: clamp(2rem, 4vw, 3rem); }
+
+.legal-h2 {
+  font-family: 'Syne', sans-serif;
+  font-size: clamp(1.05rem, 2vw, 1.25rem);
+  font-weight: 800;
+  color: var(--text-1);
+  margin-bottom: 0.85rem;
+  letter-spacing: -0.01em;
+  line-height: 1.3;
+}
+.legal-h3 {
+  font-family: 'Syne', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--text-1);
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  letter-spacing: 0;
+}
+.legal-address {
+  font-style: normal;
+  color: var(--text-2);
+  font-size: 0.9rem;
+  line-height: 2;
+}
+.legal-content p + p { margin-top: 0.75rem; }
+.legal-content ul {
+  list-style: disc;
+  padding-left: 1.25em;
+  margin-top: 0.5rem;
+  color: var(--text-2);
+  font-size: 0.9rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  line-height: 1.7;
+}
+.legal-content a { color: var(--accent); }
+.legal-content a:hover { text-decoration: underline; }
+
+/* Numbered table of contents */
+.legal-toc {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 1.4rem 1.75rem;
+  margin-bottom: 3rem;
+  font-size: 0.85rem;
+}
+.legal-toc-title {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--text-3);
+  margin-bottom: 0.85rem;
+  display: block;
+}
+.legal-toc ol {
+  list-style: decimal;
+  padding-left: 1.35em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  color: var(--text-2);
+}
+.legal-toc a { color: var(--text-2); text-decoration: none; }
+.legal-toc a:hover { color: var(--accent); }
+
+/* Placeholder highlight — easy to find when filling in real data */
+.placeholder {
+  background: rgba(200, 169, 110, 0.10);
+  border: 1px dashed rgba(200, 169, 110, 0.45);
+  border-radius: 3px;
+  padding: 0.05em 0.35em;
+  color: var(--gold);
+  font-style: italic;
+}
+
+/* Footer legal links row */
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.6rem 0;
+  border-bottom: 1px solid var(--border);
+}
+.footer-legal-link {
+  font-size: 0.72rem;
+  color: var(--text-3);
+  transition: color 0.2s;
+}
+.footer-legal-link:hover { color: var(--text-2); }
+.footer-legal-sep { font-size: 0.72rem; color: var(--border-2); }
