@@ -919,6 +919,7 @@ html[lang="de"] :where(
   -webkit-text-stroke:1px var(--border-2);
   color:transparent;
   user-select:none;
+  pointer-events:none;
   display:block;
   width:100%;
   padding: 1.5rem 0 0;
@@ -1238,13 +1239,12 @@ html[lang="de"] :where(
   font-style: italic;
 }
 
-/* Footer legal links row */
-.footer-bottom {
+/* Footer legal links */
+.footer-legal {
   display: flex;
   align-items: center;
   gap: 0.65rem;
-  padding: 0.6rem 0;
-  border-bottom: 1px solid var(--border);
+  padding: 0.5rem 0 0.25rem;
 }
 .footer-legal-link {
   font-size: 0.72rem;
