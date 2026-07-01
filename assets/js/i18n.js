@@ -75,7 +75,7 @@ const TRANSLATIONS = {
 
     /* Banner */
     'banner.role.scientist': 'Scientist',
-    'banner.role.phd':       'PhD Candidate',
+    'banner.role.phd':       'PhD',
     'banner.role.lecturer':  'University Lecturer',
     'banner.institution':    'Fraunhofer Heinrich Hertz Institute (HHI), Berlin',
     'banner.tagline':        'Terahertz Communications &amp; Photonic Networks',
@@ -122,16 +122,16 @@ const TRANSLATIONS = {
     /* ── About page ─────────────────────────────────────── */
     'about.page.title':   'About | In-Ho Baek',
     'about.header':       'About Me',
-    'about.subtitle':     'Scientist &amp; PhD Candidate &mdash; Fraunhofer HHI, Berlin',
+    'about.subtitle':     'Scientist &amp; PhD &mdash; Fraunhofer HHI, Berlin',
 
     'about.profile.title':'Professional Profile',
-    'about.profile.p1':   'I am a Scientist at the <strong>Fraunhofer Institute for Telecommunications, Heinrich Hertz Institute (HHI)</strong>, Berlin, within the Department of Photonic Networks and Systems, where I have been working since July 2021. In parallel, I am pursuing a <strong>PhD (Dr.-Ing.)</strong> at <strong>Technische Universit&auml;t Berlin (TUB)</strong> under the working title <em>&ldquo;Investigating Adaptive Baseband Techniques for Converged Optical / THz Wireless Links.&rdquo;</em>',
+    'about.profile.p1':   'I am a Scientist at the <strong>Fraunhofer Institute for Telecommunications, Heinrich Hertz Institute (HHI)</strong>, Berlin, within the Department of Photonic Networks and Systems, where I have been working since July 2021. In parallel, my <strong>PhD (Dr.-Ing.)</strong> at <strong>Technische Universit&auml;t Berlin (TUB)</strong> is titled <em>&ldquo;Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping.&rdquo;</em>',
     'about.profile.p2':   'My research focuses on high-capacity Terahertz (THz) wireless communications and their integration into next-generation 6G photonic network infrastructures. I develop advanced Digital Signal Processing (DSP) algorithms for rate-adaptive THz links and conduct experimental characterisation of photonic transmitter components &mdash; including PIN photodiode and WR3-coupled transmitter configurations &mdash; for probabilistically shaped, high-speed THz wireless transmission beyond 100&thinsp;Gbit/s. I am also actively exploring neural-network-based approaches to mitigate transceiver nonlinearities in THz systems.',
     'about.profile.p3':   'Alongside my research role, I have served as a lecturer for Information and Communication programmes at Berlin universities, covering topics at the intersection of communications engineering and signal processing.',
 
     'about.edu.title':              'Education',
-    'about.edu.phd.title':          'PhD &mdash; Electrical Engineering / Information Technology',
-    'about.edu.phd.body':           '<strong>Technische Universit&auml;t Berlin (TUB)</strong>, Berlin &mdash; 2026<br />Working title: <em>Investigating Adaptive Baseband Techniques for Converged Optical / THz Wireless Links</em><br />Desired degree: Dr.-Ing.',
+    'about.edu.phd.title':          'PhD (Dr.-Ing.) &mdash; Electrical Engineering / Information Technology',
+    'about.edu.phd.body':           '<strong>Technische Universit&auml;t Berlin (TUB)</strong>, Berlin &mdash; 2026<br />PhD Thesis: <em>Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping</em>',
     'about.edu.msc.title':          'M.Sc. &mdash; Electrical Engineering / Information Technology',
     'about.edu.msc.body':           '<strong>Karlsruhe Institute of Technology (KIT)</strong>, Karlsruhe &mdash; 2021<br />Focal points: Communication Engineering &amp; Optical Communications<br />Master Thesis (at IPQ, KIT): <em>Data-Aided Carrier Phase Recovery Algorithms for Coherent Optical Communication Systems</em>',
     'about.edu.exchange.title':     'Exchange Programme &mdash; Electrical Engineering &amp; Philosophy',
@@ -200,7 +200,7 @@ const TRANSLATIONS = {
     'about.contact.body':  'Fraunhofer Institute for Telecommunications &mdash; Heinrich Hertz Institute (HHI)<br />Department of Photonic Networks and Systems, Berlin, Germany<br /><br />Email: <a href="mailto:in-ho.baek@proton.me">in-ho.baek@proton.me</a><br />LinkedIn: <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener">linkedin.com/in/in-ho-baek</a><br />Google Scholar: <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar Profile</a><br />IEEE Xplore: <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE Author Profile</a>',
 
     /* ── Redesigned page sections ─────────────────────── */
-    'hero.eyebrow':         'Scientist &nbsp;·&nbsp; PhD Candidate &nbsp;·&nbsp; University Lecturer',
+    'hero.eyebrow':         'Scientist &nbsp;·&nbsp; PhD &nbsp;·&nbsp; University Lecturer',
     'hero.headline':        'Advancing <span class="accent-text">6G Photonic</span><br>Networks &amp;<br>THz Wireless',
     'hero.desc':            'Fraunhofer Heinrich Hertz Institute, Berlin &mdash; designing experimental THz systems and adaptive DSP that push wireless beyond 100&thinsp;Gbit/s at 300&thinsp;GHz.',
     'hero.btn.collab':      'Let\'s Collaborate',
@@ -245,7 +245,7 @@ const TRANSLATIONS = {
     'nav.contact':      'Kontakt',
 
     'banner.role.scientist': 'Wissenschaftler',
-    'banner.role.phd':       'Doktorand',
+    'banner.role.phd':       'Promotion',
     'banner.role.lecturer':  'Lehrbeauftragter',
     'banner.institution':    'Fraunhofer Heinrich-Hertz-Institut (HHI), Berlin',
     'banner.tagline':        'Terahertz-Kommunikation &amp; Photonische Netzwerke',
@@ -286,16 +286,16 @@ const TRANSLATIONS = {
 
     'about.page.title':  '\u00FCber mich | In-Ho Baek',
     'about.header':      '\u00FCber mich',
-    'about.subtitle':    'Wissenschaftler &amp; Doktorand &mdash; Fraunhofer HHI, Berlin',
+    'about.subtitle':    'Wissenschaftler &amp; Promotion &mdash; Fraunhofer HHI, Berlin',
 
     'about.profile.title':'Berufliches Profil',
-    'about.profile.p1':   'Ich bin Wissenschaftler am <strong>Fraunhofer-Institut f\u00FCr Nachrichtentechnik, Heinrich-Hertz-Institut (HHI)</strong>, Berlin, in der Abteilung Photonische Netze und Systeme, wo ich seit Juli 2021 t&auml;tig bin. Parallel dazu promoviere ich an der <strong>Technischen Universit&auml;t Berlin (TUB)</strong> unter dem Arbeitstitel <em>&ldquo;Untersuchung adaptiver Basisbandtechniken f\u00FCr konvergierte optische/THz-Funkverbindungen.&rdquo;</em>',
+    'about.profile.p1':   'Ich bin Wissenschaftler am <strong>Fraunhofer-Institut f\u00FCr Nachrichtentechnik, Heinrich-Hertz-Institut (HHI)</strong>, Berlin, in der Abteilung Photonische Netze und Systeme, wo ich seit Juli 2021 t&auml;tig bin. Parallel dazu tr&auml;gt meine Promotion (Dr.-Ing.) an der <strong>Technischen Universit&auml;t Berlin (TUB)</strong> den Titel <em>&ldquo;Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping.&rdquo;</em>',
     'about.profile.p2':   'Meine Forschung konzentriert sich auf hochkapazitive THz-Funkkommunikation und deren Integration in 6G-Photoniknetzwerke. Ich entwickle fortschrittliche DSP-Algorithmen f\u00FCr ratenadaptive THz-Strecken und f\u00FChre experimentelle Charakterisierungen photonischer Sendebaugruppen durch &mdash; f\u00FCr probabilistisch geformte THz-Funk\u00FCbertragungen \u00FCber 100&thinsp;Gbit/s. Zudem erforsche ich neuronalnetzbasierte Ans&auml;tze zur Kompensation von Nichtlinearit&auml;ten.',
     'about.profile.p3':   'Neben meiner Forschungst&auml;tigkeit bin ich als Lehrbeauftragter f\u00FCr Informations- und Kommunikationsprogramme an Berliner Hochschulen t&auml;tig.',
 
     'about.edu.title':           'Ausbildung',
-    'about.edu.phd.title':       'Promotion &mdash; Elektrotechnik / Informationstechnik',
-    'about.edu.phd.body':        '<strong>Technische Universit&auml;t Berlin (TUB)</strong>, Berlin &mdash; 2026<br />Arbeitstitel: <em>Untersuchung adaptiver Basisbandtechniken f\u00FCr konvergierte optische/THz-Funkverbindungen</em><br />Angestrebter Abschluss: Dr.-Ing.',
+    'about.edu.phd.title':       'Promotion (Dr.-Ing.) &mdash; Elektrotechnik / Informationstechnik',
+    'about.edu.phd.body':        '<strong>Technische Universit&auml;t Berlin (TUB)</strong>, Berlin &mdash; 2026<br />Dissertationstitel: <em>Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping</em>',
     'about.edu.msc.title':       'M.Sc. &mdash; Elektrotechnik / Informationstechnik',
     'about.edu.msc.body':        '<strong>Karlsruher Institut f\u00FCr Technologie (KIT)</strong>, Karlsruhe &mdash; 2021<br />Schwerpunkte: Kommunikationstechnik &amp; Optische Kommunikation<br />Masterarbeit (am IPQ, KIT): <em>Data-Aided Carrier Phase Recovery Algorithms for Coherent Optical Communication Systems</em>',
     'about.edu.exchange.title':  'Austauschprogramm &mdash; Elektrotechnik &amp; Philosophie',
@@ -363,7 +363,7 @@ const TRANSLATIONS = {
     'about.contact.title': 'Kontakt',
     'about.contact.body':  'Fraunhofer-Institut f\u00FCr Nachrichtentechnik &mdash; Heinrich-Hertz-Institut (HHI)<br />Abteilung Photonische Netze und Systeme, Berlin, Deutschland<br /><br />E-Mail: <a href="mailto:in-ho.baek@proton.me">in-ho.baek@proton.me</a><br />LinkedIn: <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener">linkedin.com/in/in-ho-baek</a><br />Google Scholar: <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar-Profil</a><br />IEEE Xplore: <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE-Autorenprofil</a>',
 
-    'hero.eyebrow':         'Wissenschaftler &nbsp;·&nbsp; Doktorand &nbsp;·&nbsp; Lehrbeauftragter',
+    'hero.eyebrow':         'Wissenschaftler &nbsp;·&nbsp; Promotion &nbsp;·&nbsp; Lehrbeauftragter',
     'hero.headline':        'Fortschritte in <span class="accent-text">6G Photonik</span><br>Netzwerken &amp;<br>THz-Kommunikation',
     'hero.desc':            'Fraunhofer Heinrich-Hertz-Institut, Berlin &mdash; experimentelle THz-Systeme und adaptive DSP f\u00FCr Datenraten \u00FCber 100&thinsp;Gbit/s bei 300&thinsp;GHz.',
     'hero.btn.collab':      'Zusammenarbeiten',
@@ -452,13 +452,13 @@ const TRANSLATIONS = {
     'about.subtitle':    '연구원 &amp; 박사 &mdash; 프라운호퍼 HHI, 베를린',
 
     'about.profile.title':'전문 프로필',
-    'about.profile.p1':   '저는 2021년 7월부터 베를린의 <strong>프라운호퍼 통신 연구소, 하인리히 헤르츠 연구소(HHI)</strong> 광자 네트워크 및 시스템 부서에서 연구원으로 근무하고 있습니다. 동시에 <strong>베를린 공과대학교(TUB)</strong>에서 <em>&ldquo;수렴된 광/THz 무선 링크를 위한 적응형 기저대역 기술 연구&rdquo;</em>라는 주제로 박사(Dr.-Ing.) 학위 과정 중입니다.',
+    'about.profile.p1':   '저는 2021년 7월부터 베를린의 <strong>프라운호퍼 통신 연구소, 하인리히 헤르츠 연구소(HHI)</strong> 광자 네트워크 및 시스템 부서에서 연구원으로 근무하고 있습니다. 동시에 <strong>베를린 공과대학교(TUB)</strong>에서의 박사(Dr.-Ing.) 논문 제목은 <em>&ldquo;Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping&rdquo;</em>입니다.',
     'about.profile.p2':   '연구는 고용량 테라헤르츠(THz) 무선 통신과 차세대 6G 포토닉 네트워크 인프라로의 통합에 초점을 맞춥니다. PIN 광검출기 및 WR3 결합 송신기를 포함한 광자 송신기 부품의 실험적 특성화와 100&thinsp;Gbit/s를 초과하는 고속 THz 무선 전송을 위한 고급 DSP 알고리즘을 개발합니다. 또한 THz 시스템의 비선형성 완화를 위한 신경망 기반 접근법을 연구합니다.',
     'about.profile.p3':   '연구 업무 외에도 베를린 대학에서 통신 공학과 신호 처리를 다루는 정보통신 프로그램의 겸임교수로 활동하고 있습니다.',
 
     'about.edu.title':           '학력',
-    'about.edu.phd.title':       '박사 &mdash; 전기공학 / 정보기술',
-    'about.edu.phd.body':        '<strong>베를린 공과대학교 (TUB)</strong>, 베를린 &mdash; 2026<br />논문 제목: <em>수렴된 광/THz 무선 링크를 위한 적응형 기저대역 기술 연구</em><br />목표 학위: Dr.-Ing.',
+    'about.edu.phd.title':       '박사(Dr.-Ing.) &mdash; 전기공학 / 정보기술',
+    'about.edu.phd.body':        '<strong>베를린 공과대학교 (TUB)</strong>, 베를린 &mdash; 2026<br />논문 제목: <em>Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping</em>',
     'about.edu.msc.title':       '석사 &mdash; 전기공학 / 정보기술',
     'about.edu.msc.body':        '<strong>카를스루에 공과대학교 (KIT)</strong>, 카를스루에 &mdash; 2021<br />전공: 통신 공학 &amp; 광통신<br />석사 논문 (IPQ, KIT): <em>Data-Aided Carrier Phase Recovery Algorithms for Coherent Optical Communication Systems</em>',
     'about.edu.exchange.title':  '교환 프로그램 &mdash; 전기공학 &amp; 철학',
