@@ -783,6 +783,19 @@ html[lang="de"] :where(
   color:var(--text-3);
   font-weight:500;
 }
+.pub-row-body p.pub-award,
+.tl-body p.pub-award {
+  display:flex;
+  align-items:center;
+  gap:0.45em;
+  margin-top:0.55rem;
+  font-size:0.78rem;
+  font-weight:700;
+  letter-spacing:0.01em;
+  color:#F5B301;
+}
+.pub-row-body p.pub-award i,
+.tl-body p.pub-award i { color:#F5B301; }
 .pub-first-author-marker {
   width:2px;
   background:rgba(79,195,247,0.3);

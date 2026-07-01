@@ -109,6 +109,7 @@ const TRANSLATIONS = {
     'pub.submitted': 'Submitted',
     'pub.accepted':  'Accepted',
     'pub.coauthor':  'Co-Author',
+    'pub.award':     'Best Student Paper Award &mdash; OECC 2026',
 
     /* Contact */
     'contact.title':      'Get in Touch',
@@ -148,7 +149,7 @@ const TRANSLATIONS = {
     'about.exp.hhi.li3':            'Device and experimental setup characterisation',
     'about.exp.hhi.li4':            'Project management and scientific collaboration',
     'about.exp.htw.title':          'Lecturer &mdash; HTW Berlin University of Applied Sciences (HTW Berlin)',
-    'about.exp.htw.period':         'October 2025 &ndash; March 2026',
+    'about.exp.htw.period':         'October 2025 &ndash; present',
     'about.exp.htw.prog':           'B.Sc. programme: Information and Communication Technology',
     'about.exp.htw.intro':          'Preparation and delivery of lectures, exercises, and assessments covering:',
     'about.exp.htw.li1':            'Fundamentals of telecommunications and communication systems',
@@ -274,6 +275,7 @@ const TRANSLATIONS = {
     'pub.submitted': 'Eingereicht',
     'pub.accepted':  'Angenommen',
     'pub.coauthor':  'Mitautor',
+    'pub.award':     'Auszeichnung für die beste studentische Arbeit &mdash; OECC 2026',
 
     'contact.title':       'Kontakt aufnehmen',
     'contact.text':        'Ich freue mich \u00FCber Anfragen zu Forschungskooperationen, Projekten<br />und M&ouml;glichkeiten im Bereich THz-Kommunikation und photonische Netzwerke.',
@@ -311,7 +313,7 @@ const TRANSLATIONS = {
     'about.exp.hhi.li3':         'Charakterisierung von Ger&auml;ten und experimentellen Aufbauten',
     'about.exp.hhi.li4':         'Projektmanagement und wissenschaftliche Zusammenarbeit',
     'about.exp.htw.title':       'Lehrbeauftragter &mdash; HTW Berlin, Berlin',
-    'about.exp.htw.period':      'Oktober 2025 &ndash; M&auml;rz 2026',
+    'about.exp.htw.period':      'Oktober 2025 &ndash; heute',
     'about.exp.htw.prog':        'B.Sc.-Studiengang: Informations- und Kommunikationstechnik',
     'about.exp.htw.intro':       'Vorbereitung und Durchf\u00FChrung von Vorlesungen, \u00FCbungen und Pr\u00FCfungen, Kerninhalte:',
     'about.exp.htw.li1':         'Grundlagen der Telekommunikation und Kommunikationssysteme',
@@ -406,7 +408,7 @@ const TRANSLATIONS = {
     'nav.contact':      '연락처',
 
     'banner.role.scientist': '연구원',
-    'banner.role.phd':       '박사 과정생',
+    'banner.role.phd':       '박사',
     'banner.role.lecturer':  '대학 강사',
     'banner.institution':    '프라운호퍼 하인리히 헤르츠 연구소 (HHI), 베를린',
     'banner.tagline':        '테라헤르츠 통신 &amp; 포토닉 네트워크',
@@ -436,6 +438,7 @@ const TRANSLATIONS = {
     'pub.submitted': '제출됨',
     'pub.accepted':  '수락됨',
     'pub.coauthor':  '공동 저자',
+    'pub.award':     'OECC 2026 최우수 논문상',
 
     'contact.title':       '연락하기',
     'contact.text':        'THz 통신 및 포토닉 네트워크 분야의 연구 협력,<br />프로젝트 문의 및 기회에 대한 논의를 환영합니다.',
@@ -446,7 +449,7 @@ const TRANSLATIONS = {
 
     'about.page.title':  '소개 | In-Ho Baek',
     'about.header':      '소개',
-    'about.subtitle':    '연구원 &amp; 박사 과정생 &mdash; 프라운호퍼 HHI, 베를린',
+    'about.subtitle':    '연구원 &amp; 박사 &mdash; 프라운호퍼 HHI, 베를린',
 
     'about.profile.title':'전문 프로필',
     'about.profile.p1':   '저는 2021년 7월부터 베를린의 <strong>프라운호퍼 통신 연구소, 하인리히 헤르츠 연구소(HHI)</strong> 광자 네트워크 및 시스템 부서에서 연구원으로 근무하고 있습니다. 동시에 <strong>베를린 공과대학교(TUB)</strong>에서 <em>&ldquo;수렴된 광/THz 무선 링크를 위한 적응형 기저대역 기술 연구&rdquo;</em>라는 주제로 박사(Dr.-Ing.) 학위 과정 중입니다.',
@@ -473,7 +476,7 @@ const TRANSLATIONS = {
     'about.exp.hhi.li3':         '장치 및 실험 설비 특성화',
     'about.exp.hhi.li4':         '프로젝트 관리 및 과학적 협력',
     'about.exp.htw.title':       '대학 강사 &mdash; HTW 베를린',
-    'about.exp.htw.period':      '2025년 10월 &ndash; 2026년 3월',
+    'about.exp.htw.period':      '2025년 10월 &ndash; 현재',
     'about.exp.htw.prog':        '학사 과정: 정보통신기술',
     'about.exp.htw.intro':       '디지털 통신 및 신호 처리 분야 강의, 연습 및 평가 진행:',
     'about.exp.htw.li1':         '통신 및 통신 시스템 기초',
@@ -523,7 +526,7 @@ const TRANSLATIONS = {
     'about.contact.title': '연락처',
     'about.contact.body':  '프라운호퍼 통신 연구소 &mdash; 하인리히 헤르츠 연구소 (HHI)<br />광자 네트워크 및 시스템 부서, 베를린, 독일<br /><br />이메일: <a href="mailto:in-ho.baek@proton.me">in-ho.baek@proton.me</a><br />LinkedIn: <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener">linkedin.com/in/in-ho-baek</a><br />Google Scholar: <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar 프로필</a><br />IEEE Xplore: <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE 저자 프로필</a>',
 
-    'hero.eyebrow':         '연구원 &nbsp;·&nbsp; 박사 과정생 &nbsp;·&nbsp; 대학 강사',
+    'hero.eyebrow':         '연구원 &nbsp;·&nbsp; 박사 &nbsp;·&nbsp; 대학 강사',
     'hero.headline':        '<span class="accent-text">6G 포토닉</span> 네트워크와<br>THz 무선 통신의<br>발전을 선도하다',
     'hero.desc':            '프라운호퍼 하인리히 헤르츠 연구소, 베를린 &mdash; 300&thinsp;GHz에서 100&thinsp;Gbit/s를 초과하는 실험적 THz 시스템과 적응형 DSP를 개발합니다.',
     'hero.btn.collab':      '협력 문의',
