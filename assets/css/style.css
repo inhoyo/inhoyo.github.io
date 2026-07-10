@@ -944,6 +944,17 @@ html[lang="de"] :where(
   border-top:1px solid var(--border);
 }
 .venture-meta strong { color:var(--text-2); }
+.venture-link {
+  display:inline-flex;
+  align-items:center;
+  gap:0.4em;
+  margin-top:1.25rem;
+  font-size:0.85rem;
+  font-weight:600;
+  color:var(--accent);
+  transition:color 0.2s ease;
+}
+.venture-link:hover { color:var(--text-1); }
 
 /* ── Skills marquee ──────────────────────────────────────────────────────── */
 .skills-section { border-top:1px solid var(--border); border-bottom:1px solid var(--border); }

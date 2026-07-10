@@ -204,7 +204,7 @@ const TRANSLATIONS = {
     /* ── Redesigned page sections ─────────────────────── */
     'hero.eyebrow':         'Scientist &nbsp;·&nbsp; PhD &nbsp;·&nbsp; Co-Founder &amp; CEO, LUXONNIC',
     'hero.headline':        'Advancing <span class="accent-text">6G Photonic</span><br>Networks &amp;<br>THz Wireless',
-    'hero.desc':            'Fraunhofer Heinrich Hertz Institute, Berlin &mdash; designing experimental THz systems and adaptive DSP that push wireless beyond 100&thinsp;Gbit/s at 300&thinsp;GHz. Also Co-Founder &amp; CEO of <strong>LUXONNIC</strong>, an early-stage venture I&rsquo;m building at Fraunhofer HHI to reinvent the optical transceiver for AI infrastructure.',
+    'hero.desc':            'Fraunhofer Heinrich Hertz Institute, Berlin &mdash; designing experimental THz systems and adaptive DSP that push wireless beyond 100&thinsp;Gbit/s at 300&thinsp;GHz. Also Co-Founder &amp; CEO of <strong>LUXONNIC</strong>, an early-stage venture we&rsquo;re building at Fraunhofer HHI to reinvent the optical transceiver for AI infrastructure.',
     'hero.btn.collab':      'Let\'s Collaborate',
     'hero.btn.research':    'View Research',
     'affils.label':         'Affiliated with',
@@ -252,6 +252,7 @@ const TRANSLATIONS = {
     'venture.tagline':      '&ldquo;Becoming the secret sauce of next-gen transceivers.&rdquo;',
     'venture.desc':         'Optical transceivers already consume roughly 10% of an AI factory&rsquo;s power &mdash; about 40&thinsp;MW per site, much of it spent on digital signal correction. <strong>LUXONNIC</strong> is developing the <strong>LUXONNICore</strong>, a photonic integrated circuit that performs signal equalization directly in the optical domain using photonic neural networks &mdash; replacing the power-hungry DSP chips inside next-generation (LPO/CPO) transceivers and targeting up to 30&times; higher bit-per-Joule efficiency.',
     'venture.meta':         'In development at <strong>Fraunhofer HHI</strong>, Department of Photonic Networks and Systems &mdash; a funding proposal has been submitted to the <strong>BMFTR xG-Incubator</strong> programme (StartUpConnect).',
+    'venture.visit':        'Visit luxonnic.com',
     'about.page.hero.eyebrow': 'Fraunhofer HHI &nbsp;·&nbsp; LUXONNIC &nbsp;·&nbsp; TU Berlin',
     'about.page.desc':         'Scientist at the Department of Photonic Networks and Systems, Fraunhofer HHI, and Co-Founder &amp; CEO of LUXONNIC &mdash; developing high-capacity THz wireless systems and photonic neural transceivers for 6G network and AI-infrastructure integration.',
     'about.page.profile.label':'Profile',
@@ -404,7 +405,7 @@ const TRANSLATIONS = {
 
     'hero.eyebrow':         'Wissenschaftler &nbsp;·&nbsp; Promotion &nbsp;·&nbsp; Mitgründer &amp; CEO, LUXONNIC',
     'hero.headline':        'Fortschritte in <span class="accent-text">6G Photonik</span><br>Netzwerken &amp;<br>THz-Kommunikation',
-    'hero.desc':            'Fraunhofer Heinrich-Hertz-Institut, Berlin &mdash; experimentelle THz-Systeme und adaptive DSP f\u00FCr Datenraten \u00FCber 100&thinsp;Gbit/s bei 300&thinsp;GHz. Zudem Mitgr\u00FCnder &amp; CEO von <strong>LUXONNIC</strong>, einem jungen Vorhaben, das ich am Fraunhofer HHI aufbaue, um den optischen Transceiver f\u00FCr KI-Infrastruktur neu zu erfinden.',
+    'hero.desc':            'Fraunhofer Heinrich-Hertz-Institut, Berlin &mdash; experimentelle THz-Systeme und adaptive DSP f\u00FCr Datenraten \u00FCber 100&thinsp;Gbit/s bei 300&thinsp;GHz. Zudem Mitgr\u00FCnder &amp; CEO von <strong>LUXONNIC</strong>, einem jungen Vorhaben, das wir am Fraunhofer HHI aufbauen, um den optischen Transceiver f\u00FCr KI-Infrastruktur neu zu erfinden.',
     'hero.btn.collab':      'Zusammenarbeiten',
     'hero.btn.research':    'Forschung ansehen',
     'affils.label':         'Zugeh\u00F6rigkeiten',
@@ -470,6 +471,7 @@ const TRANSLATIONS = {
     'venture.tagline':      '&bdquo;Die Geheimzutat der Next-Gen-Transceiver werden.&ldquo;',
     'venture.desc':         'Optische Transceiver verbrauchen bereits rund 10&thinsp;% der Energie einer KI-Fabrik &mdash; etwa 40&thinsp;MW pro Standort, größtenteils für die digitale Signalentzerrung. <strong>LUXONNIC</strong> entwickelt den <strong>LUXONNICore</strong>, einen photonischen integrierten Schaltkreis, der die Signalentzerrung mittels photonischer neuronaler Netze direkt in der optischen Domäne durchführt &mdash; als Ersatz für die energiehungrigen DSP-Chips in Transceivern der nächsten Generation (LPO/CPO), mit dem Ziel einer bis zu 30-fach höheren Bit-pro-Joule-Effizienz.',
     'venture.meta':         'In Entwicklung am <strong>Fraunhofer HHI</strong>, Abteilung Photonische Netze und Systeme &mdash; ein Förderantrag beim <strong>BMFTR xG-Incubator</strong>-Programm (StartUpConnect) wurde eingereicht.',
+    'venture.visit':        'luxonnic.com besuchen',
     'about.venture.card':      '<strong style="color:var(--text-1)">LUXONNIC</strong><br><span style="color:var(--text-2);">Mitgründer &amp; CEO</span><br><span style="color:var(--text-3); font-size:0.78rem;">Photonische neuronale Transceiver &middot; in Entwicklung am Fraunhofer HHI</span>',
   },
 
@@ -604,7 +606,7 @@ const TRANSLATIONS = {
 
     'hero.eyebrow':         '연구원 &nbsp;·&nbsp; 박사 &nbsp;·&nbsp; LUXONNIC 공동창업자 &amp; CEO',
     'hero.headline':        '<span class="accent-text">6G 포토닉</span> 네트워크와<br>THz 무선 통신의<br>발전을 선도하다',
-    'hero.desc':            '프라운호퍼 하인리히 헤르츠 연구소, 베를린 &mdash; 300&thinsp;GHz에서 100&thinsp;Gbit/s를 초과하는 실험적 THz 시스템과 적응형 DSP를 개발합니다. 또한 AI 인프라를 위한 광 트랜시버를 혁신하고자 프라운호퍼 HHI에서 키우고 있는 초기 단계 벤처 <strong>LUXONNIC</strong>의 공동창업자 &amp; CEO입니다.',
+    'hero.desc':            '프라운호퍼 하인리히 헤르츠 연구소, 베를린 &mdash; 300&thinsp;GHz에서 100&thinsp;Gbit/s를 초과하는 실험적 THz 시스템과 적응형 DSP를 개발합니다. 또한 AI 인프라를 위한 광 트랜시버를 혁신하고자 프라운호퍼 HHI에서 동료들과 함께 키우고 있는 초기 단계 벤처 <strong>LUXONNIC</strong>의 공동창업자 &amp; CEO입니다.',
     'hero.btn.collab':      '협력 문의',
     'hero.btn.research':    '연구 보기',
     'affils.label':         '소속',
@@ -670,6 +672,7 @@ const TRANSLATIONS = {
     'venture.tagline':      '&ldquo;차세대 트랜시버의 비밀 병기가 되다.&rdquo;',
     'venture.desc':         '광 트랜시버는 이미 AI 팩토리 전력의 약 10%&mdash;사이트당 약 40&thinsp;MW&mdash;를 소비하며, 대부분 디지털 신호 보정에 사용됩니다. <strong>LUXONNIC</strong>은 광자 신경망을 이용해 광 영역에서 직접 신호 등화를 수행하는 광집적회로 <strong>LUXONNICore</strong>를 개발하고 있습니다. 이는 차세대(LPO/CPO) 트랜시버 내부의 전력 소모가 큰 DSP 칩을 대체하며, 최대 30배 높은 비트당 에너지 효율을 목표로 합니다.',
     'venture.meta':         '<strong>프라운호퍼 HHI</strong> 광자 네트워크 및 시스템 부서에서 개발 중이며, <strong>BMFTR xG-Incubator</strong> 프로그램(StartUpConnect)에 지원서를 제출했습니다.',
+    'venture.visit':        'luxonnic.com 방문하기',
     'about.venture.card':      '<strong style="color:var(--text-1)">LUXONNIC</strong><br><span style="color:var(--text-2);">공동창업자 &amp; CEO</span><br><span style="color:var(--text-3); font-size:0.78rem;">광자 신경망 트랜시버 &middot; 프라운호퍼 HHI에서 개발 중</span>',
   },
 };
