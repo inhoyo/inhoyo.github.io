@@ -405,28 +405,13 @@
 <script src="assets/js/app.js"></script>
 <script>
 /* ─────────────────────────────────────────────────────────────────────────
-   AVAILABLE SLOTS — edit this array to add / remove times.
-   Format: { date: "YYYY-MM-DD", time: "HH:MM" }  (slot is always 15 min)
+   Availability data now lives in slots.json (managed via admin.html) instead
+   of being hardcoded here. Format:
+   { "available": [{ "date": "YYYY-MM-DD", "time": "HH:MM" }, ...],
+     "booked":    ["YYYY-MM-DD", ...] }
    ───────────────────────────────────────────────────────────────────────── */
-const AVAILABLE_SLOTS = [
-  { date: "2026-06-09", time: "15:05" },
-  { date: "2026-06-10", time: "10:15" },
-  { date: "2026-06-10", time: "18:00" },
-  { date: "2026-06-15", time: "15:15" },
-  { date: "2026-06-15", time: "16:45" },
-  { date: "2026-06-16", time: "12:00" },
-];
-
-/* ─────────────────────────────────────────────────────────────────────────
-   FULLY BOOKED DATES — shown with a red tile, not clickable.
-   ───────────────────────────────────────────────────────────────────────── */
-const BOOKED_DATES = new Set([
-  "2026-06-11","2026-06-12","2026-06-13","2026-06-14",
-  "2026-06-17","2026-06-18","2026-06-19","2026-06-20",
-  "2026-06-21","2026-06-22","2026-06-23","2026-06-24",
-  "2026-06-25","2026-06-26","2026-06-27","2026-06-28",
-  "2026-06-29","2026-06-30","2026-07-01","2026-07-02",
-]);
+let AVAILABLE_SLOTS = [];
+let BOOKED_DATES = new Set();
 
 /* ── Helpers ─────────────────────────────────────────────────────────── */
 function localISODate(d) {
@@ -462,62 +447,81 @@ function formatDateShort(iso) {
 const DAY_NAMES = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
 const MON_NAMES = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
 
-// All slot times are CET — compare against current CET time
-const cetNow = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Berlin" }));
-const today = new Date(cetNow);
-today.setHours(0, 0, 0, 0);
-
-const days = Array.from({ length: 14 }, (_, i) => {
-  const d = new Date(today);
-  d.setDate(today.getDate() + i);
-  return localISODate(d);
-});
-
-// Drop slots that have already passed in CET
-const activeSlots = AVAILABLE_SLOTS.filter(({ date, time }) => {
-  const [y, mo, d] = date.split("-").map(Number);
-  const [h, min] = time.split(":").map(Number);
-  return new Date(y, mo - 1, d, h, min) > cetNow;
-});
-
-// Index active slots by date
-const slotsByDate = {};
-activeSlots.forEach(s => {
-  if (!slotsByDate[s.date]) slotsByDate[s.date] = [];
-  slotsByDate[s.date].push(s.time);
-});
-
-/* ── Render calendar strip ───────────────────────────────────────────── */
-const strip = document.getElementById("cal-strip");
-const rangeEl = document.getElementById("cal-range");
-
-rangeEl.textContent = `${formatDateShort(days[0])} – ${formatDateShort(days[days.length - 1])}`;
-
+let slotsByDate = {};
 let selectedDate = null;
 
-days.forEach(iso => {
-  const [y, mo, d] = iso.split("-").map(Number);
-  const dateObj = new Date(y, mo - 1, d);
-  const hasSlots = !!slotsByDate[iso];
+async function loadAndRenderCalendar() {
+  const strip = document.getElementById("cal-strip");
+  const rangeEl = document.getElementById("cal-range");
 
-  const isBooked = BOOKED_DATES.has(iso);
-  const el = document.createElement("div");
-  el.className = "cal-day" + (isBooked ? " booked" : hasSlots ? " has-slots" : " no-slots");
-  el.dataset.date = iso;
-  el.innerHTML = `
-    <div class="cal-day-name">${DAY_NAMES[dateObj.getDay()]}</div>
-    <div class="cal-day-num">${d}</div>
-    <div class="cal-day-mon">${MON_NAMES[mo - 1]}</div>
-    ${isBooked  ? '<div class="cal-booked-tag">Booked</div>' : ""}
-    ${hasSlots  ? '<div class="cal-dot"></div>'              : ""}
-  `;
-
-  if (hasSlots) {
-    el.addEventListener("click", () => selectDay(iso, el));
+  try {
+    const resp = await fetch("slots.json", { cache: "no-store" });
+    if (!resp.ok) throw new Error("fetch failed");
+    const data = await resp.json();
+    AVAILABLE_SLOTS = Array.isArray(data.available) ? data.available : [];
+    BOOKED_DATES = new Set(Array.isArray(data.booked) ? data.booked : []);
+  } catch (err) {
+    strip.innerHTML = "";
+    rangeEl.textContent = "";
+    document.getElementById("slots-hint").textContent =
+      "Couldn't load availability right now — please email in-ho.baek@hhi.fraunhofer.de directly.";
+    return;
   }
 
-  strip.appendChild(el);
-});
+  // All slot times are CET — compare against current CET time
+  const cetNow = new Date(new Date().toLocaleString("en-US", { timeZone: "Europe/Berlin" }));
+  const today = new Date(cetNow);
+  today.setHours(0, 0, 0, 0);
+
+  const days = Array.from({ length: 14 }, (_, i) => {
+    const d = new Date(today);
+    d.setDate(today.getDate() + i);
+    return localISODate(d);
+  });
+
+  // Drop slots that have already passed in CET
+  const activeSlots = AVAILABLE_SLOTS.filter(({ date, time }) => {
+    const [y, mo, d] = date.split("-").map(Number);
+    const [h, min] = time.split(":").map(Number);
+    return new Date(y, mo - 1, d, h, min) > cetNow;
+  });
+
+  // Index active slots by date
+  slotsByDate = {};
+  activeSlots.forEach(s => {
+    if (!slotsByDate[s.date]) slotsByDate[s.date] = [];
+    slotsByDate[s.date].push(s.time);
+  });
+
+  /* ── Render calendar strip ───────────────────────────────────────── */
+  rangeEl.textContent = `${formatDateShort(days[0])} – ${formatDateShort(days[days.length - 1])}`;
+
+  days.forEach(iso => {
+    const [y, mo, d] = iso.split("-").map(Number);
+    const dateObj = new Date(y, mo - 1, d);
+    const hasSlots = !!slotsByDate[iso];
+
+    const isBooked = BOOKED_DATES.has(iso);
+    const el = document.createElement("div");
+    el.className = "cal-day" + (isBooked ? " booked" : hasSlots ? " has-slots" : " no-slots");
+    el.dataset.date = iso;
+    el.innerHTML = `
+      <div class="cal-day-name">${DAY_NAMES[dateObj.getDay()]}</div>
+      <div class="cal-day-num">${d}</div>
+      <div class="cal-day-mon">${MON_NAMES[mo - 1]}</div>
+      ${isBooked  ? '<div class="cal-booked-tag">Booked</div>' : ""}
+      ${hasSlots  ? '<div class="cal-dot"></div>'              : ""}
+    `;
+
+    if (hasSlots) {
+      el.addEventListener("click", () => selectDay(iso, el));
+    }
+
+    strip.appendChild(el);
+  });
+}
+
+loadAndRenderCalendar();
 
 /* ── Select a day ────────────────────────────────────────────────────── */
 function selectDay(iso, el) {
