@@ -125,8 +125,8 @@ const TRANSLATIONS = {
     'about.subtitle':     'Scientist &amp; PhD &mdash; Fraunhofer HHI, Berlin',
 
     'about.profile.title':'Professional Profile',
-    'about.profile.p1':   'I am a Scientist at the <strong>Fraunhofer Institute for Telecommunications, Heinrich Hertz Institute (HHI)</strong>, Berlin, within the Department of Photonic Networks and Systems, where I have been working since July 2021. In parallel, my <strong>PhD (Dr.-Ing.)</strong> at <strong>Technische Universit&auml;t Berlin (TUB)</strong> is titled <em>&ldquo;Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping.&rdquo;</em>',
-    'about.profile.p2':   'My research focuses on high-capacity Terahertz (THz) wireless communications and their integration into next-generation 6G photonic network infrastructures. I develop advanced Digital Signal Processing (DSP) algorithms for rate-adaptive THz links and conduct experimental characterisation of photonic transmitter components &mdash; including PIN photodiode and WR3-coupled transmitter configurations &mdash; for probabilistically shaped, high-speed THz wireless transmission beyond 100&thinsp;Gbit/s. I am also actively exploring neural-network-based approaches to mitigate transceiver nonlinearities in THz systems.',
+    'about.profile.p1':   'I am a Scientist at the <strong>Fraunhofer Institute for Telecommunications, Heinrich Hertz Institute (HHI)</strong>, Berlin, within the Department of Photonic Networks and Systems, where I have been working since July 2021. I completed my <strong>PhD (Dr.-Ing.)</strong> at <strong>Technische Universit&auml;t Berlin (TUB)</strong>, titled <em>&ldquo;Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping.&rdquo;</em>',
+    'about.profile.p2':   'My research spans high-capacity THz wireless communications, 6G photonic networks, and neuromorphic computing for optical systems. I also lead German&ndash;Korean research collaborations and project acquisition, connecting institutions across both countries to advance next-generation communication technologies.',
     'about.profile.p3':   'Alongside my research role, I have served as a lecturer for Information and Communication programmes at Berlin universities, covering topics at the intersection of communications engineering and signal processing.',
 
     'about.edu.title':              'Education',
@@ -147,7 +147,8 @@ const TRANSLATIONS = {
     'about.exp.hhi.li1':            'Advanced DSP development for rate-adaptive THz wireless communications',
     'about.exp.hhi.li2':            'DSP on chip for high-speed coherent 800G ASICs',
     'about.exp.hhi.li3':            'Device and experimental setup characterisation',
-    'about.exp.hhi.li4':            'Project management and scientific collaboration',
+    'about.exp.hhi.li4':            'Leading German&ndash;Korean research collaborations and project acquisition',
+    'about.exp.hhi.li5':            'Research on neuromorphic computing for photonic systems',
     'about.exp.htw.title':          'Lecturer &mdash; HTW Berlin University of Applied Sciences (HTW Berlin)',
     'about.exp.htw.period':         'October 2025 &ndash; present',
     'about.exp.htw.prog':           'B.Sc. programme: Information and Communication Technology',
@@ -326,8 +327,8 @@ const TRANSLATIONS = {
     'about.subtitle':    'Wissenschaftler &amp; Promotion &mdash; Fraunhofer HHI, Berlin',
 
     'about.profile.title':'Berufliches Profil',
-    'about.profile.p1':   'Ich bin Wissenschaftler am <strong>Fraunhofer-Institut f\u00FCr Nachrichtentechnik, Heinrich-Hertz-Institut (HHI)</strong>, Berlin, in der Abteilung Photonische Netze und Systeme, wo ich seit Juli 2021 t&auml;tig bin. Parallel dazu tr&auml;gt meine Promotion (Dr.-Ing.) an der <strong>Technischen Universit&auml;t Berlin (TUB)</strong> den Titel <em>&ldquo;Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping.&rdquo;</em>',
-    'about.profile.p2':   'Meine Forschung konzentriert sich auf hochkapazitive THz-Funkkommunikation und deren Integration in 6G-Photoniknetzwerke. Ich entwickle fortschrittliche DSP-Algorithmen f\u00FCr ratenadaptive THz-Strecken und f\u00FChre experimentelle Charakterisierungen photonischer Sendebaugruppen durch &mdash; f\u00FCr probabilistisch geformte THz-Funk\u00FCbertragungen \u00FCber 100&thinsp;Gbit/s. Zudem erforsche ich neuronalnetzbasierte Ans&auml;tze zur Kompensation von Nichtlinearit&auml;ten.',
+    'about.profile.p1':   'Ich bin Wissenschaftler am <strong>Fraunhofer-Institut f\u00FCr Nachrichtentechnik, Heinrich-Hertz-Institut (HHI)</strong>, Berlin, in der Abteilung Photonische Netze und Systeme, wo ich seit Juli 2021 t&auml;tig bin. Meine Promotion (Dr.-Ing.) habe ich an der <strong>Technischen Universit&auml;t Berlin (TUB)</strong> abgeschlossen, mit dem Titel <em>&ldquo;Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping.&rdquo;</em>',
+    'about.profile.p2':   'Meine Forschung umfasst hochkapazitive THz-Funkkommunikation, 6G-Photoniknetzwerke und neuromorphes Computing f\u00FCr optische Systeme. Au\u00DFerdem leite ich deutsch-koreanische Forschungskooperationen und Projektakquise, um gemeinsam mit Partnern beider L\u00E4nder Kommunikationstechnologien der n\u00E4chsten Generation voranzutreiben.',
     'about.profile.p3':   'Neben meiner Forschungst&auml;tigkeit bin ich als Lehrbeauftragter f\u00FCr Informations- und Kommunikationsprogramme an Berliner Hochschulen t&auml;tig.',
 
     'about.edu.title':           'Ausbildung',
@@ -348,7 +349,8 @@ const TRANSLATIONS = {
     'about.exp.hhi.li1':         'Entwicklung fortschrittlicher DSP f\u00FCr ratenadaptive THz-Funkkommunikation',
     'about.exp.hhi.li2':         'DSP auf Chip f\u00FCr hochgeschwindige koh\u00E4rente 800G-ASICs',
     'about.exp.hhi.li3':         'Charakterisierung von Ger\u00E4ten und experimentellen Aufbauten',
-    'about.exp.hhi.li4':         'Projektmanagement und wissenschaftliche Zusammenarbeit',
+    'about.exp.hhi.li4':         'Leitung deutsch-koreanischer Forschungskooperationen und Projektakquise',
+    'about.exp.hhi.li5':         'Forschung zu neuromorphem Computing für photonische Systeme',
     'about.exp.htw.title':       'Lehrbeauftragter &mdash; HTW Berlin, Berlin',
     'about.exp.htw.period':      'Oktober 2025 &ndash; heute',
     'about.exp.htw.prog':        'B.Sc.-Studiengang: Informations- und Kommunikationstechnik',
@@ -526,8 +528,8 @@ const TRANSLATIONS = {
     'about.subtitle':    '연구원 &amp; 박사 &mdash; 프라운호퍼 HHI, 베를린',
 
     'about.profile.title':'전문 프로필',
-    'about.profile.p1':   '저는 2021년 7월부터 베를린의 <strong>프라운호퍼 통신 연구소, 하인리히 헤르츠 연구소(HHI)</strong> 광자 네트워크 및 시스템 부서에서 연구원으로 근무하고 있습니다. 동시에 <strong>베를린 공과대학교(TUB)</strong>에서의 박사(Dr.-Ing.) 논문 제목은 <em>&ldquo;Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping&rdquo;</em>입니다.',
-    'about.profile.p2':   '연구는 고용량 테라헤르츠(THz) 무선 통신과 차세대 6G 포토닉 네트워크 인프라로의 통합에 초점을 맞춥니다. PIN 광검출기 및 WR3 결합 송신기를 포함한 광자 송신기 부품의 실험적 특성화와 100&thinsp;Gbit/s를 초과하는 고속 THz 무선 전송을 위한 고급 DSP 알고리즘을 개발합니다. 또한 THz 시스템의 비선형성 완화를 위한 신경망 기반 접근법을 연구합니다.',
+    'about.profile.p1':   '저는 2021년 7월부터 베를린의 <strong>프라운호퍼 통신 연구소, 하인리히 헤르츠 연구소(HHI)</strong> 광자 네트워크 및 시스템 부서에서 연구원으로 근무하고 있습니다. <strong>베를린 공과대학교(TUB)</strong>에서 박사(Dr.-Ing.) 학위를 취득했으며, 논문 제목은 <em>&ldquo;Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping&rdquo;</em>입니다.',
+    'about.profile.p2':   '제 연구는 고용량 THz 무선 통신, 6G 포토닉 네트워크, 그리고 광학 시스템을 위한 뉴로모픽 컴퓨팅을 아우릅니다. 또한 한독 연구 협력과 프로젝트 수주를 주도하며 양국 기관과 협력해 차세대 통신 기술을 발전시키고 있습니다.',
     'about.profile.p3':   '연구 업무 외에도 베를린 대학에서 통신 공학과 신호 처리를 다루는 정보통신 프로그램의 겸임교수로 활동하고 있습니다.',
 
     'about.edu.title':           '학력',
@@ -548,7 +550,8 @@ const TRANSLATIONS = {
     'about.exp.hhi.li1':         '전송률 적응형 THz 무선 통신을 위한 고급 DSP 개발',
     'about.exp.hhi.li2':         '고속 코히런트 800G ASIC을 위한 칩 기반 DSP',
     'about.exp.hhi.li3':         '장치 및 실험 설비 특성화',
-    'about.exp.hhi.li4':         '프로젝트 관리 및 과학적 협력',
+    'about.exp.hhi.li4':         '한독 연구 협력 및 프로젝트 수주 주도',
+    'about.exp.hhi.li5':         '광자 시스템을 위한 뉴로모픽 컴퓨팅 연구',
     'about.exp.htw.title':       '겸임교수 &mdash; HTW 베를린',
     'about.exp.htw.period':      '2025년 10월 &ndash; 현재',
     'about.exp.htw.prog':        '학사 과정: 정보통신기술',
