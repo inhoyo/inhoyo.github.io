@@ -464,7 +464,7 @@ async function loadAndRenderCalendar() {
     strip.innerHTML = "";
     rangeEl.textContent = "";
     document.getElementById("slots-hint").textContent =
-      "Couldn't load availability right now — please email in-ho.baek@hhi.fraunhofer.de directly.";
+      "Couldn't load availability right now — please email in-ho.baek@proton.me directly.";
     return;
   }
 
@@ -620,12 +620,12 @@ document.getElementById("booking-form").addEventListener("submit", async functio
     } else {
       btn.disabled = false;
       btn.textContent = "Send Request  →";
-      alert("Something went wrong. Please try emailing me directly at in-ho.baek@hhi.fraunhofer.de");
+      alert("Something went wrong. Please try emailing me directly at in-ho.baek@proton.me");
     }
   } catch {
     btn.disabled = false;
     btn.textContent = "Send Request  →";
-    alert("Could not send — please email in-ho.baek@hhi.fraunhofer.de directly.");
+    alert("Could not send — please email in-ho.baek@proton.me directly.");
   }
 });
 </script>

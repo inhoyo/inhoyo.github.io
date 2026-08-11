@@ -11,7 +11,8 @@
   --accent:    #4FC3F7;
   --accent-dim: rgba(79,195,247,0.10);
   --text-1:    #EDE8E3;
-  --text-2:    #7A7570;
+  --text-body: #B6B0A8;
+  --text-2:    #8C867F;
   --text-3:    #3D3B38;
   --gold:      #C8A96E;
   --nav-h:     68px;
@@ -41,7 +42,7 @@ ul,ol { list-style:none; }
 
 /* ── Readability baseline ────────────────────────────────────────────────── */
 body { font-size: 1.05rem; }
-p { font-size: 0.92rem; color: var(--text-2); line-height: 1.8; }
+p { font-size: 0.92rem; color: var(--text-body); line-height: 1.8; }
 strong { color: var(--text-1); font-weight: 600; }
 em { font-style: italic; }
 
@@ -71,7 +72,6 @@ html[lang="de"] :where(
   .pill,
   .label,
   .section-num,
-  .skill-group-label,
   .sidebar-card-label
 ) {
   overflow-wrap: anywhere;
@@ -316,6 +316,7 @@ html[lang="de"] :where(
   padding-bottom: clamp(3rem,6vw,5rem);
   position:relative;
   z-index:2;
+  min-width:0;
 }
 .hero-eyebrow {
   display:flex;
@@ -323,6 +324,7 @@ html[lang="de"] :where(
   gap:1em;
   margin-bottom: clamp(2rem,4vw,3.5rem);
 }
+.hero-eyebrow .label { min-width:0; overflow-wrap:anywhere; }
 .hero-eyebrow-dot {
   width:6px; height:6px;
   border-radius:50%;
@@ -356,14 +358,15 @@ html[lang="de"] :where(
   margin-top: clamp(2.5rem,4vw,4rem);
   padding-top: clamp(1.5rem,2.5vw,2rem);
   border-top:1px solid var(--border);
+  min-width:0;
 }
 .hero-desc {
   max-width: 380px;
   font-size: 0.92rem;
-  color: var(--text-2);
+  color: var(--text-body);
   line-height:1.7;
 }
-.hero-actions { display:flex; gap:0.85rem; flex-wrap:wrap; }
+.hero-actions { display:flex; gap:0.85rem; flex-wrap:wrap; min-width:0; }
 
 /* Flanking video column */
 .hero-right {
@@ -371,6 +374,7 @@ html[lang="de"] :where(
   flex-direction:column;
   overflow:hidden;
   position:relative;
+  min-width:0;
 }
 .hero-right::before {
   content:'';
@@ -394,6 +398,7 @@ html[lang="de"] :where(
   flex:1;
   overflow:hidden;
   position:relative;
+  min-width:0;
 }
 .hero-video-panel:first-child {
   border-bottom:1px solid var(--border);
@@ -421,43 +426,6 @@ html[lang="de"] :where(
 @keyframes scrollPulse {
   0%,100%{transform:scaleX(1);opacity:0.4;}
   50%{transform:scaleX(0.5);opacity:1;}
-}
-
-/* ── Marquee ─────────────────────────────────────────────────────────────── */
-.marquee-section {
-  border-top: 1px solid var(--border);
-  border-bottom: 1px solid var(--border);
-  padding: 1.2rem 0;
-  overflow:hidden;
-  background: var(--surface);
-}
-.marquee-track {
-  display:flex;
-  gap:0;
-  white-space:nowrap;
-  animation: marquee 28s linear infinite;
-}
-.marquee-track:hover { animation-play-state:paused; }
-.marquee-item {
-  display:inline-flex;
-  align-items:center;
-  gap:2rem;
-  padding-right:2rem;
-  font-size:0.78rem;
-  font-weight:500;
-  letter-spacing:0.15em;
-  text-transform:uppercase;
-  color:var(--text-2);
-}
-.marquee-item .dot {
-  width:4px; height:4px;
-  border-radius:50%;
-  background:var(--accent);
-  flex-shrink:0;
-}
-@keyframes marquee {
-  from{transform:translateX(0);}
-  to{transform:translateX(-50%);}
 }
 
 /* ── Affiliations logos ───────────────────────────────────────────────────── */
@@ -579,7 +547,7 @@ html[lang="de"] :where(
 .section-head-right {
   max-width:320px;
   font-size:0.88rem;
-  color:var(--text-2);
+  color:var(--text-body);
   line-height:1.7;
   text-align:right;
 }
@@ -702,7 +670,7 @@ html[lang="de"] :where(
 .rp:hover .rp-content h3 { color: var(--accent); }
 .rp-content p {
   font-size: 0.88rem;
-  color: var(--text-2);
+  color: var(--text-body);
   line-height: 1.85;
   max-width: 460px;
 }
@@ -745,7 +713,7 @@ html[lang="de"] :where(
 }
 .pub-row-body p {
   font-size:0.8rem;
-  color:var(--text-2);
+  color:var(--text-body);
   line-height:1.6;
 }
 .pub-row-meta {
@@ -833,7 +801,7 @@ html[lang="de"] :where(
 .news-row-body { min-width:0; }
 .news-row-body p {
   font-size:0.88rem;
-  color:var(--text-2);
+  color:var(--text-body);
   line-height:1.7;
   margin-top:0.5rem;
 }
@@ -874,6 +842,23 @@ html[lang="de"] :where(
   transition:color 0.2s ease;
 }
 .news-link:hover { color:var(--accent); }
+
+.pub-toggle {
+  display:flex;
+  align-items:center;
+  gap:0.5em;
+  margin-top:0.5rem;
+  padding:0.6rem 0;
+  background:none;
+  border:none;
+  cursor:pointer;
+  font-family:inherit;
+  font-size:0.82rem;
+  font-weight:600;
+  color:var(--text-2);
+  transition:color 0.2s ease;
+}
+.pub-toggle:hover { color:var(--accent); }
 
 .pub-footer {
   display:flex;
@@ -925,12 +910,35 @@ html[lang="de"] :where(
 }
 .venture-tagline {
   font-style:italic;
-  color:var(--text-2);
+  color:var(--text-body);
   font-size:1.05rem;
   margin-bottom:1.25rem;
 }
-.venture-desc {
+.venture-stats {
+  display:flex;
+  gap:clamp(1.5rem,4vw,3rem);
+  flex-wrap:wrap;
+  margin-bottom:1.75rem;
+  padding-bottom:1.75rem;
+  border-bottom:1px solid var(--border);
+}
+.venture-stat-num {
+  font-family:'Syne',sans-serif;
+  font-weight:800;
+  font-size:clamp(1.7rem,3.2vw,2.4rem);
+  letter-spacing:-0.02em;
+  color:var(--accent);
+  line-height:1;
+  margin-bottom:0.4rem;
+}
+.venture-stat-label {
+  font-size:0.78rem;
   color:var(--text-2);
+  max-width:14em;
+  line-height:1.4;
+}
+.venture-desc {
+  color:var(--text-body);
   line-height:1.8;
   font-size:0.92rem;
   margin-bottom:1.5rem;
@@ -956,32 +964,6 @@ html[lang="de"] :where(
 }
 .venture-link:hover { color:var(--text-1); }
 
-/* ── Skills marquee ──────────────────────────────────────────────────────── */
-.skills-section { border-top:1px solid var(--border); border-bottom:1px solid var(--border); }
-.skills-grid {
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:0;
-  background:var(--border);
-  border:1px solid var(--border);
-  border-radius:var(--radius);
-  overflow:hidden;
-}
-.skill-group {
-  background:var(--bg);
-  padding:2.5rem;
-  border:none;
-}
-.skill-group:nth-child(2),.skill-group:nth-child(4) { background:var(--surface); }
-.skill-group-label {
-  font-size:0.65rem;
-  font-weight:600;
-  letter-spacing:0.2em;
-  text-transform:uppercase;
-  color:var(--text-3);
-  margin-bottom:1.25rem;
-  display:block;
-}
 .pill-row { display:flex; flex-wrap:wrap; gap:0.5rem; }
 .pill {
   display:inline-flex;
@@ -1106,7 +1088,7 @@ html[lang="de"] :where(
   font-size:clamp(2.5rem,6vw,5.5rem);
   margin-bottom:0.5rem;
 }
-.about-hero-text p { font-size:0.9rem; color:var(--text-2); max-width:420px; margin-top:0.75rem; line-height:1.7; }
+.about-hero-text p { font-size:0.9rem; color:var(--text-body); max-width:420px; margin-top:0.75rem; line-height:1.7; }
 .about-hero-actions { display:flex; gap:0.85rem; flex-wrap:wrap; margin-top:1.75rem; }
 
 .about-body {
@@ -1142,7 +1124,7 @@ html[lang="de"] :where(
   margin-bottom:0.25rem;
 }
 .tl-org { font-size:0.8rem; color:var(--accent); font-weight:500; margin-bottom:0.6rem; display:block; }
-.tl-body p,.tl-body li { font-size:0.85rem; color:var(--text-2); line-height:1.65; }
+.tl-body p,.tl-body li { font-size:0.85rem; color:var(--text-body); line-height:1.65; }
 .tl-body ul { list-style:disc; padding-left:1.1em; display:flex; flex-direction:column; gap:0.2rem; margin-top:0.4rem; }
 
 /* Sidebar */
@@ -1199,7 +1181,6 @@ html[lang="de"] :where(
   .rp-content { max-width: 100%; }
   .about-body { grid-template-columns:1fr; }
   .about-sidebar { position:static; }
-  .skills-grid { grid-template-columns:1fr; }
 }
 @media(max-width:768px) {
   .nav-links { display:none; }
@@ -1208,18 +1189,16 @@ html[lang="de"] :where(
 
   html[lang="de"] .label,
   html[lang="de"] .section-num,
-  html[lang="de"] .skill-group-label,
   html[lang="de"] .sidebar-card-label {
     letter-spacing:0.12em;
   }
 
-  /* Speed up all marquees on mobile */
-  .marquee-track { animation-duration: 16s; }
+  /* Speed up marquee on mobile */
   .affils-track  { animation-duration: 18s; }
 
   /* Hero: stack text above, videos below as a wide strip */
   .hero {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     grid-template-rows: auto auto;
     min-height: unset;
   }
@@ -1262,6 +1241,7 @@ html[lang="de"] :where(
 
   .pub-row { grid-template-columns:2rem 1fr; }
   .pub-row-meta { display:none; }
+  .venture-stats { flex-direction:column; gap:1.25rem; }
   .news-row { grid-template-columns:1fr; gap:0.35rem; }
   .section-head { grid-template-columns:1fr; }
   .section-head-right { text-align:left; max-width:100%; }
@@ -1340,7 +1320,7 @@ html[lang="de"] :where(
   list-style: disc;
   padding-left: 1.25em;
   margin-top: 0.5rem;
-  color: var(--text-2);
+  color: var(--text-body);
   font-size: 0.9rem;
   display: flex;
   flex-direction: column;

@@ -22,11 +22,17 @@ if (burger && mobileMenu) {
   }));
 }
 
-/* ── Marquee — duplicate inner content for seamless loop ─────────────────── */
-const track = document.getElementById('marqueeTrack');
-if (track) {
-  track.innerHTML += track.innerHTML;
-}
+/* ── Collapsible toggles (publications / co-authored timeline) ───────────── */
+document.querySelectorAll('[data-toggle-target]').forEach(btn => {
+  const target = document.getElementById(btn.getAttribute('data-toggle-target'));
+  if (!target) return;
+  btn.addEventListener('click', () => {
+    const nowHidden = !target.hidden;
+    target.hidden = nowHidden;
+    btn.querySelector('[data-show]').hidden = !nowHidden;
+    btn.querySelector('[data-hide]').hidden = nowHidden;
+  });
+});
 
 /* ── Intersection Observer — fade-up ─────────────────────────────────────── */
 const fadeEls = document.querySelectorAll('.fade-up');
