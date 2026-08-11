@@ -1246,7 +1246,11 @@ html[lang="de"] :where(
   .section-head { grid-template-columns:1fr; }
   .section-head-right { text-align:left; max-width:100%; }
   .about-hero-grid { grid-template-columns:1fr; }
-  .about-photo { display:none; }
+  .about-photo {
+    width: clamp(120px, 32vw, 160px);
+    height: clamp(150px, 40vw, 200px);
+    margin-bottom: 0.5rem;
+  }
   .footer-wordmark { font-size:clamp(3rem,14vw,7rem); }
   .contact-row { flex-direction:column; align-items:flex-start; gap:1.5rem; }
   .pub-footer { flex-direction:column; gap:0.85rem; }
