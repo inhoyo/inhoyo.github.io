@@ -831,6 +831,10 @@ html[lang="de"] :where(
   border:1px solid rgba(179,136,255,0.4);
   color:#B388FF;
 }
+.news-tag--talk {
+  border:1px solid rgba(76,217,123,0.4);
+  color:#4CD97B;
+}
 .news-link {
   display:inline-flex;
   align-items:center;
