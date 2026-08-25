@@ -125,6 +125,7 @@ html[lang="de"] :where(
 .delay-5 { transition-delay:0.40s; }
 .delay-6 { transition-delay:0.48s; }
 .delay-7 { transition-delay:0.56s; }
+.delay-8 { transition-delay:0.64s; }
 
 /* ── Layout ──────────────────────────────────────────────────────────────── */
 .container {
