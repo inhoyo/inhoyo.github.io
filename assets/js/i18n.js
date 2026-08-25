@@ -87,7 +87,7 @@ const TRANSLATIONS = {
 
     /* Intro */
     'intro.title': 'Research Overview',
-    'intro.text':  'My work is centred on high-capacity Terahertz (THz) wireless communications<br />and their integration into future 6G photonic network infrastructures.<br />At Fraunhofer HHI I develop advanced digital signal processing techniques<br />and experimental systems pushing beyond 100&thinsp;Gbit/s over THz wireless links.<br />I also serve as a <strong>University Lecturer</strong> at HTW Berlin and BHT Berlin,<br />teaching communications engineering at Bachelor&rsquo;s and Master&rsquo;s level.',
+    'intro.text':  'My work is centred on high-capacity Terahertz (THz) wireless communications<br />and their integration into future 6G photonic network infrastructures.<br />At Fraunhofer HHI I develop advanced digital signal processing techniques<br />and experimental systems pushing beyond 200&thinsp;Gbit/s over THz wireless links.<br />I also serve as a <strong>University Lecturer</strong> at HTW Berlin and BHT Berlin,<br />teaching communications engineering at Bachelor&rsquo;s and Master&rsquo;s level.',
     'intro.icon.thz':     'THz Wireless',
     'intro.icon.dsp':     'DSP',
     'intro.icon.photonic':'Photonic Networks',
@@ -97,7 +97,7 @@ const TRANSLATIONS = {
 
     /* Research spotlights */
     'research.1.title': 'Terahertz Wireless<br />Communications',
-    'research.1.text':  'Experimental 300&thinsp;GHz (WR-3) transmission systems built on photonic upconversion, from PIN-photodiode transmitters to receiver-side DSP. Demonstrated throughputs beyond 109&thinsp;Gbit/s, with a record <strong>221&thinsp;Gb/s dual-polarisation</strong> link over 500&thinsp;m.',
+    'research.1.text':  'Experimental 300&thinsp;GHz (WR-3) transmission systems built on photonic upconversion, from PIN-photodiode transmitters to receiver-side DSP. Demonstrated throughputs beyond 200&thinsp;Gbit/s, with a record <strong>221&thinsp;Gb/s dual-polarisation</strong> link over 500&thinsp;m.',
     'research.2.title': 'Adaptive Modulation &amp;<br />Converged 6G Links',
     'research.2.text':  'Rate-adaptive probabilistic shaping approaching the Shannon limit, integrated into converged fiber&ndash;THz backhaul architectures for 6G. The subject of my PhD dissertation at TU Berlin.',
     'research.3.title': 'Neuromorphic<br />Photonic Computing',
@@ -205,7 +205,7 @@ const TRANSLATIONS = {
     /* ── Redesigned page sections ─────────────────────── */
     'hero.eyebrow':         'Scientist &nbsp;·&nbsp; PhD &nbsp;·&nbsp; Co-Founder &amp; CEO, LUXONNIC',
     'hero.headline':        'Advancing <span class="accent-text">6G Photonic</span><br>Networks &amp;<br>THz Wireless',
-    'hero.desc':            'At Fraunhofer HHI in Berlin, I build experimental THz systems beyond 100&thinsp;Gbit/s at 300&thinsp;GHz. I&rsquo;m also Co-Founder &amp; CEO of <strong>LUXONNIC</strong>, reinventing the optical transceiver for AI infrastructure.',
+    'hero.desc':            'At Fraunhofer HHI in Berlin, I build experimental THz systems beyond 200&thinsp;Gbit/s at 300&thinsp;GHz. I&rsquo;m also Co-Founder &amp; CEO of <strong>LUXONNIC</strong>, reinventing the optical transceiver for AI infrastructure.',
     'hero.btn.collab':      'Let\'s Collaborate',
     'affils.label':         'Affiliated with',
     'sec.00.label':         '01 &mdash; Latest News',
@@ -297,7 +297,7 @@ const TRANSLATIONS = {
     'banner.more':           'Mehr erfahren',
 
     'intro.title': 'Forschungs\u00FCberblick',
-    'intro.text':  'Meine Forschung konzentriert sich auf hochkapazitive Terahertz (THz)-Funkkommunikation<br />und deren Integration in zuk\u00FCnftige 6G-Photoniknetzwerkinfrastrukturen.<br />Am Fraunhofer HHI entwickle ich fortschrittliche digitale Signalverarbeitungstechniken<br />und experimentelle Systeme f\u00FCr Datenraten \u00FCber 100&thinsp;Gbit/s auf THz-Funkstrecken.<br />Dar\u00FCber hinaus bin ich als <strong>Lehrbeauftragter</strong> an der HTW Berlin und BHT Berlin t&auml;tig<br />und unterrichte Kommunikationstechnik auf Bachelor- und Masterniveau.',
+    'intro.text':  'Meine Forschung konzentriert sich auf hochkapazitive Terahertz (THz)-Funkkommunikation<br />und deren Integration in zuk\u00FCnftige 6G-Photoniknetzwerkinfrastrukturen.<br />Am Fraunhofer HHI entwickle ich fortschrittliche digitale Signalverarbeitungstechniken<br />und experimentelle Systeme f\u00FCr Datenraten \u00FCber 200&thinsp;Gbit/s auf THz-Funkstrecken.<br />Dar\u00FCber hinaus bin ich als <strong>Lehrbeauftragter</strong> an der HTW Berlin und BHT Berlin t&auml;tig<br />und unterrichte Kommunikationstechnik auf Bachelor- und Masterniveau.',
     'intro.icon.thz':     'THz-Funk',
     'intro.icon.dsp':     'DSP',
     'intro.icon.photonic':'Photonische Netzwerke',
@@ -305,7 +305,7 @@ const TRANSLATIONS = {
     'affiliations.title': 'Zugeh&ouml;rigkeiten &amp; Mitgliedschaften',
 
     'research.1.title': 'Terahertz-<br />Funkkommunikation',
-    'research.1.text':  'Experimentelle 300&thinsp;GHz-Funk\u00FCbertragungssysteme (WR-3) mit photonischer Aufw\u00E4rtskonvertierung, von PIN-Photodioden-Sendern bis zur empf&auml;ngerseitigen DSP. Durchs&auml;tze \u00FCber 109&thinsp;Gbit/s sowie ein Rekordwert von <strong>221&thinsp;Gb/s Dual-Polarisation</strong> \u00FCber 500&thinsp;m.',
+    'research.1.text':  'Experimentelle 300&thinsp;GHz-Funk\u00FCbertragungssysteme (WR-3) mit photonischer Aufw\u00E4rtskonvertierung, von PIN-Photodioden-Sendern bis zur empf&auml;ngerseitigen DSP. Durchs&auml;tze \u00FCber 200&thinsp;Gbit/s sowie ein Rekordwert von <strong>221&thinsp;Gb/s Dual-Polarisation</strong> \u00FCber 500&thinsp;m.',
     'research.2.title': 'Adaptive Modulation &amp;<br />Konvergierte 6G-Verbindungen',
     'research.2.text':  'Ratenadaptives probabilistisches Shaping nahe der Shannon-Grenze, integriert in konvergierte Glasfaser-THz-Backhaul-Architekturen f\u00FCr 6G. Das Thema meiner Doktorarbeit an der TU Berlin.',
     'research.3.title': 'Neuromorphe<br />Photonische Datenverarbeitung',
@@ -409,7 +409,7 @@ const TRANSLATIONS = {
 
     'hero.eyebrow':         'Wissenschaftler &nbsp;·&nbsp; Promotion &nbsp;·&nbsp; Mitgründer &amp; CEO, LUXONNIC',
     'hero.headline':        'Fortschritte in <span class="accent-text">6G Photonik</span><br>Netzwerken &amp;<br>THz-Kommunikation',
-    'hero.desc':            'Am Fraunhofer HHI in Berlin baue ich experimentelle THz-Systeme \u00FCber 100&thinsp;Gbit/s bei 300&thinsp;GHz. Zudem bin ich Mitgr\u00FCnder &amp; CEO von <strong>LUXONNIC</strong>, das den optischen Transceiver f\u00FCr KI-Infrastruktur neu erfindet.',
+    'hero.desc':            'Am Fraunhofer HHI in Berlin baue ich experimentelle THz-Systeme \u00FCber 200&thinsp;Gbit/s bei 300&thinsp;GHz. Zudem bin ich Mitgr\u00FCnder &amp; CEO von <strong>LUXONNIC</strong>, das den optischen Transceiver f\u00FCr KI-Infrastruktur neu erfindet.',
     'hero.btn.collab':      'Zusammenarbeiten',
     'affils.label':         'Zugeh\u00F6rigkeiten',
     'sec.00.label':         '01 &mdash; Neuigkeiten',
@@ -501,7 +501,7 @@ const TRANSLATIONS = {
     'banner.more':           '더 알아보기',
 
     'intro.title': '연구 개요',
-    'intro.text':  '저의 연구는 고용량 테라헤르츠(THz) 무선 통신과<br />미래 6G 포토닉 네트워크 인프라로의 통합에 초점을 맞추고 있습니다.<br />프라운호퍼 HHI에서 THz 무선 링크에서 100&thinsp;Gbit/s를 초과하는<br />고급 디지털 신호 처리 기술과 실험 시스템을 개발합니다.<br />또한 HTW 베를린과 BHT 베를린에서 <strong>겸임교수</strong>로서<br />학사 및 석사 수준의 통신 공학을 가르치고 있습니다.',
+    'intro.text':  '저의 연구는 고용량 테라헤르츠(THz) 무선 통신과<br />미래 6G 포토닉 네트워크 인프라로의 통합에 초점을 맞추고 있습니다.<br />프라운호퍼 HHI에서 THz 무선 링크에서 200&thinsp;Gbit/s를 초과하는<br />고급 디지털 신호 처리 기술과 실험 시스템을 개발합니다.<br />또한 HTW 베를린과 BHT 베를린에서 <strong>겸임교수</strong>로서<br />학사 및 석사 수준의 통신 공학을 가르치고 있습니다.',
     'intro.icon.thz':     'THz 무선',
     'intro.icon.dsp':     'DSP',
     'intro.icon.photonic':'포토닉 네트워크',
@@ -509,7 +509,7 @@ const TRANSLATIONS = {
     'affiliations.title': '소속 및 회원 자격',
 
     'research.1.title': '테라헤르츠<br />무선 통신',
-    'research.1.text':  '광자 업변환 기반의 실험적 300&thinsp;GHz(WR-3) 무선 전송 시스템으로, PIN 광검출기 송신기부터 수신단 DSP까지 다룹니다. 109&thinsp;Gbit/s를 넘는 전송률과 500&thinsp;m 거리에서 기록적인 <strong>221&thinsp;Gb/s 이중 편파</strong> 전송을 시연했습니다.',
+    'research.1.text':  '광자 업변환 기반의 실험적 300&thinsp;GHz(WR-3) 무선 전송 시스템으로, PIN 광검출기 송신기부터 수신단 DSP까지 다룹니다. 200&thinsp;Gbit/s를 넘는 전송률과 500&thinsp;m 거리에서 기록적인 <strong>221&thinsp;Gb/s 이중 편파</strong> 전송을 시연했습니다.',
     'research.2.title': '적응형 변조 &amp;<br />융합형 6G 링크',
     'research.2.text':  '섀넌 한계에 근접하는 전송률 적응형 확률적 성상 형성을 융합형 광섬유&ndash;THz 백홀 아키텍처에 적용합니다. TU 베를린 박사 논문의 주제입니다.',
     'research.3.title': '뉴로모픽<br />포토닉 컴퓨팅',
@@ -613,7 +613,7 @@ const TRANSLATIONS = {
 
     'hero.eyebrow':         '연구원 &nbsp;·&nbsp; 박사 &nbsp;·&nbsp; LUXONNIC 공동창업자 &amp; CEO',
     'hero.headline':        '<span class="accent-text">6G 포토닉</span> 네트워크와<br>THz 무선 통신의<br>발전을 선도하다',
-    'hero.desc':            '프라운호퍼 HHI 베를린에서 300&thinsp;GHz 대역 100&thinsp;Gbit/s 이상의 실험적 THz 시스템을 구축하고 있습니다. 또한 AI 인프라용 광 트랜시버를 혁신하는 <strong>LUXONNIC</strong>의 공동창업자 &amp; CEO입니다.',
+    'hero.desc':            '프라운호퍼 HHI 베를린에서 300&thinsp;GHz 대역 200&thinsp;Gbit/s 이상의 실험적 THz 시스템을 구축하고 있습니다. 또한 AI 인프라용 광 트랜시버를 혁신하는 <strong>LUXONNIC</strong>의 공동창업자 &amp; CEO입니다.',
     'hero.btn.collab':      '협력 문의',
     'affils.label':         '소속',
     'sec.00.label':         '01 &mdash; 최신 소식',
