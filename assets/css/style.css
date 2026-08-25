@@ -124,6 +124,7 @@ html[lang="de"] :where(
 .delay-4 { transition-delay:0.32s; }
 .delay-5 { transition-delay:0.40s; }
 .delay-6 { transition-delay:0.48s; }
+.delay-7 { transition-delay:0.56s; }
 
 /* ── Layout ──────────────────────────────────────────────────────────────── */
 .container {
@@ -834,6 +835,10 @@ html[lang="de"] :where(
 .news-tag--talk {
   border:1px solid rgba(76,217,123,0.4);
   color:#4CD97B;
+}
+.news-tag--record {
+  border:1px solid rgba(255,112,67,0.4);
+  color:#FF7043;
 }
 .news-link {
   display:inline-flex;
