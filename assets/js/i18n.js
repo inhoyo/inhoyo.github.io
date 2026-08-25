@@ -797,9 +797,9 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.addEventListener('click', () => setLanguage(btn.getAttribute('data-lang')))
   );
 
-  /* Apply preferred or browser language */
-  const saved    = localStorage.getItem('preferred-lang');
-  const browser  = (navigator.language || 'en').slice(0, 2);
-  const fallback = ['en', 'de', 'ko'].includes(browser) ? browser : 'en';
-  applyTranslations(saved || fallback);
+  /* Always default to English on landing, regardless of device/browser
+     language. Only a language the visitor explicitly picked before
+     (stored locally) overrides that default. */
+  const saved = localStorage.getItem('preferred-lang');
+  applyTranslations(saved || 'en');
 });
