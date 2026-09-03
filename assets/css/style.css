@@ -837,6 +837,10 @@ html[lang="de"] :where(
   border:1px solid rgba(76,217,123,0.4);
   color:#4CD97B;
 }
+.news-tag--event {
+  border:1px solid rgba(240,98,146,0.4);
+  color:#F06292;
+}
 .news-tag--record {
   border:1px solid rgba(255,112,67,0.4);
   color:#FF7043;
