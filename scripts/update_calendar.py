@@ -56,12 +56,30 @@ def main() -> None:
         calendar_data = response.read()
 
     calendar = icalendar.Calendar.from_ical(calendar_data)
+
+    raw_events = [
+        component
+        for component in calendar.walk()
+        if component.name == "VEVENT"
+    ]
+    print(f"VEVENT-Einträge im ICS-Feed: {len(raw_events)}")
+
+    # Nur Startdatum und Wiederholungsstatus protokollieren – keine Termintitel.
+    for component in raw_events:
+        start = component.get("DTSTART")
+        if start:
+            print(
+                f"Terminstart: {start.dt}; "
+                f"wiederkehrend: {bool(component.get('RRULE'))}"
+            )
+
     dates_with_events: set[str] = set()
 
     occurrences = recurring_ical_events.of(calendar).between(
         period_start,
         period_end
     )
+    print(f"Termine im gesuchten Zeitraum: {len(occurrences)}")
 
     for event in occurrences:
         start_property = event.get("DTSTART")
