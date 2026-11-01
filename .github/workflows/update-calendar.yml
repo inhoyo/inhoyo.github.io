@@ -30,7 +30,7 @@ jobs:
 
       - name: Generate event dates
         env:
-          ICS_URL: "https://calendar.google.com/calendar/ical/f333b8404d3ee6afa7eb72db38c63e8410a7744a9d6255286ba4959a46607bca%40group.calendar.google.com/public/basic.ics"
+          ICS_URL: "https://calendar.google.com/calendar/ical/f333b8404d3ee6afa7eb72db38c63e8410a7744a9d6255286ba4959a46607bca%40group.calendar.google.com/private-9a79ad023ce0158693212fe288cf7c2d/basic.ics"
         run: python scripts/update_calendar.py
 
       - name: Commit updated dates
