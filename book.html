@@ -3,9 +3,12 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Book 15 Minutes — In-Ho Baek</title>
+  <title>Book a Call — In-Ho Baek</title>
   <meta name="description" content="Book a 15-minute slot with In-Ho Baek." />
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>" />
+  <link
+    rel="icon"
+    href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>"
+  />
   <link rel="stylesheet" href="assets/css/style.css" />
 
   <style>
@@ -21,7 +24,7 @@
     }
 
     .book-hero h1 {
-      font-family: 'Syne', sans-serif;
+      font-family: "Syne", sans-serif;
       font-size: clamp(2rem, 5vw, 3.5rem);
       font-weight: 800;
       color: var(--text-1);
@@ -40,30 +43,39 @@
       line-height: 1.8;
     }
 
-    .general-availability-button {
-      display: inline-flex;
-      align-items: center;
+    .booking-options {
+      display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      margin-top: 1.5rem;
+    }
+
+    .booking-option {
       padding: 0.7rem 1.4rem;
       border: 1px solid var(--accent);
       border-radius: 3rem;
+      background: transparent;
       color: var(--accent);
-      font-size: 0.88rem;
+      font: inherit;
+      cursor: pointer;
       transition: background 0.2s, color 0.2s;
     }
 
-    .general-availability-button:hover {
+    .booking-option:hover,
+    .booking-option[aria-expanded="true"] {
       background: var(--accent);
       color: #080808;
     }
 
+    .booking-panel,
     .calendar-section {
+      margin-top: 2rem;
       scroll-margin-top: calc(var(--nav-h) + 1.5rem);
-      margin-top: 4rem;
     }
 
     .calendar-section h2 {
-      font-family: 'Syne', sans-serif;
+      font-family: "Syne", sans-serif;
       font-size: clamp(1.5rem, 3vw, 2.2rem);
       color: var(--text-1);
       margin-bottom: 0.5rem;
@@ -113,7 +125,7 @@
     .month-title {
       margin-bottom: 0.85rem;
       color: var(--text-1);
-      font-family: 'Syne', sans-serif;
+      font-family: "Syne", sans-serif;
       font-size: 1rem;
       font-weight: 700;
     }
@@ -144,20 +156,22 @@
       background: var(--surface-2);
       border-radius: 5px;
     }
-    .calendar-day.has-event {
-    background: rgba(220, 53, 69, 0.2);
-    color: #ff737f;
-    outline: 1px solid rgba(220, 53, 69, 0.6);
-  }
 
-  .calendar-day.has-event::after {
-    content: "";
-    width: 5px;
-    height: 5px;
-    margin-left: 3px;
-    border-radius: 50%;
-    background: #ff737f;
-  }
+    .calendar-day.has-event {
+      background: rgba(220, 53, 69, 0.2);
+      color: #ff737f;
+      outline: 1px solid rgba(220, 53, 69, 0.6);
+    }
+
+    .calendar-day.has-event::after {
+      content: "";
+      width: 5px;
+      height: 5px;
+      margin-left: 3px;
+      border-radius: 50%;
+      background: #ff737f;
+    }
+
     .empty-day {
       background: transparent;
     }
@@ -185,17 +199,35 @@
 
   <main class="booking-page">
     <header class="book-hero">
-      <h1>Book <span>15 Minutes</span></h1>
-      <p>
-        Pick a time below for a 15-minute video call. I’ll send a calendar
-        invitation with the video link.
-      </p>
-      <a class="general-availability-button" href="#general-availability">
-        General Availability &nbsp;↓
-      </a>
+      <h1>Choose an <span>Option</span></h1>
+      <p>Choose an option below to see the details.</p>
+
+      <div class="booking-options">
+        <button
+          class="booking-option"
+          type="button"
+          aria-expanded="false"
+          aria-controls="booking-panel"
+          data-panel="booking-panel">
+          Book 15 Minutes
+        </button>
+
+        <button
+          class="booking-option"
+          type="button"
+          aria-expanded="false"
+          aria-controls="availability-panel"
+          data-panel="availability-panel">
+          General Availability
+        </button>
+      </div>
     </header>
 
-    <section aria-label="Book a 15-minute appointment">
+    <section
+      class="booking-panel"
+      id="booking-panel"
+      aria-label="Book a 15-minute appointment"
+      hidden>
       <iframe
         src="https://calendar.google.com/calendar/appointments/schedules/AcZssZ3lp_Fxa3ZVmDwXOSQvupP4cdbLh1uC4PggJrl4wAipuMVxmhioBGe4gOMS6yfhuyTn2rf66fGC?gv=true"
         class="gcal-embed"
@@ -214,10 +246,10 @@
       </p>
     </section>
 
-    <section class="calendar-section" id="general-availability">
+    <section class="calendar-section" id="availability-panel" hidden>
       <h2>General Availability</h2>
       <p class="calendar-intro">
-        Monthly calendar overview for November 2026 through October 2027.
+        Monthly calendar overview for the next 12 months.
       </p>
       <div class="months-grid" id="months-grid"></div>
     </section>
@@ -226,118 +258,156 @@
   <script src="assets/js/app.js"></script>
 
   <script>
-  const MONTH_NAMES = [
-    "January", "February", "March", "April", "May", "June",
-    "July", "August", "September", "October", "November", "December"
-  ];
-  const WEEKDAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
-  const TIME_ZONE = "Europe/Berlin";
-  const MONTH_COUNT = 12;
+    const MONTH_NAMES = [
+      "January", "February", "March", "April", "May", "June",
+      "July", "August", "September", "October", "November", "December"
+    ];
 
-  function getBerlinToday() {
-    const parts = new Intl.DateTimeFormat("en-CA", {
-      timeZone: TIME_ZONE,
-      year: "numeric",
-      month: "2-digit",
-      day: "2-digit"
-    }).formatToParts(new Date());
+    const WEEKDAYS = ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"];
+    const TIME_ZONE = "Europe/Berlin";
+    const MONTH_COUNT = 12;
 
-    const values = Object.fromEntries(parts.map(part => [part.type, part.value]));
+    function getBerlinToday() {
+      const parts = new Intl.DateTimeFormat("en-CA", {
+        timeZone: TIME_ZONE,
+        year: "numeric",
+        month: "2-digit",
+        day: "2-digit"
+      }).formatToParts(new Date());
 
-    return {
-      year: Number(values.year),
-      month: Number(values.month) - 1,
-      day: Number(values.day)
-    };
-  }
+      const values = Object.fromEntries(
+        parts.map(part => [part.type, part.value])
+      );
 
-  function makeISODate(year, month, day) {
-    return [
-      String(year).padStart(4, "0"),
-      String(month + 1).padStart(2, "0"),
-      String(day).padStart(2, "0")
-    ].join("-");
-  }
-
-  async function loadEventDates() {
-    try {
-      const response = await fetch("events.json", { cache: "no-store" });
-      if (!response.ok) throw new Error("Could not load events.json");
-
-      const data = await response.json();
-      return new Set(Array.isArray(data.dates) ? data.dates : []);
-    } catch (error) {
-      console.warn("Calendar dates could not be loaded:", error);
-      return new Set();
+      return {
+        year: Number(values.year),
+        month: Number(values.month) - 1,
+        day: Number(values.day)
+      };
     }
-  }
 
-  async function renderCalendar() {
-    const eventDates = await loadEventDates();
-    const monthsGrid = document.getElementById("months-grid");
-    const today = getBerlinToday();
+    function makeISODate(year, month, day) {
+      return [
+        String(year).padStart(4, "0"),
+        String(month + 1).padStart(2, "0"),
+        String(day).padStart(2, "0")
+      ].join("-");
+    }
 
-    // Start with the current month in Berlin and show 12 months.
-    for (let offset = 0; offset < MONTH_COUNT; offset++) {
-      const monthDate = new Date(Date.UTC(today.year, today.month + offset, 1));
-      const year = monthDate.getUTCFullYear();
-      const month = monthDate.getUTCMonth();
-      const firstWeekday = (monthDate.getUTCDay() + 6) % 7; // Monday first
-      const daysInMonth = new Date(Date.UTC(year, month + 1, 0)).getUTCDate();
-      const weekCount = Math.ceil((firstWeekday + daysInMonth) / 7);
+    async function loadEventDates() {
+      try {
+        const response = await fetch("events.json", { cache: "no-store" });
 
-      const card = document.createElement("section");
-      card.className = "month-card";
-      card.setAttribute("aria-label", `${MONTH_NAMES[month]} ${year}`);
-
-      const title = document.createElement("h3");
-      title.className = "month-title";
-      title.textContent = `${MONTH_NAMES[month]} ${year}`;
-      card.appendChild(title);
-
-      const grid = document.createElement("div");
-      grid.className = "month-grid";
-
-      WEEKDAYS.forEach(day => {
-        const weekday = document.createElement("div");
-        weekday.className = "weekday";
-        weekday.textContent = day;
-        weekday.setAttribute("aria-hidden", "true");
-        grid.appendChild(weekday);
-      });
-
-      for (let cell = 0; cell < weekCount * 7; cell++) {
-        const dayNumber = cell - firstWeekday + 1;
-        const dayCell = document.createElement("div");
-
-        if (dayNumber < 1 || dayNumber > daysInMonth) {
-          dayCell.className = "empty-day";
-          dayCell.setAttribute("aria-hidden", "true");
-        } else {
-          const isoDate = makeISODate(year, month, dayNumber);
-          const hasEvent = eventDates.has(isoDate);
-
-          dayCell.className = hasEvent ? "calendar-day has-event" : "calendar-day";
-          dayCell.textContent = dayNumber;
-          dayCell.setAttribute(
-            "aria-label",
-            `${MONTH_NAMES[month]} ${dayNumber}, ${year}${hasEvent ? " — calendar event" : ""}`
-          );
-
-          if (hasEvent) {
-            dayCell.title = "There is at least one event on this date";
-          }
+        if (!response.ok) {
+          throw new Error("Could not load events.json");
         }
 
-        grid.appendChild(dayCell);
+        const data = await response.json();
+        return new Set(Array.isArray(data.dates) ? data.dates : []);
+      } catch (error) {
+        console.warn("Calendar dates could not be loaded:", error);
+        return new Set();
       }
-
-      card.appendChild(grid);
-      monthsGrid.appendChild(card);
     }
-  }
 
-  renderCalendar();
-</script>
+    async function renderCalendar() {
+      const eventDates = await loadEventDates();
+      const monthsGrid = document.getElementById("months-grid");
+      const today = getBerlinToday();
+
+      // Start with the current month in Berlin and show 12 months.
+      for (let offset = 0; offset < MONTH_COUNT; offset++) {
+        const monthDate = new Date(
+          Date.UTC(today.year, today.month + offset, 1)
+        );
+
+        const year = monthDate.getUTCFullYear();
+        const month = monthDate.getUTCMonth();
+        const firstWeekday = (monthDate.getUTCDay() + 6) % 7;
+        const daysInMonth = new Date(
+          Date.UTC(year, month + 1, 0)
+        ).getUTCDate();
+        const weekCount = Math.ceil((firstWeekday + daysInMonth) / 7);
+
+        const card = document.createElement("section");
+        card.className = "month-card";
+        card.setAttribute("aria-label", `${MONTH_NAMES[month]} ${year}`);
+
+        const title = document.createElement("h3");
+        title.className = "month-title";
+        title.textContent = `${MONTH_NAMES[month]} ${year}`;
+        card.appendChild(title);
+
+        const grid = document.createElement("div");
+        grid.className = "month-grid";
+
+        WEEKDAYS.forEach(day => {
+          const weekday = document.createElement("div");
+          weekday.className = "weekday";
+          weekday.textContent = day;
+          weekday.setAttribute("aria-hidden", "true");
+          grid.appendChild(weekday);
+        });
+
+        for (let cell = 0; cell < weekCount * 7; cell++) {
+          const dayNumber = cell - firstWeekday + 1;
+          const dayCell = document.createElement("div");
+
+          if (dayNumber < 1 || dayNumber > daysInMonth) {
+            dayCell.className = "empty-day";
+            dayCell.setAttribute("aria-hidden", "true");
+          } else {
+            const isoDate = makeISODate(year, month, dayNumber);
+            const hasEvent = eventDates.has(isoDate);
+
+            dayCell.className = hasEvent
+              ? "calendar-day has-event"
+              : "calendar-day";
+
+            dayCell.textContent = dayNumber;
+            dayCell.setAttribute(
+              "aria-label",
+              `${MONTH_NAMES[month]} ${dayNumber}, ${year}${
+                hasEvent ? " — calendar event" : ""
+              }`
+            );
+
+            if (hasEvent) {
+              dayCell.title = "There is at least one event on this date";
+            }
+          }
+
+          grid.appendChild(dayCell);
+        }
+
+        card.appendChild(grid);
+        monthsGrid.appendChild(card);
+      }
+    }
+
+    renderCalendar();
+
+    // Open the selected panel and close the other one.
+    const optionButtons = document.querySelectorAll(".booking-option");
+
+    optionButtons.forEach(button => {
+      button.addEventListener("click", () => {
+        const panelToOpen = document.getElementById(button.dataset.panel);
+        const isAlreadyOpen =
+          button.getAttribute("aria-expanded") === "true";
+
+        optionButtons.forEach(option => {
+          option.setAttribute("aria-expanded", "false");
+          document.getElementById(option.dataset.panel).hidden = true;
+        });
+
+        // Clicking the open option closes it.
+        if (!isAlreadyOpen) {
+          button.setAttribute("aria-expanded", "true");
+          panelToOpen.hidden = false;
+        }
+      });
+    });
+  </script>
 </body>
 </html>
