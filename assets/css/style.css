@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&display=swap");
 @import url(fontawesome-all.min.css);
+@import url("https://cdn.jsdelivr.net/npm/locomotive-scroll@5.0.1/bundled/locomotive-scroll.css");
 
 /* ── Tokens ─────────────────────────────────────────────────────────────── */
 :root {
@@ -1517,3 +1518,6 @@ html[lang="de"] :where(
   display: block;
   cursor: crosshair;
 }
+
+/* Smooth scrolling (Locomotive/Lenis owns the scroll when active) */
+html.smooth-scroll { scroll-behavior: auto; }
