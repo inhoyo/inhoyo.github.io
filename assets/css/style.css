@@ -1405,3 +1405,73 @@ html[lang="de"] :where(
 }
 .footer-legal-link:hover { color: var(--text-2); }
 .footer-legal-sep { font-size: 0.72rem; color: var(--border-2); }
+
+/* ══════════════════════════════════════════════════════════════════════════
+   Signature details — "light" motif: waveguide field, laser rules, cursor halo
+   ══════════════════════════════════════════════════════════════════════════ */
+
+/* Hero light field (canvas drawn in app.js) */
+.hero > .hero-left { position: relative; z-index: 1; }
+.hero-field {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* Section headers: a laser line draws across the rule when revealed */
+.section-head { position: relative; }
+.section-head::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -1px;
+  height: 1px;
+  background: linear-gradient(90deg, var(--accent) 0%, rgba(79,195,247,0.35) 45%, transparent 100%);
+  box-shadow: 0 0 12px rgba(79,195,247,0.55);
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 1.4s var(--ease) 0.25s;
+  pointer-events: none;
+}
+.section-head.visible::after { transform: scaleX(1); }
+
+/* Cursor halo (created in app.js on fine pointers) */
+.cursor-halo {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 30px;
+  height: 30px;
+  border: 1px solid rgba(79,195,247,0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  opacity: 0;
+  transition: width 0.35s var(--ease), height 0.35s var(--ease),
+              background-color 0.35s, border-color 0.35s, opacity 0.3s;
+  will-change: transform;
+}
+.cursor-halo.on { opacity: 1; }
+.cursor-halo.is-hover {
+  width: 56px;
+  height: 56px;
+  background-color: rgba(79,195,247,0.10);
+  border-color: rgba(79,195,247,0.85);
+}
+
+/* Reduced motion: show everything at rest, no decorative movement */
+@media (prefers-reduced-motion: reduce) {
+  .fade-up { opacity: 1; transform: none; transition: none; }
+  .section-head::after { transform: scaleX(1); transition: none; }
+  .cursor-halo { display: none; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
