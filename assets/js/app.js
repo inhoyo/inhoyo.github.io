@@ -56,7 +56,7 @@ const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').match
 
 /* ── Hero light field: drifting waveguide lines with travelling photons ─── */
 const heroEl = document.querySelector('.hero');
-if (heroEl && !reduceMotion && heroEl.querySelector('.hero-left')) {
+if (heroEl && !reduceMotion && heroEl.querySelector('.hero-left') && document.body.dataset.hero3d !== 'on') {
   const cvs = document.createElement('canvas');
   cvs.className = 'hero-field';
   cvs.setAttribute('aria-hidden', 'true');
