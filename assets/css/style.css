@@ -1527,6 +1527,10 @@ html[lang="de"] :where(
   height: 100%;
   z-index: 0;
   pointer-events: none;
+  /* Keep the wave in the lower-right, away from the text block */
+  -webkit-mask-image: radial-gradient(ellipse 72% 62% at 68% 100%, #000 38%, transparent 92%);
+          mask-image: radial-gradient(ellipse 72% 62% at 68% 100%, #000 38%, transparent 92%);
+  opacity: 1;
 }
 
 /* 3D tilt cards (assets/js/tilt3d.js) */
