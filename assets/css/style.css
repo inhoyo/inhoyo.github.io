@@ -1475,3 +1475,23 @@ html[lang="de"] :where(
     scroll-behavior: auto !important;
   }
 }
+
+/* Light beam: scroll progress along the bottom edge of the viewport */
+.scroll-beam {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  transform-origin: left center;
+  transform: scaleX(0);
+  background: linear-gradient(90deg, rgba(79,195,247,0) 0%, var(--accent) 70%, #A8E6FF 100%);
+  box-shadow: 0 0 10px rgba(79,195,247,0.8), 0 0 2px #A8E6FF;
+  pointer-events: none;
+  z-index: 9997;
+}
+
+/* Magnetic CTAs (transform is set from app.js on fine pointers) */
+.btn.magnetic {
+  transition: transform 0.45s var(--ease), color 0.4s var(--ease), border-color 0.3s ease;
+}

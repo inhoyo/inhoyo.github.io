@@ -64,6 +64,7 @@ if (heroEl && !reduceMotion && heroEl.querySelector('.hero-left')) {
   const ctx = cvs.getContext('2d');
   const LINES = 7;
   let w = 0, h = 0, t = 0, running = false, raf = 0;
+  let px = -1e4, py = -1e4; // pointer position inside the hero (canvas space)
 
   const resize = () => {
     const dpr = Math.min(window.devicePixelRatio || 1, 2);
@@ -80,9 +81,13 @@ if (heroEl && !reduceMotion && heroEl.querySelector('.hero-left')) {
     const amp = 16 + i * 5;
     const freq = 0.0026 + i * 0.0003;
     const phase = t * (0.5 + i * 0.1) + i * 1.3;
+    // the pointer bends nearby lines like a lens in a waveguide
+    const dx = x - px, dy = base - py;
+    const lens = Math.exp(-(dx * dx) / (2 * 130 * 130)) * Math.exp(-(dy * dy) / (2 * 160 * 160));
     return base
       + Math.sin(x * freq + phase) * amp
-      + Math.sin(x * freq * 2.3 - phase * 0.7) * amp * 0.25;
+      + Math.sin(x * freq * 2.3 - phase * 0.7) * amp * 0.25
+      + (py - base) * lens * 0.45;
   };
 
   const frame = () => {
@@ -116,6 +121,15 @@ if (heroEl && !reduceMotion && heroEl.querySelector('.hero-left')) {
 
   resize();
   window.addEventListener('resize', resize, { passive: true });
+
+  if (window.matchMedia('(pointer: fine)').matches) {
+    heroEl.addEventListener('pointermove', e => {
+      const r = cvs.getBoundingClientRect();
+      px = e.clientX - r.left;
+      py = e.clientY - r.top;
+    }, { passive: true });
+    heroEl.addEventListener('pointerleave', () => { px = -1e4; py = -1e4; });
+  }
 }
 
 /* ── Cursor halo (fine pointers only, never on touch) ───────────────────── */
@@ -147,4 +161,60 @@ if (!reduceMotion && window.matchMedia('(hover: hover) and (pointer: fine)').mat
     requestAnimationFrame(follow);
   };
   follow();
+
+  /* ── Magnetic CTAs: buttons lean toward the cursor ─────────────────────── */
+  const magnetic = document.querySelectorAll('.btn');
+  magnetic.forEach(btn => btn.classList.add('magnetic'));
+  document.addEventListener('mousemove', e => {
+    magnetic.forEach(btn => {
+      const r = btn.getBoundingClientRect();
+      const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
+      const dx = e.clientX - cx, dy = e.clientY - cy;
+      const near = Math.hypot(dx, dy) < Math.max(r.width, r.height) * 0.9;
+      btn.style.transform = near ? `translate(${dx * 0.22}px, ${dy * 0.22}px)` : '';
+    });
+  }, { passive: true });
+}
+
+/* ── Light-beam scroll progress (a beam travelling down the page) ─────── */
+if (!reduceMotion) {
+  const beam = document.createElement('div');
+  beam.className = 'scroll-beam';
+  beam.setAttribute('aria-hidden', 'true');
+  document.body.appendChild(beam);
+  let queued = false;
+  const update = () => {
+    queued = false;
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    beam.style.transform = `scaleX(${max > 0 ? window.scrollY / max : 0})`;
+  };
+  window.addEventListener('scroll', () => {
+    if (!queued) { queued = true; requestAnimationFrame(update); }
+  }, { passive: true });
+  update();
+}
+
+/* ── Scramble-decode section titles on reveal ─────────────────────────── */
+if (!reduceMotion) {
+  const GLYPHS = '/\\|#%*<>+=-_';
+  const decode = el => {
+    const final = el.textContent;
+    const frames = 24;
+    let f = 0;
+    const timer = setInterval(() => {
+      f++;
+      const settled = Math.floor((f / frames) * final.length);
+      el.textContent = [...final].map((c, i) =>
+        (i < settled || c === ' ') ? c : GLYPHS[Math.floor(Math.random() * GLYPHS.length)]
+      ).join('');
+      if (f >= frames) { clearInterval(timer); el.textContent = final; }
+    }, 30);
+  };
+  const titleIO = new IntersectionObserver(entries => entries.forEach(e => {
+    if (e.isIntersecting && !e.target.children.length) {
+      decode(e.target);
+      titleIO.unobserve(e.target);
+    }
+  }), { threshold: 0.6 });
+  document.querySelectorAll('.section-title').forEach(el => titleIO.observe(el));
 }
