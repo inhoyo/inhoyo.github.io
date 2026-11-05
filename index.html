@@ -393,8 +393,8 @@
       </p>
     </div>
 
-    <div class="chip-stage fade-up" id="chipStage">
-      <canvas id="chipCanvas" aria-hidden="true"></canvas>
+    <div class="chip-stage luxonnic-glb-stage fade-up" id="glbStage">
+      <canvas id="glbCanvas" aria-hidden="true"></canvas>
     </div>
 
     <div class="venture-card fade-up delay-1">
@@ -651,10 +651,13 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/three@0.160/build/three.min.js"></script>
 <script src="assets/js/research.js"></script>
-<script src="assets/js/chip3d.js"></script>
 <script src="assets/js/hero3d.js"></script>
 <script src="assets/js/tilt3d.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
 <script src="assets/js/motion.js"></script>
+<script type="importmap">
+{ "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
+</script>
+<script type="module" src="assets/js/luxonnic-glb.js"></script>
 </body>
 </html>
