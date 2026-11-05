@@ -162,18 +162,6 @@ if (!reduceMotion && window.matchMedia('(hover: hover) and (pointer: fine)').mat
   };
   follow();
 
-  /* ── Magnetic CTAs: buttons lean toward the cursor ─────────────────────── */
-  const magnetic = document.querySelectorAll('.btn');
-  magnetic.forEach(btn => btn.classList.add('magnetic'));
-  document.addEventListener('mousemove', e => {
-    magnetic.forEach(btn => {
-      const r = btn.getBoundingClientRect();
-      const cx = r.left + r.width / 2, cy = r.top + r.height / 2;
-      const dx = e.clientX - cx, dy = e.clientY - cy;
-      const near = Math.hypot(dx, dy) < Math.max(r.width, r.height) * 0.9;
-      btn.style.transform = near ? `translate(${dx * 0.22}px, ${dy * 0.22}px)` : '';
-    });
-  }, { passive: true });
 }
 
 /* ── Light-beam scroll progress (a beam travelling down the page) ─────── */
@@ -218,3 +206,36 @@ if (!reduceMotion) {
   }), { threshold: 0.6 });
   document.querySelectorAll('.section-title').forEach(el => titleIO.observe(el));
 }
+
+/* ── News: show the latest few updates, the rest on demand ───────────────── */
+(() => {
+  const list = document.querySelector('.news-list');
+  if (!list) return;
+  const rows = [...list.querySelectorAll('.news-row')];
+  const LIMIT = 5;
+  if (rows.length <= LIMIT) return;
+  const extra = rows.slice(LIMIT);
+  extra.forEach(r => { r.hidden = true; });
+
+  const more = document.createElement('button');
+  more.type = 'button';
+  more.className = 'news-more btn btn-outline';
+  more.setAttribute('aria-expanded', 'false');
+  more.innerHTML =
+    '<span data-i18n="news.more.show">Show all updates</span>' +
+    '<span data-i18n="news.more.hide" hidden>Show fewer</span>';
+  list.after(more);
+
+  more.addEventListener('click', () => {
+    const open = more.getAttribute('aria-expanded') !== 'true';
+    more.setAttribute('aria-expanded', String(open));
+    more.querySelector('[data-i18n="news.more.show"]').hidden = open;
+    more.querySelector('[data-i18n="news.more.hide"]').hidden = !open;
+    extra.forEach(r => { r.hidden = !open; });
+    if (open && typeof anime !== 'undefined' && !reduceMotion) {
+      anime({ targets: extra, opacity: [0, 1], translateY: [12, 0], delay: anime.stagger(45), duration: 500, easing: 'easeOutQuad' });
+    } else if (!open) {
+      list.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  });
+})();
