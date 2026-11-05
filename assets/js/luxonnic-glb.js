@@ -11,8 +11,10 @@
 
   var THREE, GLTFLoader;
   try {
-    THREE = await import('three');
-    ({ GLTFLoader } = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.js'));
+    /* jsDelivr "+esm" bundles resolve the bare 'three' import themselves, so no
+       <script type="importmap"> is needed (import maps are missing on older iOS/Android). */
+    THREE = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/+esm');
+    ({ GLTFLoader } = await import('https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/loaders/GLTFLoader.js/+esm'));
   } catch (err) {
     stage.style.display = 'none';
     return;
