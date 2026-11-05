@@ -10,6 +10,16 @@
 </head>
 <body data-hero3d="on">
 
+<!-- ── Intro: "Teaching light to think" (plays once per browser session) ── -->
+<div class="intro" id="intro" role="dialog" aria-label="Intro: Teaching light to think">
+  <video class="intro-video" id="introVideo" muted playsinline preload="auto"
+         poster="assets/video/teaching-light-poster.jpg">
+    <source src="assets/video/teaching-light.webm" type="video/webm" />
+    <source src="assets/video/teaching-light.mp4" type="video/mp4" />
+  </video>
+  <button type="button" class="intro-skip" id="introSkip">Skip intro</button>
+</div>
+
 <div class="noise" aria-hidden="true"></div>
 
 <!-- ── Navigation ──────────────────────────────────────────────────────── -->
@@ -655,6 +665,7 @@
 <script src="assets/js/tilt3d.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.2/lib/anime.min.js"></script>
 <script src="assets/js/motion.js"></script>
+<script src="assets/js/intro.js"></script>
 <script type="importmap">
 { "imports": { "three": "https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js" } }
 </script>

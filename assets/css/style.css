@@ -1577,3 +1577,47 @@ html[lang="de"] :where(
 
 /* Smooth scrolling (Locomotive/Lenis owns the scroll when active) */
 html.smooth-scroll { scroll-behavior: auto; }
+
+/* ── Intro overlay: "Teaching light to think" ─────────────────────────────── */
+html.intro-lock, html.intro-lock body { overflow: hidden; }
+.intro {
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  background: #03060c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.9s ease, visibility 0.9s ease;
+}
+.intro.is-hidden { opacity: 0; visibility: hidden; pointer-events: none; }
+.intro-video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  background: #03060c;
+}
+.intro-skip {
+  position: absolute;
+  right: 16px;
+  bottom: 16px;
+  padding: 8px 14px;
+  font: inherit;
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: rgba(220, 240, 255, 0.85);
+  background: rgba(3, 6, 12, 0.45);
+  border: 1px solid rgba(160, 220, 255, 0.35);
+  border-radius: 999px;
+  cursor: pointer;
+  backdrop-filter: blur(6px);
+}
+.intro-skip:hover, .intro-skip:focus-visible {
+  color: #fff;
+  border-color: rgba(160, 220, 255, 0.8);
+  outline: none;
+}
+@media (max-width: 736px) {
+  .intro-skip { right: 12px; bottom: 12px; }
+}
