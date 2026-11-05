@@ -80,7 +80,7 @@ const TRANSLATIONS = {
     'banner.role.phd':       'PhD',
     'banner.role.lecturer':  'University Lecturer',
     'banner.institution':    'Fraunhofer Heinrich Hertz Institute (HHI), Berlin',
-    'banner.tagline':        'Terahertz Communications &amp; Photonic Networks',
+    'banner.tagline':        'Neuromorphic Photonics &amp; Optical Networks',
     'banner.btn.about':      'About Me',
     'banner.btn.research':   'Research',
     'banner.more':           'Learn More',
@@ -88,7 +88,7 @@ const TRANSLATIONS = {
     /* Intro */
     'intro.title': 'Research Overview',
     'intro.text':  'My work is centred on high-capacity Terahertz (THz) wireless communications<br />and their integration into future 6G photonic network infrastructures.<br />At Fraunhofer HHI I develop advanced digital signal processing techniques<br />and experimental systems pushing beyond 200&thinsp;Gbit/s over THz wireless links.<br />I also serve as a <strong>University Lecturer</strong> at HTW Berlin and BHT Berlin,<br />teaching communications engineering at Bachelor&rsquo;s and Master&rsquo;s level.',
-    'intro.icon.thz':     'THz Wireless',
+    'intro.icon.thz':     'Photonic Computing',
     'intro.icon.dsp':     'DSP',
     'intro.icon.photonic':'Photonic Networks',
 
@@ -114,7 +114,7 @@ const TRANSLATIONS = {
 
     /* Contact */
     'contact.title':      'Get in Touch',
-    'contact.text':       'I welcome discussions on research collaborations, project inquiries,<br />and opportunities in THz communications and photonic networks.',
+    'contact.text':       'I welcome discussions on research collaborations, project inquiries,<br />and opportunities in photonic computing and photonic networks.',
     'contact.dept':       'Department of Photonic Networks and Systems',
     'contact.city':       'Berlin, Germany',
     'contact.btn.about':  'About Me',
@@ -127,7 +127,7 @@ const TRANSLATIONS = {
 
     'about.profile.title':'Professional Profile',
     'about.profile.p1':   'I am a Scientist at the <strong>Fraunhofer Institute for Telecommunications, Heinrich Hertz Institute (HHI)</strong> in Berlin, within the Department of Photonic Networks and Systems, since July 2021. I completed my <strong>PhD (Dr.-Ing.)</strong> at <strong>Technische Universit&auml;t Berlin (TUB)</strong>, titled <em>&ldquo;Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping.&rdquo;</em>',
-    'about.profile.p2':   'My research spans THz wireless communications, 6G photonic networks, and neuromorphic computing for optical systems. I also lead German&ndash;Korean research collaborations, connecting institutions across both countries.',
+    'about.profile.p2':   'My research spans neuromorphic photonic computing, 6G photonic networks, and high-capacity THz wireless communication. I also lead German&ndash;Korean research collaborations, connecting institutions across both countries.',
     'about.profile.p3':   'Alongside my research role, I serve as a University Lecturer at HTW Berlin and BHT Berlin, teaching communications engineering and signal processing at Bachelor&rsquo;s and Master&rsquo;s level.',
 
     'about.edu.title':              'Education',
@@ -204,8 +204,8 @@ const TRANSLATIONS = {
 
     /* ── Redesigned page sections ─────────────────────── */
     'hero.eyebrow':         'Scientist &nbsp;·&nbsp; PhD &nbsp;·&nbsp; Co-Founder &amp; CEO, LUXONNIC',
-    'hero.headline':        'Advancing <span class="accent-text">6G Photonic</span><br>Networks &amp;<br>THz Wireless',
-    'hero.desc':            'At Fraunhofer HHI in Berlin, I build experimental THz systems beyond 200&thinsp;Gbit/s at 300&thinsp;GHz. I&rsquo;m also Co-Founder &amp; CEO of <strong>LUXONNIC</strong>, reinventing the optical transceiver for AI infrastructure.',
+    'hero.headline':        'Advancing <span class="accent-text">Photonic Computing</span><br>for AI &amp;<br>6G Networks',
+    'hero.desc':            'At Fraunhofer HHI in Berlin, I research neuromorphic photonic computing: neural networks on integrated photonic chips that process signals entirely in the optical domain. As Co-Founder &amp; CEO of <strong>LUXONNIC</strong>, I bring this to the optical transceivers that AI data centers depend on.',
     'hero.btn.collab':      'Let\'s Collaborate',
     'hero.btn.luxonnic':    'Visit LUXONNIC',
     'affils.label':         'Affiliated with',
@@ -214,7 +214,7 @@ const TRANSLATIONS = {
     'sec.00.desc':          'Recent updates on publications, awards, and teaching.',
     'sec.01.label':         '02 &mdash; Research',
     'sec.01.title':         'Areas of Focus',
-    'sec.01.desc':          'From experimental 300&thinsp;GHz THz links to neuromorphic photonics. Building the physical layer of 6G.',
+    'sec.01.desc':          'Neuromorphic photonic computing, and the optical links that carry data to and from it. Building the physical layer of AI and 6G.',
     'sec.venture.label':    '03 &mdash; Venture',
     'sec.venture.title':    'Building LUXONNIC',
     'sec.venture.desc':     'Co-Founder &amp; CEO of an early-stage deep-tech venture, developed at Fraunhofer HHI, working to reinvent the optical transceiver for AI data centers.',
@@ -292,7 +292,7 @@ const TRANSLATIONS = {
     'venture.meta':         'In development at <strong>Fraunhofer HHI</strong>, Department of Photonic Networks and Systems. A funding proposal has been submitted to the <strong>BMFTR xG-Incubator</strong> programme (StartUpConnect).',
     'venture.visit':        'Visit luxonnic.com',
     'about.page.hero.eyebrow': 'Fraunhofer HHI &nbsp;·&nbsp; LUXONNIC &nbsp;·&nbsp; TU Berlin',
-    'about.page.desc':         'Scientist at the Department of Photonic Networks and Systems, Fraunhofer HHI, and Co-Founder &amp; CEO of LUXONNIC, developing high-capacity THz wireless systems and photonic neural transceivers for 6G and AI infrastructure.',
+    'about.page.desc':         'Scientist at the Department of Photonic Networks and Systems, Fraunhofer HHI, and Co-Founder &amp; CEO of LUXONNIC, developing photonic neural transceivers and neuromorphic photonic computing for AI infrastructure and 6G.',
     'about.page.profile.label':'Profile',
     'about.page.edu.label':    'Education',
     'about.page.exp.label':    'Experience',
@@ -326,14 +326,14 @@ const TRANSLATIONS = {
     'banner.role.phd':       'Promotion',
     'banner.role.lecturer':  'Lehrbeauftragter',
     'banner.institution':    'Fraunhofer Heinrich-Hertz-Institut (HHI), Berlin',
-    'banner.tagline':        'Terahertz-Kommunikation &amp; Photonische Netzwerke',
+    'banner.tagline':        'Neuromorphe Photonik &amp; Optische Netzwerke',
     'banner.btn.about':      '\u00DCber mich',
     'banner.btn.research':   'Forschung',
     'banner.more':           'Mehr erfahren',
 
     'intro.title': 'Forschungs\u00FCberblick',
     'intro.text':  'Meine Forschung konzentriert sich auf hochkapazitive Terahertz (THz)-Funkkommunikation<br />und deren Integration in zuk\u00FCnftige 6G-Photoniknetzwerkinfrastrukturen.<br />Am Fraunhofer HHI entwickle ich fortschrittliche digitale Signalverarbeitungstechniken<br />und experimentelle Systeme f\u00FCr Datenraten \u00FCber 200&thinsp;Gbit/s auf THz-Funkstrecken.<br />Dar\u00FCber hinaus bin ich als <strong>Lehrbeauftragter</strong> an der HTW Berlin und BHT Berlin t&auml;tig<br />und unterrichte Kommunikationstechnik auf Bachelor- und Masterniveau.',
-    'intro.icon.thz':     'THz-Funk',
+    'intro.icon.thz':     'Photonische Datenverarbeitung',
     'intro.icon.dsp':     'DSP',
     'intro.icon.photonic':'Photonische Netzwerke',
 
@@ -355,7 +355,7 @@ const TRANSLATIONS = {
     'pub.award':     'Paper Award — OECC 2026',
 
     'contact.title':       'Kontakt aufnehmen',
-    'contact.text':        'Ich freue mich \u00FCber Anfragen zu Forschungskooperationen, Projekten<br />und M&ouml;glichkeiten im Bereich THz-Kommunikation und photonische Netzwerke.',
+    'contact.text':        'Ich freue mich über Anfragen zu Forschungskooperationen, Projekten<br />und Möglichkeiten im Bereich photonisches Rechnen und photonische Netzwerke.',
     'contact.dept':        'Abteilung Photonische Netze und Systeme',
     'contact.city':        'Berlin, Deutschland',
     'contact.btn.about':   '\u00FCber mich',
@@ -367,7 +367,7 @@ const TRANSLATIONS = {
 
     'about.profile.title':'Berufliches Profil',
     'about.profile.p1':   'Ich bin Wissenschaftler am <strong>Fraunhofer-Institut f\u00FCr Nachrichtentechnik, Heinrich-Hertz-Institut (HHI)</strong>, Berlin, in der Abteilung Photonische Netze und Systeme, wo ich seit Juli 2021 t&auml;tig bin. Meine Promotion (Dr.-Ing.) habe ich an der <strong>Technischen Universit&auml;t Berlin (TUB)</strong> abgeschlossen, mit dem Titel <em>&ldquo;Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping.&rdquo;</em>',
-    'about.profile.p2':   'Meine Forschung umfasst hochkapazitive THz-Funkkommunikation, 6G-Photoniknetzwerke und neuromorphes Computing f\u00FCr optische Systeme. Au\u00DFerdem leite ich deutsch-koreanische Forschungskooperationen und Projektakquise, um gemeinsam mit Partnern beider L\u00E4nder Kommunikationstechnologien der n\u00E4chsten Generation voranzutreiben.',
+    'about.profile.p2':   'Meine Forschung umfasst neuromorphes photonisches Rechnen, 6G-Photoniknetzwerke und hochkapazitive THz-Funkkommunikation. Au\u00DFerdem leite ich deutsch-koreanische Forschungskooperationen und Projektakquise, um gemeinsam mit Partnern beider L\u00E4nder Kommunikationstechnologien der n\u00E4chsten Generation voranzutreiben.',
     'about.profile.p3':   'Neben meiner Forschungst&auml;tigkeit bin ich als Lehrbeauftragter f\u00FCr Informations- und Kommunikationsprogramme an Berliner Hochschulen t&auml;tig.',
 
     'about.edu.title':           'Ausbildung',
@@ -443,8 +443,8 @@ const TRANSLATIONS = {
     'about.contact.body':  'Fraunhofer-Institut f\u00FCr Nachrichtentechnik &mdash; Heinrich-Hertz-Institut (HHI)<br />Abteilung Photonische Netze und Systeme, Berlin, Deutschland<br /><br />E-Mail: <a href="mailto:in-ho.baek@proton.me">in-ho.baek@proton.me</a><br />LinkedIn: <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener">linkedin.com/in/in-ho-baek</a><br />Google Scholar: <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar-Profil</a><br />IEEE Xplore: <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE-Autorenprofil</a>',
 
     'hero.eyebrow':         'Wissenschaftler &nbsp;·&nbsp; Promotion &nbsp;·&nbsp; Mitgründer &amp; CEO, LUXONNIC',
-    'hero.headline':        'Fortschritte in <span class="accent-text">6G Photonik</span><br>Netzwerken &amp;<br>THz-Kommunikation',
-    'hero.desc':            'Am Fraunhofer HHI in Berlin baue ich experimentelle THz-Systeme \u00FCber 200&thinsp;Gbit/s bei 300&thinsp;GHz. Zudem bin ich Mitgr\u00FCnder &amp; CEO von <strong>LUXONNIC</strong>, das den optischen Transceiver f\u00FCr KI-Infrastruktur neu erfindet.',
+    'hero.headline':        'Fortschritte in <span class="accent-text">Photonischem Rechnen</span><br>für KI &amp;<br>6G-Netzwerke',
+    'hero.desc':            'Am Fraunhofer HHI in Berlin erforsche ich neuromorphes photonisches Rechnen: neuronale Netze auf integrierten photonischen Chips, die Signale vollständig im optischen Bereich verarbeiten. Als Mitgründer &amp; CEO von <strong>LUXONNIC</strong> bringe ich das in die optischen Transceiver, auf die KI-Rechenzentren angewiesen sind.',
     'hero.btn.collab':      'Zusammenarbeiten',
     'hero.btn.luxonnic':    'LUXONNIC besuchen',
     'affils.label':         'Zugeh\u00F6rigkeiten',
@@ -453,7 +453,7 @@ const TRANSLATIONS = {
     'sec.00.desc':          'Aktuelle Neuigkeiten zu Publikationen, Auszeichnungen und Lehre.',
     'sec.01.label':         '02 &mdash; Forschung',
     'sec.01.title':         'Forschungsgebiete',
-    'sec.01.desc':          'Von experimentellen 300&thinsp;GHz-THz-Strecken bis zur neuromorphen Photonik. Ich baue die physikalische Schicht von 6G.',
+    'sec.01.desc':          'Neuromorphes photonisches Rechnen und die optischen Verbindungen, die Daten dorthin und zurück tragen. Ich baue die physikalische Schicht von KI und 6G.',
     'sec.venture.label':    '03 &mdash; Venture',
     'sec.venture.title':    'LUXONNIC aufbauen',
     'sec.venture.desc':     'Mitgr\u00FCnder &amp; CEO eines jungen Deep-Tech-Vorhabens am Fraunhofer HHI, das den optischen Transceiver f\u00FCr KI-Rechenzentren neu erfinden soll.',
@@ -523,7 +523,7 @@ const TRANSLATIONS = {
     'news.awardbw.date':    '2018',
     'news.awardbw.text':    'Auszeichnung mit dem <strong>Baden-W\u00FCrttemberg-Stipendium</strong>.',
     'about.page.hero.eyebrow': 'Fraunhofer HHI &nbsp;·&nbsp; LUXONNIC &nbsp;·&nbsp; TU Berlin',
-    'about.page.desc':         'Wissenschaftler in der Abteilung Photonische Netze und Systeme, Fraunhofer HHI, und Mitgr\u00FCnder &amp; CEO von LUXONNIC, mit Fokus auf hochkapazitive THz-Systeme und photonische neuronale Transceiver f\u00FCr 6G- und KI-Infrastruktur.',
+    'about.page.desc':         'Wissenschaftler in der Abteilung Photonische Netze und Systeme, Fraunhofer HHI, und Mitgründer &amp; CEO von LUXONNIC, mit Fokus auf photonische neuronale Transceiver und neuromorphes photonisches Rechnen für KI-Infrastruktur und 6G.',
     'about.page.profile.label':'Profil',
     'about.page.edu.label':    'Ausbildung',
     'about.page.exp.label':    'Erfahrung',
@@ -565,14 +565,14 @@ const TRANSLATIONS = {
     'banner.role.phd':       '박사',
     'banner.role.lecturer':  '겸임교수',
     'banner.institution':    '프라운호퍼 하인리히 헤르츠 연구소 (HHI), 베를린',
-    'banner.tagline':        '테라헤르츠 통신 &amp; 포토닉 네트워크',
+    'banner.tagline':        '뉴로모픽 포토닉스 &amp; 광 네트워크',
     'banner.btn.about':      '소개',
     'banner.btn.research':   '연구',
     'banner.more':           '더 알아보기',
 
     'intro.title': '연구 개요',
     'intro.text':  '저의 연구는 고용량 테라헤르츠(THz) 무선 통신과<br />미래 6G 포토닉 네트워크 인프라로의 통합에 초점을 맞추고 있습니다.<br />프라운호퍼 HHI에서 THz 무선 링크에서 200&thinsp;Gbit/s를 초과하는<br />고급 디지털 신호 처리 기술과 실험 시스템을 개발합니다.<br />또한 HTW 베를린과 BHT 베를린에서 <strong>겸임교수</strong>로서<br />학사 및 석사 수준의 통신 공학을 가르치고 있습니다.',
-    'intro.icon.thz':     'THz 무선',
+    'intro.icon.thz':     '포토닉 컴퓨팅',
     'intro.icon.dsp':     'DSP',
     'intro.icon.photonic':'포토닉 네트워크',
 
@@ -594,7 +594,7 @@ const TRANSLATIONS = {
     'pub.award':     'OECC 2026 논문상',
 
     'contact.title':       '연락하기',
-    'contact.text':        'THz 통신 및 포토닉 네트워크 분야의 연구 협력,<br />프로젝트 문의 및 기회에 대한 논의를 환영합니다.',
+    'contact.text':        '포토닉 컴퓨팅 및 포토닉 네트워크 분야의 연구 협력,<br />프로젝트 문의 및 기회에 대한 논의를 환영합니다.',
     'contact.dept':        '광자 네트워크 및 시스템 부서',
     'contact.city':        '베를린, 독일',
     'contact.btn.about':   '소개',
@@ -606,7 +606,7 @@ const TRANSLATIONS = {
 
     'about.profile.title':'전문 프로필',
     'about.profile.p1':   '저는 2021년 7월부터 베를린의 <strong>프라운호퍼 통신 연구소, 하인리히 헤르츠 연구소(HHI)</strong> 광자 네트워크 및 시스템 부서에서 연구원으로 근무하고 있습니다. <strong>베를린 공과대학교(TUB)</strong>에서 박사(Dr.-Ing.) 학위를 취득했으며, 논문 제목은 <em>&ldquo;Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping&rdquo;</em>입니다.',
-    'about.profile.p2':   '제 연구는 고용량 THz 무선 통신, 6G 포토닉 네트워크, 그리고 광학 시스템을 위한 뉴로모픽 컴퓨팅을 아우릅니다. 또한 한독 연구 협력과 프로젝트 수주를 주도하며 양국 기관과 협력해 차세대 통신 기술을 발전시키고 있습니다.',
+    'about.profile.p2':   '제 연구는 뉴로모픽 포토닉 컴퓨팅, 6G 포토닉 네트워크, 그리고 고용량 THz 무선 통신을 아우릅니다. 또한 한독 연구 협력과 프로젝트 수주를 주도하며 양국 기관과 협력해 차세대 통신 기술을 발전시키고 있습니다.',
     'about.profile.p3':   '연구 업무 외에도 베를린 대학에서 통신 공학과 신호 처리를 다루는 정보통신 프로그램의 겸임교수로 활동하고 있습니다.',
 
     'about.edu.title':           '학력',
@@ -682,8 +682,8 @@ const TRANSLATIONS = {
     'about.contact.body':  '프라운호퍼 통신 연구소 &mdash; 하인리히 헤르츠 연구소 (HHI)<br />광자 네트워크 및 시스템 부서, 베를린, 독일<br /><br />이메일: <a href="mailto:in-ho.baek@proton.me">in-ho.baek@proton.me</a><br />LinkedIn: <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener">linkedin.com/in/in-ho-baek</a><br />Google Scholar: <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar 프로필</a><br />IEEE Xplore: <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE 저자 프로필</a>',
 
     'hero.eyebrow':         '연구원 &nbsp;·&nbsp; 박사 &nbsp;·&nbsp; LUXONNIC 공동창업자 &amp; CEO',
-    'hero.headline':        '<span class="accent-text">6G 포토닉</span> 네트워크와<br>THz 무선 통신의<br>발전을 선도하다',
-    'hero.desc':            '프라운호퍼 HHI 베를린에서 300&thinsp;GHz 대역 200&thinsp;Gbit/s 이상의 실험적 THz 시스템을 구축하고 있습니다. 또한 AI 인프라용 광 트랜시버를 혁신하는 <strong>LUXONNIC</strong>의 공동창업자 &amp; CEO입니다.',
+    'hero.headline':        '<span class="accent-text">포토닉 컴퓨팅</span>으로<br>AI와 6G 네트워크의<br>발전을 선도하다',
+    'hero.desc':            '프라운호퍼 HHI 베를린에서 집적 포토닉 칩 위의 신경망으로 신호를 완전히 광 영역에서 처리하는 뉴로모픽 포토닉 컴퓨팅을 연구하고 있습니다. 또한 AI 데이터센터의 광 트랜시버를 혁신하는 <strong>LUXONNIC</strong>의 공동창업자 &amp; CEO입니다.',
     'hero.btn.collab':      '협력 문의',
     'hero.btn.luxonnic':    'LUXONNIC 방문',
     'affils.label':         '소속',
@@ -692,7 +692,7 @@ const TRANSLATIONS = {
     'sec.00.desc':          '논문, 수상, 강의에 관한 최신 소식입니다.',
     'sec.01.label':         '02 &mdash; 연구',
     'sec.01.title':         '연구 분야',
-    'sec.01.desc':          '실험적 300&thinsp;GHz THz 링크부터 뉴로모픽 포토닉스까지, 6G의 물리 계층을 구축합니다.',
+    'sec.01.desc':          '뉴로모픽 포토닉 컴퓨팅과 데이터를 실어 나르는 광 링크, AI와 6G의 물리 계층을 구축합니다.',
     'sec.venture.label':    '03 &mdash; 벤처',
     'sec.venture.title':    'LUXONNIC 구축하기',
     'sec.venture.desc':     '프라운호퍼 HHI에서 키우고 있는 초기 단계 딥테크 벤처의 공동창업자 &amp; CEO로서, AI 데이터센터용 광 트랜시버를 혁신하고자 합니다.',
@@ -762,7 +762,7 @@ const TRANSLATIONS = {
     'news.awardbw.date':    '2018년',
     'news.awardbw.text':    '<strong>바덴뷔르템베르크 장학금</strong> 수혜.',
     'about.page.hero.eyebrow': '프라운호퍼 HHI &nbsp;·&nbsp; LUXONNIC &nbsp;·&nbsp; TU 베를린',
-    'about.page.desc':         '프라운호퍼 HHI 광자 네트워크 및 시스템 부서 연구원이자 LUXONNIC 공동창업자 &amp; CEO로, 6G 및 AI 인프라를 위한 고용량 THz 시스템과 광자 신경망 트랜시버를 개발합니다.',
+    'about.page.desc':         '프라운호퍼 HHI 광자 네트워크 및 시스템 부서 연구원이자 LUXONNIC 공동창업자 &amp; CEO로, AI 인프라와 6G를 위한 포토닉 신경망 트랜시버와 뉴로모픽 포토닉 컴퓨팅을 개발합니다.',
     'about.page.profile.label':'전문 프로필',
     'about.page.edu.label':    '학력',
     'about.page.exp.label':    '경력',
