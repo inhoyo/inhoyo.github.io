@@ -87,18 +87,25 @@
   }
 
   var mixer = new THREE.AnimationMixer(root);
+  var introActions = [];
   gltf.animations.forEach(function (clip) {
     var action = mixer.clipAction(clip);
     if (clip.name.indexOf('intro_') === 0) {
+      /* The logo intro is scrubbed by scroll (see frame), not played on its own */
       action.setLoop(THREE.LoopOnce, 1);
       action.clampWhenFinished = true;
+      action.play();
+      action.paused = true;
+      introActions.push(action);
+    } else {
+      action.play();
     }
-    action.play();
   });
 
   fit();
 
   if (reduceMotion) {
+    introActions.forEach(function (a) { a.time = a.getClip().duration; });
     mixer.update(3.2);            // logo fully drawn, static pose
     pivot.rotation.set(0, 0, 0);
     renderer.render(scene, camera);
@@ -116,14 +123,29 @@
     stage.addEventListener('pointerleave', function () { pointer.x = 0; pointer.y = 0; });
   }
 
+  /* 0 when the stage enters at the bottom edge, 0.5 when centred, 1 when it leaves at the top */
+  function stageProgress() {
+    var r = stage.getBoundingClientRect();
+    var vh = window.innerHeight || 1;
+    return Math.min(1, Math.max(0, (vh - r.top) / (vh + r.height)));
+  }
+
+  var sp = 0;            // smoothed scroll progress through the stage
   var running = false, rafId = 0, last = 0;
   function frame(now) {
     var dt = Math.min((now - last) / 1000, 0.05);
     last = now;
+    sp += (stageProgress() - sp) * 0.12;
+
+    /* The logo draws in while the braid travels up the screen (progress 0.08 → 0.58) */
+    var ip = Math.min(1, Math.max(0, (sp - 0.08) / 0.5));
+    introActions.forEach(function (a) { a.time = ip * a.getClip().duration; });
+
     mixer.update(dt);
     tilt.x += (pointer.y * 0.12 - tilt.x) * 0.08;
     tilt.y += (pointer.x * 0.22 - tilt.y) * 0.08;
-    pivot.rotation.set(tilt.x, tilt.y, 0);
+    /* The braid turns with the scroll (about ±40°) and leans toward the pointer */
+    pivot.rotation.set(tilt.x, tilt.y + (sp - 0.5) * 1.4, 0);
     renderer.render(scene, camera);
     rafId = running ? requestAnimationFrame(frame) : 0;
   }
@@ -135,9 +157,27 @@
   }
   function stop() { running = false; }
 
+  /* anime.js: one light sweep crosses the stage the first time it is seen */
+  var sweepPlayed = false;
+  function playSweep() {
+    if (sweepPlayed || typeof anime === 'undefined') return;
+    sweepPlayed = true;
+    var sweep = document.createElement('div');
+    sweep.className = 'stage-sweep';
+    sweep.setAttribute('aria-hidden', 'true');
+    stage.appendChild(sweep);
+    anime({
+      targets: sweep,
+      translateX: ['-100%', '100%'],
+      duration: 1600,
+      easing: 'easeInOutSine',
+      complete: function () { sweep.remove(); }
+    });
+  }
+
   if ('IntersectionObserver' in window) {
     new IntersectionObserver(function (entries) {
-      entries[0].isIntersecting ? start() : stop();
+      if (entries[0].isIntersecting) { playSweep(); start(); } else { stop(); }
     }, { threshold: 0.05 }).observe(stage);
   } else {
     start();

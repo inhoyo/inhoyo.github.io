@@ -1513,6 +1513,18 @@ html[lang="de"] :where(
 .luxonnic-glb-stage canvas {
   cursor: default;
 }
+/* anime.js light sweep across the stage on first view (assets/js/luxonnic-glb.js) */
+.stage-sweep {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 60%;
+  pointer-events: none;
+  background: linear-gradient(90deg, transparent, rgba(160, 230, 255, 0.16), transparent);
+  transform: translateX(-100%);
+  z-index: 1;
+}
 
 .chip-stage canvas {
   position: absolute;
