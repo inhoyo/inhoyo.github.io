@@ -205,7 +205,7 @@ const TRANSLATIONS = {
     /* ── Redesigned page sections ─────────────────────── */
     'hero.eyebrow':         'Scientist &nbsp;·&nbsp; PhD &nbsp;·&nbsp; Co-Founder &amp; CEO, LUXONNIC',
     'hero.headline':        'Advancing <span class="accent-text">Photonic Computing</span><br>for AI &amp;<br>6G Networks',
-    'hero.desc':            'At Fraunhofer HHI in Berlin, I research neuromorphic photonic computing: neural networks on integrated photonic chips that process signals entirely in the optical domain. As Co-Founder &amp; CEO of <strong>LUXONNIC</strong>, I bring this to the optical transceivers that AI data centers depend on.',
+    'hero.desc':            'At Fraunhofer HHI in Berlin, I build the photonic hardware behind AI and 6G: from 300&thinsp;GHz terahertz links beyond 200&thinsp;Gbit/s to neuromorphic photonic chips that compute in light. As Co-Founder &amp; CEO of <strong>LUXONNIC</strong>, I bring this to the optical transceivers AI data centers depend on.',
     'hero.btn.collab':      'Let\'s Collaborate',
     'hero.btn.luxonnic':    'Visit LUXONNIC',
     'affils.label':         'Affiliated with',
@@ -444,7 +444,7 @@ const TRANSLATIONS = {
 
     'hero.eyebrow':         'Wissenschaftler &nbsp;·&nbsp; Promotion &nbsp;·&nbsp; Mitgründer &amp; CEO, LUXONNIC',
     'hero.headline':        'Fortschritte in <span class="accent-text">Photonischem Rechnen</span><br>für KI &amp;<br>6G-Netzwerke',
-    'hero.desc':            'Am Fraunhofer HHI in Berlin erforsche ich neuromorphes photonisches Rechnen: neuronale Netze auf integrierten photonischen Chips, die Signale vollständig im optischen Bereich verarbeiten. Als Mitgründer &amp; CEO von <strong>LUXONNIC</strong> bringe ich das in die optischen Transceiver, auf die KI-Rechenzentren angewiesen sind.',
+    'hero.desc':            'Am Fraunhofer HHI in Berlin entwickle ich die photonische Hardware hinter KI und 6G: von 300-GHz-Terahertz-Strecken mit über 200&thinsp;Gbit/s bis zu neuromorphen photonischen Chips, die im Licht rechnen. Als Mitgründer &amp; CEO von <strong>LUXONNIC</strong> bringe ich das in die optischen Transceiver, auf die KI-Rechenzentren angewiesen sind.',
     'hero.btn.collab':      'Zusammenarbeiten',
     'hero.btn.luxonnic':    'LUXONNIC besuchen',
     'affils.label':         'Zugeh\u00F6rigkeiten',
@@ -683,7 +683,7 @@ const TRANSLATIONS = {
 
     'hero.eyebrow':         '연구원 &nbsp;·&nbsp; 박사 &nbsp;·&nbsp; LUXONNIC 공동창업자 &amp; CEO',
     'hero.headline':        '<span class="accent-text">포토닉 컴퓨팅</span>으로<br>AI와 6G 네트워크의<br>발전을 선도하다',
-    'hero.desc':            '프라운호퍼 HHI 베를린에서 집적 포토닉 칩 위의 신경망으로 신호를 완전히 광 영역에서 처리하는 뉴로모픽 포토닉 컴퓨팅을 연구하고 있습니다. 또한 AI 데이터센터의 광 트랜시버를 혁신하는 <strong>LUXONNIC</strong>의 공동창업자 &amp; CEO입니다.',
+    'hero.desc':            '프라운호퍼 HHI 베를린에서 AI와 6G를 뒷받침하는 포토닉 하드웨어를 개발합니다. 300&thinsp;GHz 테라헤르츠 링크에서 200&thinsp;Gbit/s 이상의 전송률을 구현하고, 빛으로 연산하는 뉴로모픽 포토닉 칩을 연구합니다. 또한 AI 데이터센터의 광 트랜시버를 혁신하는 <strong>LUXONNIC</strong>의 공동창업자 &amp; CEO입니다.',
     'hero.btn.collab':      '협력 문의',
     'hero.btn.luxonnic':    'LUXONNIC 방문',
     'affils.label':         '소속',
