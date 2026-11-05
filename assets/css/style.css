@@ -1598,6 +1598,36 @@ html.intro-lock, html.intro-lock body { overflow: hidden; }
   display: block;
   background: #03060c;
 }
+/* Real-time intro scene (assets/js/intro-scene.js) */
+.intro-scene {
+  position: absolute;
+  inset: 0;
+}
+.intro-scene canvas {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+.intro-title {
+  position: absolute;
+  left: 50%;
+  bottom: 15%;
+  margin: 0;
+  transform: translate(-50%, 8px);
+  white-space: nowrap;
+  pointer-events: none;
+  font-family: 'Syne', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1rem, 3vw, 1.9rem);
+  letter-spacing: 0.04em;
+  color: rgba(225, 244, 255, 0.92);
+  opacity: 0;
+  transition: opacity 1.1s var(--ease), transform 1.1s var(--ease);
+}
+.intro.is-title-on .intro-title {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
 .intro-skip {
   position: absolute;
   right: 16px;

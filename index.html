@@ -12,10 +12,13 @@
 
 <!-- ── Intro: "Teaching light to think" (plays once per browser session) ── -->
 <div class="intro" id="intro" role="dialog" aria-label="Intro: Teaching light to think">
-  <video class="intro-video" id="introVideo" muted playsinline preload="auto"
+  <div class="intro-scene" id="introScene" aria-hidden="true"></div>
+  <p class="intro-title">Teaching light to think</p>
+  <!-- Fallback only: shown when WebGL is unavailable (see assets/js/intro.js) -->
+  <video class="intro-video" id="introVideo" muted playsinline preload="none"
          poster="assets/video/teaching-light-poster.jpg">
-    <source src="assets/video/teaching-light.webm" type="video/webm" />
     <source src="assets/video/teaching-light.mp4" type="video/mp4" />
+    <source src="assets/video/teaching-light.webm" type="video/webm" />
   </video>
   <button type="button" class="intro-skip" id="introSkip">Skip intro</button>
 </div>
