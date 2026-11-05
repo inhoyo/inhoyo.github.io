@@ -53,6 +53,8 @@
   }
 
   html.classList.add('intro-lock');
+  // Keep the old video (and its poster frame) hidden until we know it is needed.
+  if (video) video.style.display = 'none';
   if (skip) skip.addEventListener('click', finish);
   document.addEventListener('keydown', function (e) {
     if (e.key === 'Escape') finish();
@@ -64,6 +66,7 @@
   function playVideo() {
     if (!video) { finish(); return; }
     if (sceneHost) sceneHost.style.display = 'none';
+    video.style.display = '';
     video.addEventListener('ended', finish);
     video.addEventListener('error', finish);
     var p = video.play();
