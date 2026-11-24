@@ -66,7 +66,7 @@
   function playVideo() {
     if (!video) { finish(); return; }
     if (sceneHost) sceneHost.style.display = 'none';
-    video.style.display = '';
+    video.style.display = 'block';
     video.addEventListener('ended', finish);
     video.addEventListener('error', finish);
     var p = video.play();
@@ -85,7 +85,7 @@
     scene = handle;
     if (video) video.style.display = 'none';
     // The title fades in over the scene; the video fallback has its own title.
-    titleTimer = setTimeout(function () { overlay.classList.add('is-title-on'); }, 5000);
+    titleTimer = setTimeout(function () { overlay.classList.add('is-title-on'); }, 3400);
   }).catch(function () {
     if (!done) playVideo();
   });

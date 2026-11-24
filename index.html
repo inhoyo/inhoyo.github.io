@@ -7,6 +7,13 @@
   <meta name="description" content="Scientist at Fraunhofer HHI, PhD (Dr.-Ing.) at TU Berlin, and Co-Founder & CEO of LUXONNIC — advancing neuromorphic photonic computing, photonic neural transceivers for AI infrastructure, and 6G photonic networks." />
   <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>" />
   <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- Start downloading the intro scene and its three.js modules while the page parses -->
+  <link rel="modulepreload" href="assets/js/intro-scene.js" />
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/+esm" crossorigin />
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/EffectComposer.js/+esm" crossorigin />
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/RenderPass.js/+esm" crossorigin />
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/UnrealBloomPass.js/+esm" crossorigin />
+  <link rel="modulepreload" href="https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/OutputPass.js/+esm" crossorigin />
 </head>
 <body data-hero3d="on">
 
@@ -55,7 +62,7 @@
   <div class="hero-left" data-scroll data-scroll-speed="0.15">
     <div class="hero-eyebrow">
       <span class="hero-eyebrow-dot"></span>
-      <span class="label" data-i18n-html="hero.eyebrow">Scientist &nbsp;·&nbsp; PhD &nbsp;·&nbsp; Co-Founder &amp; CEO, LUXONNIC</span>
+      <span class="label" data-i18n-html="hero.eyebrow">Scientist &nbsp;·&nbsp; PhD (Dr.-Ing.) &nbsp;·&nbsp; Co-Founder &amp; CEO, LUXONNIC</span>
     </div>
 
     <h1 class="hero-name">In&#8209;Ho Baek</h1>
@@ -142,6 +149,14 @@
     </div>
 
     <div class="news-list">
+
+      <div class="news-row fade-up">
+        <span class="news-date" data-i18n="news.phd.date">Nov 2026</span>
+        <div class="news-row-body">
+          <span class="news-tag news-tag--award" data-i18n="news.tag.award">Award</span>
+          <p data-i18n-html="news.phd.text">Received my <strong>Dr.-Ing.</strong> from <strong>TU Berlin</strong> <strong>summa cum laude</strong> for the thesis <em>Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping</em>.</p>
+        </div>
+      </div>
 
       <div class="news-row fade-up">
         <span class="news-date" data-i18n="news.cdl.date">Sep 2026</span>

@@ -12,7 +12,7 @@ import { RenderPass } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/
 import { UnrealBloomPass } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/UnrealBloomPass.js/+esm';
 import { OutputPass } from 'https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/postprocessing/OutputPass.js/+esm';
 
-var DURATION = 7.8;      // seconds; the page fades the title in at about 5 s
+var DURATION = 6.2;      // seconds; the page fades the title in at about 3.4 s
 var PATHS = 16;          // neural pathways through the brain
 var TRAIL = 6;           // segments per light pulse
 var PULSES = 22;         // light pulses in flight at once

@@ -81,6 +81,8 @@ const TRANSLATIONS = {
     'banner.role.lecturer':  'University Lecturer',
     'banner.institution':    'Fraunhofer Heinrich Hertz Institute (HHI), Berlin',
     'banner.tagline':        'Neuromorphic Photonics &amp; Optical Networks',
+    'news.phd.date': 'Nov 2026',
+    'news.phd.text': 'Received my <strong>Dr.-Ing.</strong> from <strong>TU Berlin</strong> <strong>summa cum laude</strong> for the thesis <em>Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping</em>.',
     'news.more.show': 'Show all updates',
     'news.more.hide': 'Show fewer',
     'banner.btn.about':      'About Me',
@@ -128,12 +130,12 @@ const TRANSLATIONS = {
     'about.subtitle':     'Scientist &amp; PhD &mdash; Fraunhofer HHI, Berlin',
 
     'about.profile.title':'Professional Profile',
-    'about.profile.p1':   'I am a Scientist at the <strong>Fraunhofer Institute for Telecommunications, Heinrich Hertz Institute (HHI)</strong> in Berlin, within the Department of Photonic Networks and Systems, since July 2021. I completed my <strong>PhD (Dr.-Ing.)</strong> at <strong>Technische Universit&auml;t Berlin (TUB)</strong>, titled <em>&ldquo;Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping.&rdquo;</em>',
+    'about.profile.p1':   'I am a Scientist at the <strong>Fraunhofer Institute for Telecommunications, Heinrich Hertz Institute (HHI)</strong> in Berlin, within the Department of Photonic Networks and Systems, since July 2021. I completed my <strong>PhD (Dr.-Ing., summa cum laude)</strong> at <strong>Technische Universit&auml;t Berlin (TUB)</strong>, titled <em>&ldquo;Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping.&rdquo;</em>',
     'about.profile.p2':   'My research spans neuromorphic photonic computing, 6G photonic networks, and high-capacity THz wireless communication. I also lead German&ndash;Korean research collaborations, connecting institutions across both countries.',
     'about.profile.p3':   'Alongside my research role, I serve as a University Lecturer at HTW Berlin and BHT Berlin, teaching communications engineering and signal processing at Bachelor&rsquo;s and Master&rsquo;s level.',
 
     'about.edu.title':              'Education',
-    'about.edu.phd.title':          'PhD (Dr.-Ing.) &mdash; Electrical Engineering / Information Technology',
+    'about.edu.phd.title':          'PhD (Dr.-Ing., summa cum laude) &mdash; Electrical Engineering / Information Technology',
     'about.edu.phd.body':           '<strong>Technische Universit&auml;t Berlin (TUB)</strong>, Berlin &mdash; 2026<br />PhD Thesis: <em>Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping</em>',
     'about.edu.msc.title':          'M.Sc. &mdash; Electrical Engineering / Information Technology',
     'about.edu.msc.body':           '<strong>Karlsruhe Institute of Technology (KIT)</strong>, Karlsruhe &mdash; 2021<br />Focal points: Communication Engineering &amp; Optical Communications<br />Master Thesis (at IPQ, KIT): <em>Data-Aided Carrier Phase Recovery Algorithms for Coherent Optical Communication Systems</em>',
@@ -205,7 +207,7 @@ const TRANSLATIONS = {
     'about.contact.body':  'Fraunhofer Institute for Telecommunications &mdash; Heinrich Hertz Institute (HHI)<br />Department of Photonic Networks and Systems, Berlin, Germany<br /><br />Email: <a href="mailto:in-ho.baek@proton.me">in-ho.baek@proton.me</a><br />LinkedIn: <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener">linkedin.com/in/in-ho-baek</a><br />Google Scholar: <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar Profile</a><br />IEEE Xplore: <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE Author Profile</a>',
 
     /* ── Redesigned page sections ─────────────────────── */
-    'hero.eyebrow':         'Scientist &nbsp;·&nbsp; PhD &nbsp;·&nbsp; Co-Founder &amp; CEO, LUXONNIC',
+    'hero.eyebrow':         'Scientist &nbsp;·&nbsp; PhD (Dr.-Ing.) &nbsp;·&nbsp; Co-Founder &amp; CEO, LUXONNIC',
     'hero.headline':        'Advancing <span class="accent-text">Photonic Computing</span><br>for AI &amp;<br>6G Networks',
     'hero.desc':            'At Fraunhofer HHI in Berlin, I build the photonic hardware behind AI and 6G: from 300&thinsp;GHz terahertz links beyond 200&thinsp;Gbit/s to neuromorphic photonic chips that compute in light. As Co-Founder &amp; CEO of <strong>LUXONNIC</strong>, I bring this to the optical transceivers AI data centers depend on.',
     'hero.btn.collab':      'Let\'s Collaborate',
@@ -329,6 +331,8 @@ const TRANSLATIONS = {
     'banner.role.lecturer':  'Lehrbeauftragter',
     'banner.institution':    'Fraunhofer Heinrich-Hertz-Institut (HHI), Berlin',
     'banner.tagline':        'Neuromorphe Photonik &amp; Optische Netzwerke',
+    'news.phd.date': 'Nov 2026',
+    'news.phd.text': 'Promotion an der <strong>TU Berlin</strong> mit <strong>summa cum laude</strong> abgeschlossen. Dissertation: <em>Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping</em>.',
     'news.more.show': 'Alle Meldungen zeigen',
     'news.more.hide': 'Weniger zeigen',
     'banner.btn.about':      '\u00DCber mich',
@@ -370,12 +374,12 @@ const TRANSLATIONS = {
     'about.subtitle':    'Wissenschaftler &amp; Promotion &mdash; Fraunhofer HHI, Berlin',
 
     'about.profile.title':'Berufliches Profil',
-    'about.profile.p1':   'Ich bin Wissenschaftler am <strong>Fraunhofer-Institut f\u00FCr Nachrichtentechnik, Heinrich-Hertz-Institut (HHI)</strong>, Berlin, in der Abteilung Photonische Netze und Systeme, wo ich seit Juli 2021 t&auml;tig bin. Meine Promotion (Dr.-Ing.) habe ich an der <strong>Technischen Universit&auml;t Berlin (TUB)</strong> abgeschlossen, mit dem Titel <em>&ldquo;Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping.&rdquo;</em>',
+    'about.profile.p1':   'Ich bin Wissenschaftler am <strong>Fraunhofer-Institut f\u00FCr Nachrichtentechnik, Heinrich-Hertz-Institut (HHI)</strong>, Berlin, in der Abteilung Photonische Netze und Systeme, wo ich seit Juli 2021 t&auml;tig bin. Meine Promotion (Dr.-Ing., summa cum laude) habe ich an der <strong>Technischen Universit&auml;t Berlin (TUB)</strong> abgeschlossen, mit dem Titel <em>&ldquo;Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping.&rdquo;</em>',
     'about.profile.p2':   'Meine Forschung umfasst neuromorphes photonisches Rechnen, 6G-Photoniknetzwerke und hochkapazitive THz-Funkkommunikation. Au\u00DFerdem leite ich deutsch-koreanische Forschungskooperationen und Projektakquise, um gemeinsam mit Partnern beider L\u00E4nder Kommunikationstechnologien der n\u00E4chsten Generation voranzutreiben.',
     'about.profile.p3':   'Neben meiner Forschungst&auml;tigkeit bin ich als Lehrbeauftragter f\u00FCr Informations- und Kommunikationsprogramme an Berliner Hochschulen t&auml;tig.',
 
     'about.edu.title':           'Ausbildung',
-    'about.edu.phd.title':       'Promotion (Dr.-Ing.) &mdash; Elektrotechnik / Informationstechnik',
+    'about.edu.phd.title':       'Promotion (Dr.-Ing., summa cum laude) &mdash; Elektrotechnik / Informationstechnik',
     'about.edu.phd.body':        '<strong>Technische Universit&auml;t Berlin (TUB)</strong>, Berlin &mdash; 2026<br />Dissertationstitel: <em>Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping</em>',
     'about.edu.msc.title':       'M.Sc. &mdash; Elektrotechnik / Informationstechnik',
     'about.edu.msc.body':        '<strong>Karlsruher Institut f\u00FCr Technologie (KIT)</strong>, Karlsruhe &mdash; 2021<br />Schwerpunkte: Kommunikationstechnik &amp; Optische Kommunikation<br />Masterarbeit (am IPQ, KIT): <em>Data-Aided Carrier Phase Recovery Algorithms for Coherent Optical Communication Systems</em>',
@@ -446,7 +450,7 @@ const TRANSLATIONS = {
     'about.contact.title': 'Kontakt',
     'about.contact.body':  'Fraunhofer-Institut f\u00FCr Nachrichtentechnik &mdash; Heinrich-Hertz-Institut (HHI)<br />Abteilung Photonische Netze und Systeme, Berlin, Deutschland<br /><br />E-Mail: <a href="mailto:in-ho.baek@proton.me">in-ho.baek@proton.me</a><br />LinkedIn: <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener">linkedin.com/in/in-ho-baek</a><br />Google Scholar: <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar-Profil</a><br />IEEE Xplore: <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE-Autorenprofil</a>',
 
-    'hero.eyebrow':         'Wissenschaftler &nbsp;·&nbsp; Promotion &nbsp;·&nbsp; Mitgründer &amp; CEO, LUXONNIC',
+    'hero.eyebrow':         'Wissenschaftler &nbsp;·&nbsp; PhD (Dr.-Ing.) &nbsp;·&nbsp; Mitgründer &amp; CEO, LUXONNIC',
     'hero.headline':        'Fortschritte in <span class="accent-text">Photonischem Rechnen</span><br>für KI &amp;<br>6G-Netzwerke',
     'hero.desc':            'Am Fraunhofer HHI in Berlin entwickle ich die photonische Hardware hinter KI und 6G: von 300-GHz-Terahertz-Strecken mit über 200&thinsp;Gbit/s bis zu neuromorphen photonischen Chips, die im Licht rechnen. Als Mitgründer &amp; CEO von <strong>LUXONNIC</strong> bringe ich das in die optischen Transceiver, auf die KI-Rechenzentren angewiesen sind.',
     'hero.btn.collab':      'Zusammenarbeiten',
@@ -570,6 +574,8 @@ const TRANSLATIONS = {
     'banner.role.lecturer':  '겸임교수',
     'banner.institution':    '프라운호퍼 하인리히 헤르츠 연구소 (HHI), 베를린',
     'banner.tagline':        '뉴로모픽 포토닉스 &amp; 광 네트워크',
+    'news.phd.date': '2026년 11월',
+    'news.phd.text': '<strong>베를린 공과대학교(TUB)</strong>에서 논문을 통과하고 <strong>summa cum laude(최우등)</strong>로 Dr.-Ing. 학위를 받았습니다. 논문: <em>Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping</em>.',
     'news.more.show': '전체 소식 보기',
     'news.more.hide': '간략히 보기',
     'banner.btn.about':      '소개',
@@ -611,12 +617,12 @@ const TRANSLATIONS = {
     'about.subtitle':    '연구원 &amp; 박사 &mdash; 프라운호퍼 HHI, 베를린',
 
     'about.profile.title':'전문 프로필',
-    'about.profile.p1':   '저는 2021년 7월부터 베를린의 <strong>프라운호퍼 통신 연구소, 하인리히 헤르츠 연구소(HHI)</strong> 광자 네트워크 및 시스템 부서에서 연구원으로 근무하고 있습니다. <strong>베를린 공과대학교(TUB)</strong>에서 박사(Dr.-Ing.) 학위를 취득했으며, 논문 제목은 <em>&ldquo;Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping&rdquo;</em>입니다.',
+    'about.profile.p1':   '저는 2021년 7월부터 베를린의 <strong>프라운호퍼 통신 연구소, 하인리히 헤르츠 연구소(HHI)</strong> 광자 네트워크 및 시스템 부서에서 연구원으로 근무하고 있습니다. <strong>베를린 공과대학교(TUB)</strong>에서 박사(Dr.-Ing., summa cum laude) 학위를 취득했으며, 논문 제목은 <em>&ldquo;Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping&rdquo;</em>입니다.',
     'about.profile.p2':   '제 연구는 뉴로모픽 포토닉 컴퓨팅, 6G 포토닉 네트워크, 그리고 고용량 THz 무선 통신을 아우릅니다. 또한 한독 연구 협력과 프로젝트 수주를 주도하며 양국 기관과 협력해 차세대 통신 기술을 발전시키고 있습니다.',
     'about.profile.p3':   '연구 업무 외에도 베를린 대학에서 통신 공학과 신호 처리를 다루는 정보통신 프로그램의 겸임교수로 활동하고 있습니다.',
 
     'about.edu.title':           '학력',
-    'about.edu.phd.title':       '박사(Dr.-Ing.) &mdash; 전기공학 / 정보기술',
+    'about.edu.phd.title':       '박사(Dr.-Ing., summa cum laude) &mdash; 전기공학 / 정보기술',
     'about.edu.phd.body':        '<strong>베를린 공과대학교 (TUB)</strong>, 베를린 &mdash; 2026<br />논문 제목: <em>Experimental Investigations of High-Capacity THz Wireless Links Using Probabilistic Constellation Shaping</em>',
     'about.edu.msc.title':       '석사 &mdash; 전기공학 / 정보기술',
     'about.edu.msc.body':        '<strong>카를스루에 공과대학교 (KIT)</strong>, 카를스루에 &mdash; 2021<br />전공: 통신 공학 &amp; 광통신<br />석사 논문 (IPQ, KIT): <em>Data-Aided Carrier Phase Recovery Algorithms for Coherent Optical Communication Systems</em>',
@@ -687,7 +693,7 @@ const TRANSLATIONS = {
     'about.contact.title': '연락처',
     'about.contact.body':  '프라운호퍼 통신 연구소 &mdash; 하인리히 헤르츠 연구소 (HHI)<br />광자 네트워크 및 시스템 부서, 베를린, 독일<br /><br />이메일: <a href="mailto:in-ho.baek@proton.me">in-ho.baek@proton.me</a><br />LinkedIn: <a href="https://www.linkedin.com/in/in-ho-baek/" target="_blank" rel="noopener">linkedin.com/in/in-ho-baek</a><br />Google Scholar: <a href="https://scholar.google.ch/citations?user=-MAAoUIAAAAJ&amp;hl=en" target="_blank" rel="noopener">Scholar 프로필</a><br />IEEE Xplore: <a href="https://ieeexplore.ieee.org/author/695481177653011" target="_blank" rel="noopener">IEEE 저자 프로필</a>',
 
-    'hero.eyebrow':         '연구원 &nbsp;·&nbsp; 박사 &nbsp;·&nbsp; LUXONNIC 공동창업자 &amp; CEO',
+    'hero.eyebrow':         '연구원 &nbsp;·&nbsp; 박사(Dr.-Ing.) &nbsp;·&nbsp; LUXONNIC 공동창업자 &amp; CEO',
     'hero.headline':        '<span class="accent-text">포토닉 컴퓨팅</span>으로<br>AI와 6G 네트워크의<br>발전을 선도하다',
     'hero.desc':            '프라운호퍼 HHI 베를린에서 AI와 6G를 뒷받침하는 포토닉 하드웨어를 개발합니다. 300&thinsp;GHz 테라헤르츠 링크에서 200&thinsp;Gbit/s 이상의 전송률을 구현하고, 빛으로 연산하는 뉴로모픽 포토닉 칩을 연구합니다. 또한 AI 데이터센터의 광 트랜시버를 혁신하는 <strong>LUXONNIC</strong>의 공동창업자 &amp; CEO입니다.',
     'hero.btn.collab':      '협력 문의',
